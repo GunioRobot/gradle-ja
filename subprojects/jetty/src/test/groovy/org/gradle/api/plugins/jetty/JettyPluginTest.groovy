@@ -35,7 +35,7 @@ public class JettyPluginTest {
 
         assertThat(project.convention.plugins.jetty, instanceOf(JettyPluginConvention))
     }
-    
+
     @Test
     public void addsTasksToProject() {
         new JettyPlugin().apply(project)

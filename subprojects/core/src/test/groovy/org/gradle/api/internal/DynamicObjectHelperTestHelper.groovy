@@ -38,7 +38,7 @@ public class DynamicObjectHelperTestHelper {
         bean.setProperty 'another', 'value'
         assertEquals(bean.another, 'value')
     }
-    
+
     public static void assertCanGetAndSetProperties (DynamicObjectHelperTest.Bean bean) {
         bean.readWriteProperty = 'value'
         assertEquals(bean.readWriteProperty, 'value')

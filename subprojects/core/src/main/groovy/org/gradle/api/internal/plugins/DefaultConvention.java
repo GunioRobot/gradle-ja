@@ -95,7 +95,7 @@ public class DefaultConvention implements Convention {
         extensionsStorage.checkExtensionIsNotReassigned(name);
         add(name, value);
     }
-    
+
     private class ExtensionsDynamicObject implements DynamicObject {
         public boolean hasProperty(String name) {
             if (extensionsStorage.hasExtension(name)) {
@@ -169,7 +169,7 @@ public class DefaultConvention implements Convention {
         public Object methodMissing(String name, Object args) {
             return invokeMethod(name, (Object[])args);
         }
-        
+
         public boolean hasMethod(String name, Object... args) {
             if (extensionsStorage.isConfigureExtensionMethod(name, args)) {
                 return true;

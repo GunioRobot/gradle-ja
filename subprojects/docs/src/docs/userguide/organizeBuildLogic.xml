@@ -75,7 +75,7 @@
             <para role="original"><link linkend="custom_plugins">Custom plugins</link>. Put your build build logic into a custom plugin,
                 and apply that plugin to multiple projects. The plugin must be in the classpath of your build script.
                 You can achieve this either by using <link linkend="sec:build_sources"><filename>build sources</filename></link> or
-                by adding an <link linkend="sec:external_dependencies">external library</link> that contains the plugin. 
+                by adding an <link linkend="sec:external_dependencies">external library</link> that contains the plugin.
             </para>
             <para><link linkend="custom_plugins">カスタムプラグイン</link>。ビルドロジックをカスタムプラグインにすれば、いろんなプロジェクトでそのプラグインを適用することができます。プラグインはビルドスクリプトのクラスパスに追加しなければなりませんが、<link linkend="sec:build_sources">buildSrcプロジェクト</link>や<link linkend="sec:external_dependencies">外部ライブラリ</link>にそのプラグインを含めれば簡単に追加できます。</para>
         </listitem>
@@ -122,7 +122,7 @@
             <output args="-q show"/>
         </sample>
     </section>
-    
+
     <section id='sec:build_sources'>
         <title><filename>buildSrc</filename>プロジェクトのソースをビルドする<phrase role="original">Build sources in the <filename>buildSrc</filename> project</phrase></title>
         <para role="original">When you run Gradle, it checks for the existence of a directory called <filename>buildSrc</filename>. Just put

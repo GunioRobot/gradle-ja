@@ -46,7 +46,7 @@ public class ProcessBuilderFactory {
             }
         }
         commandWithArguments.addAll(arguments);
-        
+
         final ProcessBuilder processBuilder = new ProcessBuilder(commandWithArguments);
 
         processBuilder.directory(execHandle.getDirectory());

@@ -56,7 +56,7 @@ class DefaultRepositoryHandlerTest extends DefaultArtifactRepositoryContainerTes
 
         assert repositoryHandler.flatDir { name = 'libs' }.is(repository)
     }
-    
+
     @Test public void testFlatDirWithNameAndDirs() {
         def repository = context.mock(FlatDirectoryArtifactRepository)
 

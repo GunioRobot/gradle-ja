@@ -49,7 +49,7 @@ public abstract class AbstractCopyTask extends ConventionTask implements CopySpe
             }
         }
     }
-    
+
     public FileCollection getDefaultSource() {
         return null;
     }
@@ -62,7 +62,7 @@ public abstract class AbstractCopyTask extends ConventionTask implements CopySpe
     public FileCollection getSource() {
         return getCopyAction().hasSource() ? getCopyAction().getAllSource() : getDefaultSource();
     }
-    
+
     protected abstract CopyActionImpl getCopyAction();
 
     public ReadableCopySpec getRootSpec() {

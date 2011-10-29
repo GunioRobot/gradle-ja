@@ -37,7 +37,7 @@ class DefaultMavenPublisherTest extends Specification {
     @Rule def resources = new Resources()
 
     def publisher = new DefaultMavenPublisher(dir.file("local-repository"), new DefaultTemporaryFileProvider({dir.createDir("tmp")} as FileSource))
-    
+
     def "installs artifact"() {
         def publication = new DefaultMavenPublication(groupId: "gradleware.test", artifactId: "fooArtifact", version: "1.1")
         def artifact = new DefaultMavenArtifact(classifier: "", extension: "jar", file: sampleJar())

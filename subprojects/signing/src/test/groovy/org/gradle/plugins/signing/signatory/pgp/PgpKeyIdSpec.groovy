@@ -19,33 +19,33 @@ package org.gradle.plugins.signing.signatory.pgp
 import spock.lang.*
 
 class PgpKeyIdSpec extends Specification  {
-    
+
     protected key(arg) {
         new PgpKeyId(arg)
     }
-    
+
     def "conversion is symmetrical"() {
         expect:
         key("ABCDABCD").asHex == "ABCDABCD"
     }
-    
+
     @Unroll
     def "conversion"() {
         expect:
         key(hex).asLong == decimal
         key(decimal).asHex == hex
-        
+
         where:
         hex        | decimal
         "AAAAAAAA" | 2863311530
         "DA124B92" | 3658632082
     }
-    
+
     def "equals impl"() {
         expect:
         key("AAAAAAAA") == key(2863311530)
     }
-    
+
     def "comparison"() {
         expect:
         key("00000000") < key("00000001")

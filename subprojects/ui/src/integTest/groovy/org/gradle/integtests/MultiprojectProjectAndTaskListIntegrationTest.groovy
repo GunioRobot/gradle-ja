@@ -223,6 +223,6 @@ class MultiprojectProjectAndTaskListIntegrationTest {
       Assert.assertNotNull( foundTask2 )
 
       //should both the same project
-      Assert.assertEquals( foundTask1, foundTask2 )      
+      Assert.assertEquals( foundTask1, foundTask2 )
    }
 }

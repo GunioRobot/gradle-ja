@@ -125,7 +125,7 @@ public class TypeMetaData implements Serializable, TypeContainer {
             lowerBounds.visitTypes(action);
             return;
         }
-        
+
         action.execute(this);
         if (typeArgs != null) {
             for (TypeMetaData typeArg : typeArgs) {

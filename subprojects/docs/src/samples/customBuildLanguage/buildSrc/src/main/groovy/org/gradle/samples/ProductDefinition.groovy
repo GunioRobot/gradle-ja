@@ -9,7 +9,7 @@ class ProductDefinition {
     def displayName(String name) {
         displayName = name
     }
-    
+
     def module(Project project) {
         modules << project
     }

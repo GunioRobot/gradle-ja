@@ -112,7 +112,7 @@ public class DefaultDomainObjectCollectionTest {
         };
         TestClosure testClosure = new TestClosure() {
             public Object call(Object param) {
-                return !param.equals("b");    
+                return !param.equals("b");
             }
         };
 
@@ -137,15 +137,15 @@ public class DefaultDomainObjectCollectionTest {
     // @Test
     // public void canExecuteActionForAllElementsInATypeFilteredCollection() {
     //     final Action<CharSequence> action = context.mock(Action.class);
-    // 
+    //
     //     container.add("c");
     //     container.add(new StringBuffer("b"));
-    // 
+    //
     //     context.checking(new Expectations(){{
     //         one(action).execute("c");
     //         one(action).execute("a");
     //     }});
-    // 
+    //
     //     container.withType(String.class, action);
     //     container.add("a");
     // }
@@ -161,7 +161,7 @@ public class DefaultDomainObjectCollectionTest {
             one(closure).call("c");
             one(closure).call("a");
         }});
-        
+
         container.withType(String.class, HelperUtil.toClosure(closure));
         container.add("a");
     }
@@ -269,7 +269,7 @@ public class DefaultDomainObjectCollectionTest {
         container.add("d");
         assertThat(collection, equalTo((Collection) toList("a", "c")));
     }
-    
+
     @Test
     public void callsActionWhenObjectAdded() {
         final Action<CharSequence> action = context.mock(Action.class);
@@ -506,7 +506,7 @@ public class DefaultDomainObjectCollectionTest {
         final RuntimeException failure = new RuntimeException();
         container.add("a");
         container.beforeChange(action);
-        
+
         context.checking(new Expectations() {{
             one(action).run();
             will(throwException(failure));
@@ -574,5 +574,5 @@ public class DefaultDomainObjectCollectionTest {
     public void canRemoveNonExistentObject() {
         assertFalse(container.remove("a"));
     }
-    
+
 }

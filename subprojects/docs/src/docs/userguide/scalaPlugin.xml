@@ -169,7 +169,7 @@
         <title>Convention Properties</title>
         <para>The Scala plugin does not add any convention properties to the project.</para>
     </section>
-    
+
     <section>
         <title>Source set properties</title>
         <para>The Scala plugin adds the following convention properties to each source set in the project. You can

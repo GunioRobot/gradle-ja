@@ -71,7 +71,7 @@ class XIncludeAwareXmlProvider {
     Document getDocument() {
         return root
     }
-    
+
     private Document parseSourceFile(File sourceFile) {
         DocumentBuilderFactory factory = Class.forName('com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl', true, Thread.currentThread().contextClassLoader).newInstance()
         factory.setNamespaceAware(true)

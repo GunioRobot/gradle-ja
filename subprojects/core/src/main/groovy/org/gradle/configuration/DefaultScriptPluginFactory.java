@@ -102,7 +102,7 @@ public class DefaultScriptPluginFactory implements ScriptPluginFactory {
                 services.add(ScriptHandlerInternal.class, defaultScriptHandler);
                 classLoaderProvider = defaultScriptHandler;
             }
-            
+
             ScriptCompiler compiler = scriptCompilerFactory.createCompiler(withImports);
 
             compiler.setClassloader(classLoaderProvider.getClassLoader());

@@ -81,7 +81,7 @@ public class TopLevelBuildServiceRegistry extends DefaultServiceRegistry impleme
     protected TimeProvider createTimeProvider() {
         return new TrueTimeProvider();
     }
-    
+
     protected ExecutorFactory createExecutorFactory() {
         return new DefaultExecutorFactory();
     }
@@ -170,7 +170,7 @@ public class TopLevelBuildServiceRegistry extends DefaultServiceRegistry impleme
     protected MultiParentClassLoader createRootClassLoader() {
         return get(ClassLoaderRegistry.class).createScriptClassLoader();
     }
-    
+
     protected InitScriptHandler createInitScriptHandler() {
         return new InitScriptHandler(
                 new UserHomeInitScriptFinder(

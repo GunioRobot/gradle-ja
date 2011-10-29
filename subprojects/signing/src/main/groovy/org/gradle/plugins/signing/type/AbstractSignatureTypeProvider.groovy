@@ -18,30 +18,30 @@ package org.gradle.plugins.signing.type
 import org.gradle.api.InvalidUserDataException
 
 abstract class AbstractSignatureTypeProvider implements SignatureTypeProvider {
-    
+
     private String defaultTypeExtension
     private Map<String, SignatureType> types = [:]
-    
+
     SignatureType getDefaultType() {
         getTypeForExtension(defaultTypeExtension)
     }
-    
+
     void setDefaultType(String defaultTypeExtension) {
         getTypeForExtension(defaultTypeExtension) // verify we have this extension
         this.defaultTypeExtension = defaultTypeExtension
     }
-    
+
     SignatureType getTypeForExtension(String extension) {
         if (!types.containsKey(extension)) {
             throw new InvalidUserDataException("no signature type is registered for extension '$extension'")
         }
         types[extension]
     }
-    
+
     protected void register(SignatureType type) {
         types[type.extension] = type
     }
-    
+
     boolean hasTypeForExtension(String extension) {
         types.containsKey(extension)
     }

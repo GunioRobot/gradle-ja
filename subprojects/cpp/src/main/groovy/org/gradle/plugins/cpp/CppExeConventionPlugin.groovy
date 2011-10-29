@@ -24,7 +24,7 @@ class CppExeConventionPlugin implements Plugin<Project> {
 
     void apply(Project project) {
         project.apply(plugin: "cpp")
-        
+
         project.with {
             cpp {
                 sourceSets {
@@ -36,7 +36,7 @@ class CppExeConventionPlugin implements Plugin<Project> {
                     sourceSets << cpp.sourceSets.main
                 }
             }
-            
+
             def exeArtifact = new DefaultPublishArtifact(
                 archivesBaseName, // name
                 "exe", // ext

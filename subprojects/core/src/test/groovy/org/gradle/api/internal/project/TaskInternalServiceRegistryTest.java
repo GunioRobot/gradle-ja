@@ -63,7 +63,7 @@ public class TaskInternalServiceRegistryTest {
         TaskOutputsInternal outputs = registry.get(TaskOutputsInternal.class);
         assertThat(outputs, instanceOf(DefaultTaskOutputs.class));
     }
-    
+
     @Test
     public void createsALoggingManagerAndStdOutputCapture() {
         final Factory<LoggingManagerInternal> loggingManagerFactory = context.mock(Factory.class);

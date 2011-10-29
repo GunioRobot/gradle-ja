@@ -27,7 +27,7 @@ class SingletonFileTreeTest extends Specification {
         expect:
         tree.displayName == "file '$f'"
     }
-    
+
     def visitsFileAsChildOfRoot() {
         FileVisitor visitor = Mock()
         File f = new File('test-file')

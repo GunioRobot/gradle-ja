@@ -91,7 +91,7 @@
         }
         return bottom;
     }
-    
+
     function adjustHeight() {
         var training = bottomY(document.getElementById('training'));
         var whoUses = bottomY(document.getElementById('who_uses'));

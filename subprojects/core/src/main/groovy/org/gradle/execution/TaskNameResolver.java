@@ -24,7 +24,7 @@ import org.gradle.api.internal.project.ProjectInternal;
 import java.util.Collections;
 
 public class TaskNameResolver {
-    
+
     public SetMultimap<String, Task> select(String name, Project project) {
         return select(name, (ProjectInternal) project, Collections.<Project>emptySet());
     }

@@ -364,5 +364,5 @@ public class DefaultConfigurableFileCollectionTest {
         assertThat(collection.getAsFileTree().getBuildDependencies().getDependencies(null), equalTo((Set) toSet(task)));
         assertThat(collection.getAsFileTree().matching(HelperUtil.TEST_CLOSURE).getBuildDependencies().getDependencies(null), equalTo((Set) toSet(task)));
     }
-    
+
 }

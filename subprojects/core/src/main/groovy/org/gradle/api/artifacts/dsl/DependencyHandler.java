@@ -162,17 +162,17 @@ public interface DependencyHandler {
      * @return The dependency.
      */
     Dependency project(Map notation);
-    
+
     /**
      * Creates a dependency on the API of the current version of Gradle.
      *
      * @return The dependency.
      */
     Dependency gradleApi();
-    
+
     /**
      * Creates a dependency on the Groovy that is distributed with the current version of Gradle.
-     * 
+     *
      * @return The dependency.
      */
     Dependency localGroovy();

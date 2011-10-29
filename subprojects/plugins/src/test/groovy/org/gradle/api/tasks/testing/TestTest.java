@@ -309,7 +309,7 @@ public class TestTest extends AbstractConventionTaskTest {
     private void configureTask() {
         test.useTestFramework(testFrameworkMock);
         test.setTestExecuter(testExecuterMock);
-        
+
         test.setTestClassesDir(classesDir);
         test.setTestResultsDir(resultsDir);
         test.setTestReportDir(reportDir);

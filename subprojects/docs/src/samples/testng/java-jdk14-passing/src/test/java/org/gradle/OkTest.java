@@ -1,7 +1,7 @@
 package org.gradle;
 public class OkTest {
-   /** 
-    * @testng.test 
+   /**
+    * @testng.test
     */
    public void passingTest() { }
 }

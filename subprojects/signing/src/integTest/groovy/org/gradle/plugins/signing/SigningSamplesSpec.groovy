@@ -39,7 +39,7 @@ class SigningSamplesSpec extends AbstractIntegrationSpec {
 
         expect:
         succeeds "uploadPublished"
-        
+
         and:
         !(":signArchives" in executedTasks)
     }

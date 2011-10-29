@@ -67,7 +67,7 @@ public class Specs {
     }
 
     public static <T> AndSpec<T> and(Spec<? super T>... specs) {
-        return new AndSpec<T>(specs);  
+        return new AndSpec<T>(specs);
     }
 
     public static <T> OrSpec<T> or(Spec<? super T>... specs) {
@@ -75,7 +75,7 @@ public class Specs {
     }
 
     public static <T> NotSpec<T> not(Spec<? super T> spec) {
-        return new NotSpec<T>(spec);  
+        return new NotSpec<T>(spec);
     }
 
     public static <T> Spec<T> or(final boolean defaultWhenNoSpecs, List<? extends Spec<? super T>> specs) {

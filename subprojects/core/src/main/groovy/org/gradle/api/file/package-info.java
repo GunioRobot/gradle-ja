@@ -15,6 +15,6 @@
  */
 
 /**
- * Classes for working with files. 
+ * Classes for working with files.
  */
 package org.gradle.api.file;

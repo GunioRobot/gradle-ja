@@ -34,7 +34,7 @@ public interface DependencyArtifact {
      * but sometimes this is not the case. For example for an ivy xml module descriptor, the type is
      * <em>ivy</em> and the extension is <em>xml</em>.
      *
-     * @see #getExtension() 
+     * @see #getExtension()
      */
     String getType();
 
@@ -43,18 +43,18 @@ public interface DependencyArtifact {
      * but sometimes this is not the case. For example for an ivy xml module descriptor, the type is
      * <em>ivy</em> and the extension is <em>xml</em>.
      *
-     * @see #getType() 
+     * @see #getType()
      */
     String getExtension();
 
     /**
-     * Returns the classifier of this dependency artifact. 
+     * Returns the classifier of this dependency artifact.
      */
     String getClassifier();
 
     /**
      * Returns an URL under which this dependency artifact can be retrieved. If not
-     * specified the user repositories are used for retrieving. 
+     * specified the user repositories are used for retrieving.
      */
     String getUrl();
 }

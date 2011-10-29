@@ -16,7 +16,7 @@
 package org.gradle.plugins.signing
 
 class SigningConfigurationsSpec extends SigningProjectSpec {
-    
+
     def setup() {
         applyPlugin()
         useJavadocAndSourceJars()
@@ -24,28 +24,28 @@ class SigningConfigurationsSpec extends SigningProjectSpec {
             meta
             produced.extendsFrom meta, archives
         }
-        
+
         artifacts {
             meta javadocJar, sourcesJar
         }
     }
-        
+
     def "sign configuration with defaults"() {
         when:
         signing {
             sign configurations.archives, configurations.meta
         }
-        
+
         then:
         def signingTasks = [signArchives, signMeta]
 
         // TODO - find way to test that the appopriate dependencies have been setup
         //        it would be easy if we could do…
-        // 
+        //
         // configurations.archives.buildArtifacts in signArchives.dependsOn
-        // 
+        //
         //        but we can't because of http://issues.gradle.org/browse/GRADLE-1608
-        
+
         and:
         configurations.signatures.artifacts.size() == 3
         signingTasks.every { it.signatures.every { it in configurations.signatures.artifacts } }
@@ -56,7 +56,7 @@ class SigningConfigurationsSpec extends SigningProjectSpec {
         signing {
             sign configurations.produced
         }
-        
+
         then:
         configurations.signatures.artifacts.size() == 3
         signProduced.signatures.every { it in configurations.signatures.artifacts }

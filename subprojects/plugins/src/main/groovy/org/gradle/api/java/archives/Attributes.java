@@ -23,5 +23,5 @@ import java.util.Map;
  * @author Hans Dockter
  */
 public interface Attributes extends Map<String, Object> {
-    
+
 }

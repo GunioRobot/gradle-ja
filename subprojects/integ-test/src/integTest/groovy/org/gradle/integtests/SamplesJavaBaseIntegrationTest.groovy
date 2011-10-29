@@ -45,7 +45,7 @@ class SamplesJavaBaseIntegrationTest {
 
         // Check jar exists
         javaprojectDir.file("prod/build/libs/prod-1.0.jar").assertIsFile()
-        
+
         // Check contents of Jar
         TestFile jarContents = dist.testDir.file('jar')
         javaprojectDir.file('prod/build/libs/prod-1.0.jar').unzipTo(jarContents)

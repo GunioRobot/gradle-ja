@@ -70,7 +70,7 @@ class BuildProgressLoggerTest extends Specification {
     def ignoresNestedBuilds() {
         given:
         gradle.getParent() >> Mock(Gradle)
-        
+
         when:
         logger.buildStarted(gradle)
 

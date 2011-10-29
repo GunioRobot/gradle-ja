@@ -22,11 +22,11 @@ import org.w3c.dom.Document
  * This class is used by the UserGuideTransformTask to inject the example location into
  * the first figure or example child of a sample block.
  * <p>
- * I would have included this as an inner class of UserGuideTransformTask but groovy doesn't 
+ * I would have included this as an inner class of UserGuideTransformTask but groovy doesn't
  * support them.
  */
 class SampleElementLocationHandler {
-    
+
     private Document doc
     private Element sampleElement
     private String srcDir

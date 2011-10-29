@@ -35,7 +35,7 @@ public abstract class Block {
         payload.setBlock(null);
         payload = null;
     }
-    
+
     public abstract BlockPointer getPos();
 
     public abstract int getSize();

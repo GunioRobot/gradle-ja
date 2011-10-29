@@ -370,12 +370,12 @@ public class WorkerProcessIntegrationTest {
         private void readObject(ObjectInputStream instr) {
             System.exit(0);
         }
-        
+
         public void execute(WorkerProcessContext workerProcessContext) {
             throw new UnsupportedOperationException();
         }
     }
-    
+
     public interface TestListenerInterface {
         public void send(String message, int count);
     }

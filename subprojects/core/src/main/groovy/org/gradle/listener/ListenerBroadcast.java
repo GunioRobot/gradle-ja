@@ -88,7 +88,7 @@ public class ListenerBroadcast<T> implements StoppableDispatch<MethodInvocation>
             broadcast.add(listener);
         }
     }
-    
+
     /**
      * Adds the given listener if it is an instance of the listener type.
      *
@@ -106,7 +106,7 @@ public class ListenerBroadcast<T> implements StoppableDispatch<MethodInvocation>
     public void add(Dispatch<MethodInvocation> dispatch) {
         broadcast.add(dispatch);
     }
-    
+
     /**
      * Adds a closure to be notified when the given method is called.
      */

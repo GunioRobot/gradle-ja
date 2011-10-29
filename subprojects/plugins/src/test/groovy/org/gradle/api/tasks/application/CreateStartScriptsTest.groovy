@@ -31,7 +31,7 @@ class CreateStartScriptsTest extends Specification {
         task.unixScript == new File(task.outputDir, 'myApp')
         task.windowsScript == new File(task.outputDir, 'myApp.bat')
     }
-    
+
     def optsEnvironmentVariableNameDefaultsToApplicationName() {
         when:
         task.applicationName = null

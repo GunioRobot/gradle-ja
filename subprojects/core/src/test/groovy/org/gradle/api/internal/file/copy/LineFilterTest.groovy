@@ -37,7 +37,7 @@ class LineFilterTest {
 
         assertThat(filter.text, equalTo(lines("1 - ", "2 - ", "")))
     }
-    
+
     @Test void testSingleLine() {
         def input = new StringReader("one")
         def lineCount = 1
@@ -52,7 +52,7 @@ class LineFilterTest {
 
         assertThat(filter.text, equalTo(""))
     }
-    
+
     @Test void testCRLFWithTrailingEOL() {
         def input = new StringReader("one\r\ntwo\r\nthree\r\n")
         def lineCount = 1
@@ -68,7 +68,7 @@ class LineFilterTest {
 
         assertThat(filter.text, equalTo(lines("1 - one", "2 - two", "3 - three")))
     }
-    
+
     @Test void testCRWithNoTrailingEOL() {
         def input = new StringReader("one\rtwo\rthree")
         def lineCount = 1

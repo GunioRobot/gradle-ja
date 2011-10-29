@@ -27,7 +27,7 @@ class AsmBackedEmptyScriptGeneratorTest extends Specification {
         script instanceof groovy.lang.Script
         script.run() == null
     }
-    
+
     def cachesScriptClass() {
         expect:
         def cl1 = generator.generate(groovy.lang.Script.class)

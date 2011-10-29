@@ -87,7 +87,7 @@ public class TopLevelBuildServiceRegistryTest {
             will(returnValue(context.mock(PluginModuleRegistry.class)));
         }});
     }
-    
+
     @Test
     public void delegatesToParentForUnknownService() {
         context.checking(new Expectations(){{

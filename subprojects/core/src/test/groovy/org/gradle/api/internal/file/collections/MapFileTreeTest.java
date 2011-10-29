@@ -41,7 +41,7 @@ public class MapFileTreeTest {
         assertVisits(tree, emptyList, emptyList);
         assertSetContainsForAllTypes(tree, emptyList);
     }
-    
+
     @Test
     public void canAddAnElementUsingAClosureToGeneratedContent() {
         Closure closure = HelperUtil.toClosure("{it.write('content'.getBytes())}");

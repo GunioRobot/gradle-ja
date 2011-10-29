@@ -47,7 +47,7 @@ class ProjectPropertySettingBuildLoaderTest extends Specification {
     def "delegates to build loader"() {
         given:
         _ * propertiesLoader.mergeProperties(!null) >> [:]
-        
+
         when:
         loader.load(projectDescriptor, gradle)
 

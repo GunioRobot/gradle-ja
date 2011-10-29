@@ -35,7 +35,7 @@ class SamplesJavaCustomizedLayoutIntegrationTest {
     @Test
     public void canBuildAndUploadJar() {
         TestFile javaprojectDir = sample.dir
-                                                      
+
         // Build and test projects
         executer.inDirectory(javaprojectDir).withTasks('clean', 'build', 'uploadArchives').run()
 

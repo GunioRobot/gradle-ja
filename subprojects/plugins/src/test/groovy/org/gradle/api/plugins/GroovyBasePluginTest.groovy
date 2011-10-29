@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.plugins
 
 import org.gradle.api.Project
@@ -44,7 +44,7 @@ class GroovyBasePluginTest {
 
     @Test public void addsGroovyConfigurationToTheProject() {
         groovyBasePlugin.apply(project)
-        
+
         def configuration = project.configurations.getByName(GroovyBasePlugin.GROOVY_CONFIGURATION_NAME)
         assertThat(Configurations.getNames(configuration.extendsFrom, false), equalTo(toSet()))
         assertFalse(configuration.visible)
@@ -61,7 +61,7 @@ class GroovyBasePluginTest {
 
     @Test public void addsCompileTaskToNewSourceSet() {
         groovyBasePlugin.apply(project)
-        
+
         project.sourceSets.add('custom')
 
         def task = project.tasks['compileCustomGroovy']
@@ -78,7 +78,7 @@ class GroovyBasePluginTest {
         def task = project.tasks['customClasses']
         assertThat(task, dependsOn(hasItem('compileCustomGroovy')))
     }
-   
+
     @Test public void configuresAdditionalTasksDefinedByTheBuildScript() {
         groovyBasePlugin.apply(project)
 

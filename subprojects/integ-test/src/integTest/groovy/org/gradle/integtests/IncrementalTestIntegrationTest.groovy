@@ -49,7 +49,7 @@ class IncrementalTestIntegrationTest {
 
         executer.withTasks('test').run().assertTasksNotSkipped(':compileJava', ':classes', ':compileTestJava', ':testClasses', ':test')
         executer.withTasks('test').run().assertTasksNotSkipped()
-        
+
         // Change a test class
         distribution.testFile('src/test/java/Ok.java').assertIsFile().copyFrom(distribution.testFile('NewOk.java'))
 

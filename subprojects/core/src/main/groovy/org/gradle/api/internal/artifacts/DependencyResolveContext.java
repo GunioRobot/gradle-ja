@@ -18,6 +18,6 @@ package org.gradle.api.internal.artifacts;
 
 public interface DependencyResolveContext {
     boolean isTransitive();
-    
+
     void add(Object dependency);
 }

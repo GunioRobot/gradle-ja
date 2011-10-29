@@ -9,7 +9,7 @@ class CustomEventLogger extends BuildAdapter implements TaskExecutionListener {
     public void afterExecute(Task task, TaskState state) {
         println()
     }
-    
+
     public void buildFinished(BuildResult result) {
         println 'build completed'
     }

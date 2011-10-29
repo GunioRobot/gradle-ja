@@ -188,7 +188,7 @@ public class BuildProfile {
      * Get the total elapsed time (in mSec) between the start of profiling and the buildFinished event.
      * @return
      */
-    public long getElapsedTotal() { 
+    public long getElapsedTotal() {
     return buildFinished - profilingStarted;
     }
 

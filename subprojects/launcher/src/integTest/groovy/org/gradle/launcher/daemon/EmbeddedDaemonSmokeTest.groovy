@@ -29,7 +29,7 @@ import org.gradle.launcher.daemon.client.DaemonClient
 
 /**
  * Exercises the basic mechanics using an embedded daemon.
- * 
+ *
  * @todo Test stdio (what should println do in the daemon threads?)
  * @todo launching multiple embedded daemons with the same registry
  */
@@ -41,32 +41,32 @@ class EmbeddedDaemonSmokeTest extends Specification {
     def metadata = new GradleLauncherMetaData()
     def outputEventListener = LoggingServiceRegistry.newEmbeddableLogging().get(OutputEventListener)
     def client = new DaemonClient(connector, metadata, outputEventListener)
-    
+
     def "run build"() {
         given:
         def action = new ConfiguringBuildAction(distribution.gradleHomeDir, distribution.testDir, false, new ExecuteBuildAction(["echo"]))
         def parameters = new DefaultBuildActionParameters(new GradleLauncherMetaData(), new Date().time, System.properties, System.getenv(), new File("."))
-        
+
         and:
         def outputFile = distribution.testDir.file("output.txt")
-        
+
         expect:
         !outputFile.exists()
-        
+
         and:
         distribution.testDir.file("build.gradle") << """
             task echo << {
                 file("output.txt").write "Hello!"
             }
         """
-        
+
         when:
         client.execute(action, parameters)
-        
+
         then:
         outputFile.exists() && outputFile.text == "Hello!"
     }
-    
+
     def cleanup() {
         connector.daemonRegistry.stopDaemons()
     }

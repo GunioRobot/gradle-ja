@@ -197,7 +197,7 @@ class DefaultModuleRegistryTest extends Specification {
         module.implementationClasspath as List == [runtimeDep]
         module.runtimeClasspath.empty
     }
-    
+
     def "locates an external module as a JAR in the distribution image when not available on the classpath"() {
         given:
         def cl = new URLClassLoader([] as URL[])

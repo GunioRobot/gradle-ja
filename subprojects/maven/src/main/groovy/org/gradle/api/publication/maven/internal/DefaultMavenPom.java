@@ -68,7 +68,7 @@ public class DefaultMavenPom implements MavenPom {
         this.configurations = configurations;
         return this;
     }
-    
+
     public DefaultMavenPom setGroupId(String groupId) {
         getModel().setGroupId(groupId);
         return this;

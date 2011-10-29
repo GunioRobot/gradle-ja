@@ -33,7 +33,7 @@ class DefaultArtifactPomContainerTest extends Specification {
     def setup() {
         _ * pomMetaInfoProvider.mavenPomDir >> pomDir
     }
-    
+
     def addsArtifactToFirstMatchingArtifactPom() {
         File artifactFile = new File('artifact')
         Artifact artifact = artifact()

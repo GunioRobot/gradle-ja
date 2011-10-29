@@ -88,7 +88,7 @@ public class SelfResolvingDependencyResolverTest {
 
         assertThat(configuration.getFiles(Specs.SATISFIES_ALL), equalTo(toLinkedSet(file)));
     }
-    
+
     @Test
     public void addsFilesFromSelfResolvingDependenciesBeforeFilesFromResolvedConfiguration() {
         final AbstractDependency dependency = context.mock(AbstractDependency.class);

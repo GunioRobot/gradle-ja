@@ -100,7 +100,7 @@ class ApplicationPluginTest extends Specification {
         def distZipTask = project.tasks[ApplicationPlugin.TASK_DIST_ZIP_NAME]
         distZipTask.archiveName == "SuperApp.zip"
     }
-    
+
     public void "mainClassName in project delegates to main in run task"() {
         when:
         plugin.apply(project)

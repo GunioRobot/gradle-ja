@@ -81,7 +81,7 @@ public class DefaultManifestMergeSpec implements ManifestMergeSpec {
         for (Map.Entry<String, Object> mergeEntry : mergeOnlyAttributes.entrySet()) {
             mergeDetailsSet.add(getMergeDetails(section, mergeEntry.getKey(), null, mergeEntry.getValue()));
         }
-        
+
         for (DefaultManifestMergeDetails mergeDetails : mergeDetailsSet) {
             for (Action<? super ManifestMergeDetails> action : actions) {
                 action.execute(mergeDetails);
@@ -94,7 +94,7 @@ public class DefaultManifestMergeSpec implements ManifestMergeSpec {
         String value = null;
         String baseValueString = baseValue != null ? baseValue.toString() : null;
         String mergeValueString = mergeValue != null ? mergeValue.toString() : null;
-        value = mergeValueString == null ? baseValueString : mergeValueString; 
+        value = mergeValueString == null ? baseValueString : mergeValueString;
         return new DefaultManifestMergeDetails(section, key, baseValueString, mergeValueString, value);
     }
 

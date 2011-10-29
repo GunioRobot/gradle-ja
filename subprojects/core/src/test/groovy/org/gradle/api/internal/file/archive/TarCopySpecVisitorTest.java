@@ -56,7 +56,7 @@ public class TarCopySpecVisitorTest {
             will(returnValue(2));
         }});
     }
-    
+
     @Test
     public void createsTarFile() {
         final TestFile tarFile = tmpDir.getDir().file("test.tar");

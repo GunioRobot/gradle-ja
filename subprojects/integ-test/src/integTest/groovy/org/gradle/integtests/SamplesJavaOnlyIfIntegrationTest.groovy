@@ -40,7 +40,7 @@ public class SamplesJavaOnlyIfIntegrationTest {
      *
      * remove class file
      * execute dists
-     * check that it re-ran tests 
+     * check that it re-ran tests
      */
     @Test public void testOptimizedBuild() {
         TestFile javaprojectDir = sample.dir

@@ -595,7 +595,7 @@ public abstract class AbstractClassGeneratorTest {
         public String getReturnValueProperty() {
             return "value";
         }
-        
+
         public BeanWithVariousPropertyTypes setReturnValueProperty(String val) {
             return this;
         }

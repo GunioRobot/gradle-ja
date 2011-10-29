@@ -19,7 +19,7 @@ import groovy.util.Node;
 
 /**
  * Represents an entry in the Eclipse classpath.
- * 
+ *
  * @author Hans Dockter
  */
 public interface ClasspathEntry {

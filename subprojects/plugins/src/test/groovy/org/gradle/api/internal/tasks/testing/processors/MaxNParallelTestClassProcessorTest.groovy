@@ -43,7 +43,7 @@ class MaxNParallelTestClassProcessorTest extends Specification {
 
     def doesNothingWhenNoTestsProcessed() {
         startProcessor()
-        
+
         when:
         processor.stop()
 

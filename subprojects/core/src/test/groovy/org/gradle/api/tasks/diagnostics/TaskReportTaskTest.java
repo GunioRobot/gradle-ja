@@ -185,7 +185,7 @@ public class TaskReportTaskTest {
     private Task task(String name) {
         return task(name, null);
     }
-    
+
     private Task task(final String name, final String taskGroup, final Task... dependencies) {
         final Task task = context.mock(Task.class);
         context.checking(new Expectations() {{
@@ -210,7 +210,7 @@ public class TaskReportTaskTest {
                     description.appendText("compare to");
                 }
             });
-            
+
             TaskDependency dependency = context.mock(TaskDependency.class);
             allowing(task).getTaskDependencies();
             will(returnValue(dependency));

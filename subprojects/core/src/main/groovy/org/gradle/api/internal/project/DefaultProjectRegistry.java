@@ -49,7 +49,7 @@ public class DefaultProjectRegistry<T extends ProjectIdentifier> implements IPro
         }
         return project;
     }
-    
+
     private void addProjectToParentSubProjects(T project) {
         ProjectIdentifier loopProject = project.getParentIdentifier();
         while (loopProject != null) {

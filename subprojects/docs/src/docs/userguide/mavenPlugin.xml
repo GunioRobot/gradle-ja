@@ -329,7 +329,7 @@
             <sample id="customizeInstaller" dir="userguide/artifacts/maven" title="Customization of Maven installer">
                 <sourcefile file="build.gradle" snippet="customize-installer"/>
             </sample>
-            <para>In contrast to the example above we use the builder here for changing groupId and artifactId.</para> 
+            <para>In contrast to the example above we use the builder here for changing groupId and artifactId.</para>
             <section id='sub:multiple_artifacts_per_project'>
                 <title>Multiple artifacts per project</title>
                 <para>Maven can only deal with one artifact per project. This is reflected in the structure of the
@@ -368,5 +368,5 @@
             </section>
         </section>
     </section>
-    
+
 </chapter>

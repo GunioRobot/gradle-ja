@@ -54,7 +54,7 @@ class ClassDocRendererTest extends XmlSpecification {
     <para>Some custom content</para>
 </chapter>'''
     }
-    
+
     def mergesPropertyMetaDataIntoPropertiesSection() {
         def content = parse('''
             <chapter>

@@ -51,7 +51,7 @@ gradle --gui
         </para>
         <para>Task Treeは、すべてのプロジェクトとタスクの階層構造を表示します。タスクをダブルクリックすると、そのタスクが実行されます。</para>
         <para role="original">
-            There is also a filter so that uncommon tasks can be hidden. You can toggle the filter via the Filter button. 
+            There is also a filter so that uncommon tasks can be hidden. You can toggle the filter via the Filter button.
             Editing the filter allows you to configure which tasks and projects are shown. Hidden tasks show up in red.
             Note: newly created tasks will show up by default (versus being hidden by default).
         </para>
@@ -73,7 +73,7 @@ gradle --gui
                 Note: this requires Java 1.6 or higher and requires that you have .gradle files associated in your OS.
                 </para>
                 <para>build.gradleファイルの編集。注意: この機能を使うには、1.6以上のバージョンのJavaが必要です。また、OS上で.gradleファイルの関連づけを設定しなければなりません。</para></listitem>
-        </itemizedlist>        
+        </itemizedlist>
     </section>
     <section>
         <title>Favorites（お気に入り）<phrase role="original">Favorites</phrase></title>

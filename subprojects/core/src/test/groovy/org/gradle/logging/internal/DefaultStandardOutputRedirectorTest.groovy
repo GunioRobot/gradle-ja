@@ -40,7 +40,7 @@ class DefaultStandardOutputRedirectorTest extends Specification {
         System.out == outputs.stdOutPrintStream
         System.err == outputs.stdErrPrintStream
     }
-    
+
     def startAndStopRedirectsStdOut() {
         when:
         redirector.redirectStandardOutputTo(stdOutListener)
@@ -70,7 +70,7 @@ class DefaultStandardOutputRedirectorTest extends Specification {
         System.out == outputs.stdOutPrintStream
         System.err == outputs.stdErrPrintStream
     }
-    
+
     def canRedirectMultipleTimes() {
         when:
         redirector.redirectStandardErrorTo(stdErrListener)

@@ -2,7 +2,7 @@ header {
     package org.gradle;
 }
 
-class CalculatorLexer extends Lexer; 
+class CalculatorLexer extends Lexer;
 
 NUMBER	:	('0'..'9')+;
 PLUS	:	'+';

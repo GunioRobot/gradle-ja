@@ -36,7 +36,7 @@ public class DiffUtil {
             changeListener.removed(t);
         }
     }
-    
+
     public static <K, V> void diff(Map<K, V> newMap, Map<K, V> oldMap, ChangeListener<? super Map.Entry<K, V>> changeListener) {
         Map<K, V> added = new HashMap<K, V>(newMap);
         added.keySet().removeAll(oldMap.keySet());

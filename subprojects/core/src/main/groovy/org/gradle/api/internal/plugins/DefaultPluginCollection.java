@@ -30,7 +30,7 @@ public class DefaultPluginCollection<T extends Plugin> extends DefaultDomainObje
     public DefaultPluginCollection(Class<T> type) {
         super(type);
     }
-    
+
     protected DefaultPluginCollection(DefaultPluginCollection<? super T> collection, CollectionFilter<T> filter) {
         super(collection, filter);
     }

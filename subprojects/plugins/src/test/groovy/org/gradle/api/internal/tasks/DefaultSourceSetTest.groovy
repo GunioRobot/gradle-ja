@@ -116,7 +116,7 @@ class DefaultSourceSetTest {
         sourceSet.resources { srcDir 'src/resources' }
         assertThat(sourceSet.resources.srcDirs, equalTo([new File('src/resources').canonicalFile] as Set))
     }
-    
+
     @Test public void canConfigureJavaSource() {
         SourceSet sourceSet = sourceSet('main')
         sourceSet.java { srcDir 'src/java' }

@@ -202,7 +202,7 @@
             <para role="original">To publish the JAR file, run <userinput>gradle uploadArchives</userinput>.</para>
             <para>JARファイルを公開するには、<userinput>gradle uploadArchives</userinput>を実行してください。</para>
         </section>
-        
+
 		<section>
             <title>Eclipseプロジェクトの作成<phrase role="original">Creating an Eclipse project</phrase></title>
             <para role="original">To import your project into Eclipse, you need to add another plugin to your build file:</para>

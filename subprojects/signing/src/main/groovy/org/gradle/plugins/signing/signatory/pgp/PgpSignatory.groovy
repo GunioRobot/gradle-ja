@@ -29,16 +29,16 @@ import java.security.Security
 import org.gradle.plugins.signing.signatory.SignatorySupport
 
 class PgpSignatory extends SignatorySupport {
-    
+
     final String name
     final private String password
     final private PGPSecretKey secretKey
     final private PGPPrivateKey privateKey
-    
+
     PgpSignatory(String name, PGPSecretKey secretKey, String password) {
         // ok to call multiple times, will be ignored
         Security.addProvider(new BouncyCastleProvider())
-        
+
         this.name = name
         this.password = password
         this.secretKey = secretKey
@@ -48,21 +48,21 @@ class PgpSignatory extends SignatorySupport {
     PgpKeyId getKeyId() {
         new PgpKeyId(secretKey.keyID)
     }
-    
+
     PGPSignatureGenerator createSignatureGenerator() {
         def generator = new PGPSignatureGenerator(secretKey.publicKey.algorithm, PGPUtil.SHA1, BouncyCastleProvider.PROVIDER_NAME)
         generator.initSign(PGPSignature.BINARY_DOCUMENT, privateKey)
         generator
     }
-    
+
     /**
      * Exhausts {@code toSign}, and writes the signature to {@code signatureDestination}.
-     * 
+     *
      * The caller is responsible for closing the streams, though the output WILL be flushed.
      */
     void sign(InputStream toSign, OutputStream signatureDestination) {
         def generator = createSignatureGenerator()
-        
+
         def buffer = new byte[1024]
         def read = toSign.read(buffer)
         while (read > 0) {
@@ -76,5 +76,5 @@ class PgpSignatory extends SignatorySupport {
         signature.encode(bufferedOutput)
         bufferedOutput.flush()
     }
-    
+
 }

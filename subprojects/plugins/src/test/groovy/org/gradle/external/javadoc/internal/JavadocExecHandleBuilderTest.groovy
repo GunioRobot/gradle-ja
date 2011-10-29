@@ -44,7 +44,7 @@ public class JavadocExecHandleBuilderTest extends Specification {
     def testCheckCustomExecutable() {
         String executable = "somepath"
         javadocExecHandleBuilder.executable = executable
-        
+
         expect:
         javadocExecHandleBuilder.execHandle.executable == executable
     }

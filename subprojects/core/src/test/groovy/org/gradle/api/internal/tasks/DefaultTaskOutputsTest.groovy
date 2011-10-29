@@ -51,7 +51,7 @@ class DefaultTaskOutputsTest extends Specification {
         then:
         outputs.hasOutput
     }
-    
+
     public void hasOutputsWhenNonEmptyOutputFilesRegistered() {
         when:
         outputs.files('a')
@@ -67,7 +67,7 @@ class DefaultTaskOutputsTest extends Specification {
         then:
         outputs.hasOutput
     }
-    
+
     public void canSpecifyUpToDatePredicateUsingClosure() {
         boolean upToDate = false
 
@@ -98,7 +98,7 @@ class DefaultTaskOutputsTest extends Specification {
         f == outputFiles
         1 * history.outputFiles >> outputFiles
     }
-    
+
     public void getPreviousFilesFailsWhenNoTaskHistoryAvailable() {
         when:
         outputs.previousFiles

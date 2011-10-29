@@ -22,7 +22,7 @@ public interface ColorMap {
     Color getColourFor(StyledTextOutput.Style style);
 
     Color getStatusBarColor();
-    
+
     interface Color {
         void on(Ansi ansi);
 

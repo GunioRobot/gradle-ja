@@ -81,7 +81,7 @@ public class BuildFileProjectSpecTest {
     @Test
     public void cannotSelectProjectWhenBuildFileIsNotAFile() {
         file.delete();
-        
+
         try {
             spec.containsProject(registry());
             fail();

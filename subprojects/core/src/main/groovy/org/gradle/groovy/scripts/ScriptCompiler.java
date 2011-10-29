@@ -33,7 +33,7 @@ public interface ScriptCompiler {
     ScriptCompiler setTransformer(Transformer transformer);
 
     /**
-     * Compiles the script into a {@code Script} object of the given type. 
+     * Compiles the script into a {@code Script} object of the given type.
      *
      * @returns a {@code ScriptRunner} for the script.
      * @throws ScriptCompilationException On compilation failure.

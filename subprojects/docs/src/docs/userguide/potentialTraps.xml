@@ -35,7 +35,7 @@
     </section>
     <section id='sec:configuration_and_execution_phase'>
         <title>Configuration and execution phase</title>
-        <para>It is important to keep in mind that Gradle has a distinct configuration and execution phase (see 
+        <para>It is important to keep in mind that Gradle has a distinct configuration and execution phase (see
             <xref linkend='build_lifecycle'/>).
         </para>
         <sample id="mkdirTrap" dir="userguide/tutorial/mkdirTrap" title="Distinct configuration and execution phase">

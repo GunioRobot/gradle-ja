@@ -52,7 +52,7 @@ public class TaskReportRenderer extends TextReportRenderer {
     public void showDetail(boolean detail) {
         this.detail = detail;
     }
-    
+
     /**
      * Writes the default task names for the current project.
      *

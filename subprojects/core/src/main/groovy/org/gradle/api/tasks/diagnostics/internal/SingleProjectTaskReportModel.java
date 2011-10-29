@@ -88,7 +88,7 @@ public class SingleProjectTaskReportModel implements TaskReportModel {
         }
         return false;
     }
-    
+
     public Set<String> getGroups() {
         return groups.keySet();
     }

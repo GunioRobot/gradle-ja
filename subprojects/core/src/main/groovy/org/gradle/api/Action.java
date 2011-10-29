@@ -18,7 +18,7 @@ package org.gradle.api;
 /**
  * Performs some action against objects of type T.
  *
- * @param <T> The type of object which this action accepts. 
+ * @param <T> The type of object which this action accepts.
  */
 public interface Action<T> {
     /**

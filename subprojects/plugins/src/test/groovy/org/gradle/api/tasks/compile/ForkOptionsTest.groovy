@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.tasks.compile
 
 import static org.junit.Assert.*
@@ -25,7 +25,7 @@ import org.junit.Test;
  */
 class ForkOptionsTest {
     static final Map PROPS = [executable: 'executable', memoryInitialSize: 'memoryInitialSize', memoryMaximumSize: 'memoryMaximumSize', tempDir: 'tempdir']
-    
+
     ForkOptions forkOptions
 
     @Before public void setUp()  {

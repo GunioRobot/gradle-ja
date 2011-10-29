@@ -43,7 +43,7 @@ public class DaemonCommandExecution {
         this.connection = connection;
         this.command = command;
         this.daemonStateCoordinator = daemonStateCoordinator;
-        
+
         this.actions = new LinkedList<DaemonCommandAction>();
         for (DaemonCommandAction action : actions) {
             this.actions.add(action);

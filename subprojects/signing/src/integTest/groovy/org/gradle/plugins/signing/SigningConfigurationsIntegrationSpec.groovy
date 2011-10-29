@@ -16,14 +16,14 @@
 package org.gradle.plugins.signing
 
 class SigningConfigurationsIntegrationSpec extends SigningIntegrationSpec {
-    
+
     def "signing configurations"() {
         given:
         buildFile << """
             configurations {
                 meta
             }
-            
+
             signing {
                 sign configurations.archives, configurations.meta
             }
@@ -31,13 +31,13 @@ class SigningConfigurationsIntegrationSpec extends SigningIntegrationSpec {
             ${keyInfo.addAsPropertiesScript()}
             ${getJavadocAndSourceJarsScript("meta")}
         """
-        
+
         when:
         run "buildSignatures"
-        
+
         then:
         executedAndNotSkipped ":signArchives", ":signMeta"
-        
+
         and:
         file("build", "libs", "sign.jar.asc").text
         file("build", "libs", "sign-javadoc.jar.asc").text

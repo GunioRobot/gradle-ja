@@ -24,7 +24,7 @@ import org.apache.maven.settings.Settings;
 public class CustomInstallTask extends InstallTask implements CustomInstallDeployTaskSupport {
     @Override
     public synchronized Settings getSettings() {
-        return super.getSettings();   
+        return super.getSettings();
     }
 
     @Override

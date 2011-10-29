@@ -95,7 +95,7 @@
             </footnote>
             ここで設定する環境変数名にはあるパターンがあり、<literal>ORG_GRADLE_PROJECT_<replaceable>propertyName</replaceable>=somevalue</literal>という環境変数を設定した場合<literal>propertyName</literal>というプロパティがプロジェクトに設定されます。もし将来的にCIサーバーがGradleを直接サポートするようになったときには、CIサーバーはGradleのmainメソッドを呼び出してビルドを開始するかもしれません。そのときのために、Gradleはシステムプロパティを使って同様のメカニズムを実装しています。パターンが<literal>org.gradle.project.<replaceable>propertyName</replaceable></literal>となっていること以外は環境変数の場合と同じです。</para>
         <para role="original">With the <filename>gradle.properties</filename> files you can also set system properties. If a property
-            in such a file has the prefix <literal>systemProp.</literal> the property and its value are added to the 
+            in such a file has the prefix <literal>systemProp.</literal> the property and its value are added to the
             system properties, without the prefix.
         </para>
         <para><filename>gradle.properties</filename>ファイルでもシステムプロパティを設定することができます。ファイル内でプレフィックスに<literal>systemProp</literal>をつけてプロパティを設定することで、プレフィックス部分をのぞいたプロパティ名でシステムプロパティに追加されます。</para>
@@ -136,7 +136,7 @@ systemProp.http.proxyHost=www.somehost.org
 systemProp.http.proxyPort=8080
 systemProp.http.proxyUser=userid
 systemProp.http.proxyPassword=password
-systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost	
+systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost
 ]]></programlisting>
         </example>
         <para role="original">We could not find a good overview for all possible proxy settings. One place to look are the constants

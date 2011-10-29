@@ -59,7 +59,7 @@ class HelperUtil {
     static <T extends Task> T createTask(Class<T> type) {
         return createTask(type, createRootProject())
     }
-    
+
     static <T extends Task> T createTask(Class<T> type, ProjectInternal project) {
         return createTask(type, project, 'name')
     }
@@ -134,7 +134,7 @@ class HelperUtil {
     static Object call(String text, Object params) {
         toClosure(text).call(params)
     }
-    
+
     static Closure toClosure(String text) {
         return new GroovyShell().evaluate("return " + text)
     }

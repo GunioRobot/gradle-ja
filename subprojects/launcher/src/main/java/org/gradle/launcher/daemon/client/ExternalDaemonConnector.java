@@ -34,10 +34,10 @@ import java.util.Set;
  */
 public class ExternalDaemonConnector extends AbstractDaemonConnector<PersistentDaemonRegistry> {
     public static final int DEFAULT_IDLE_TIMEOUT = 3 * 60 * 60 * 1000;
-    
+
     private final File userHomeDir;
     private final int idleTimeout;
-    
+
     public ExternalDaemonConnector(File userHomeDir) {
         this(userHomeDir, DEFAULT_IDLE_TIMEOUT, DEFAULT_CONNECT_TIMEOUT);
     }
@@ -59,7 +59,7 @@ public class ExternalDaemonConnector extends AbstractDaemonConnector<PersistentD
         if (bootstrapClasspath.isEmpty()) {
             throw new IllegalStateException("Unable to construct a bootstrap classpath when starting the daemon");
         }
-        
+
         List<String> daemonArgs = new ArrayList<String>();
         daemonArgs.add(Jvm.current().getJavaExecutable().getAbsolutePath());
         daemonArgs.add("-Xmx1024m");

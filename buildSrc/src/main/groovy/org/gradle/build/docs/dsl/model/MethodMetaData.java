@@ -59,7 +59,7 @@ public class MethodMetaData implements Serializable, LanguageElement, TypeContai
         LinkedList<ClassMetaData> queue = new LinkedList<ClassMetaData>();
         queue.add(ownerClass.getSuperClass());
         queue.addAll(ownerClass.getInterfaces());
-        
+
         String overrideSignature = getOverrideSignature();
 
         while (!queue.isEmpty()) {
@@ -88,7 +88,7 @@ public class MethodMetaData implements Serializable, LanguageElement, TypeContai
         parameters.add(param);
         return param;
     }
-    
+
     public String getRawCommentText() {
         return rawCommentText;
     }

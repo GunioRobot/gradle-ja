@@ -42,7 +42,7 @@ class OsgiPluginConventionTest extends Specification {
 
     def osgiManifestWithClosure() {
         OsgiManifest osgiManifest = osgiPluginConvention.osgiManifest {
-            description = 'myDescription'    
+            description = 'myDescription'
         }
 
         expect:

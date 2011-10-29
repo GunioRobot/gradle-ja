@@ -50,7 +50,7 @@ public class CompileTest extends AbstractCompileTest {
 
         GFileUtils.touch(new File(srcDir, "incl/file.java"));
     }
-           
+
     public ConventionTask getTask() {
         return compile;
     }

@@ -27,6 +27,6 @@ public interface Binary extends Named {
     CompileSpec getSpec();
 
     Project getProject();
-    
+
     DomainObjectSet<SourceSet> getSourceSets();
 }

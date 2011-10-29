@@ -36,12 +36,12 @@ public class CollectionEventRegister<T> {
 
     public Action<T> getAddAction() {
         return addActions;
-    }   
-    
+    }
+
     public Action<T> getRemoveAction() {
         return removeActions;
     }
-    
+
     public Action<? super T> registerAddAction(Action<? super T> addAction) {
         this.addActions.add(addAction);
         return addAction;
@@ -55,7 +55,7 @@ public class CollectionEventRegister<T> {
     public <S extends T> CollectionEventRegister<S> filtered(CollectionFilter<S> filter) {
         return new FilteringCollectionEventRegister<S>(filter, (ActionBroadcast)addActions, (ActionBroadcast)removeActions);
     }
-    
+
 
     private static class FilteringCollectionEventRegister<S> extends CollectionEventRegister<S> {
         private final CollectionFilter<S> filter;

@@ -17,7 +17,7 @@ package org.gradle.api;
 
 /**
  * This exceptions is thrown, if a dependency is declared with a ilegal notation.
- * 
+ *
  * @author Hans Dockter
  */
 public class IllegalDependencyNotation extends GradleException {

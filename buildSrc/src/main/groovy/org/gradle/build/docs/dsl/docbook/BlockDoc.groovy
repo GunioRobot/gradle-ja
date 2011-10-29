@@ -54,7 +54,7 @@ class BlockDoc {
     List<Element> getComment() {
         return blockMethod.comment
     }
-    
+
     PropertyDoc getBlockProperty() {
         return blockProperty
     }

@@ -33,7 +33,7 @@ class SourceTaskTest extends AbstractTaskTest {
         super.setUp()
         task = createTask(SourceTask.class)
     }
-    
+
     @Test
     public void canAppendToSource() {
         File file1 = tmpDir.file('file1.txt').createFile()

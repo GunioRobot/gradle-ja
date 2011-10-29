@@ -57,7 +57,7 @@ public class CommandLineParser {
     private boolean allowUnknownOptions;
     OutputStream deprecationPrinter = System.out;
 
-    
+
     /**
      * Parses the given command-line.
      *
@@ -413,7 +413,7 @@ public class CommandLineParser {
             if (getHasArgument() && values.isEmpty()) {
                 throw new CommandLineArgumentException(String.format("No argument was provided for command-line option '%s'.", optionString));
             }
-            
+
             ParsedCommandLineOption parsedOption = commandLine.addOption(optionString.option, option);
             if (values.size() + parsedOption.getValues().size() > 1 && !option.getAllowsMultipleArguments()) {
                 throw new CommandLineArgumentException(String.format("Multiple arguments were provided for command-line option '%s'.", optionString));

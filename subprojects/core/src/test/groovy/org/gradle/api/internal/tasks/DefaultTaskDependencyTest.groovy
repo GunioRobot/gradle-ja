@@ -125,7 +125,7 @@ public class DefaultTaskDependencyTest {
             one(callable).call()
             will(returnValue(otherTask))
         }
-        
+
         assertThat(dependency.getDependencies(task), equalTo(toSet(otherTask)));
     }
 
@@ -158,7 +158,7 @@ public class DefaultTaskDependencyTest {
             assertThat(e.cause.message, equalTo("Cannot convert $dep to a task." as String))
         }
     }
-    
+
     @Test
     public void resolvesOtherObjects() {
 

@@ -163,7 +163,7 @@ public class DefaultServiceRegistryTest {
         assertThat(registry.newInstance(Long.class), equalTo(12L));
         assertThat(registry.newInstance(Long.class), equalTo(22L));
     }
-    
+
     @Test
     public void throwsExceptionForUnknownFactory() {
         try {
@@ -244,7 +244,7 @@ public class DefaultServiceRegistryTest {
         assertThat(registry.get(String.class), equalTo("12"));
         assertThat(registry.get(Integer.class), equalTo(12));
     }
-    
+
     @Test
     public void closeInvokesCloseMethodOnEachService() {
         final TestCloseService service = context.mock(TestCloseService.class);

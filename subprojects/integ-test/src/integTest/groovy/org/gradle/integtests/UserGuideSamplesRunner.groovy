@@ -175,7 +175,7 @@ class UserGuideSamplesRunner extends Runner {
         if (expected == 'Total time: 1 secs') {
             return actual.matches('Total time: .+ secs')
         }
-        
+
         // Normalise default object toString() values
         actual = actual.replaceAll('(\\w+(\\.\\w+)*)@\\p{XDigit}+', '$1@12345')
         // Normalise $samplesDir

@@ -34,7 +34,7 @@ class SamplesJavaProjectWithIntTestsIntegrationTest {
     @Test
     public void canRunIntegrationTests() {
         TestFile javaprojectDir = sample.dir
-        
+
         // Run int tests
         executer.inDirectory(javaprojectDir).withTasks('clean', 'integrationTest').run()
 

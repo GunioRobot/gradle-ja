@@ -210,7 +210,7 @@ public class ForkingGradleExecuter extends AbstractGradleExecuter {
         public List<String> getExecutedTasks() {
             return grepTasks(taskPattern);
         }
-        
+
         public ExecutionResult assertTasksExecuted(String... taskPaths) {
             List<String> expectedTasks = Arrays.asList(taskPaths);
             assertThat(String.format("Expected tasks %s not found in process output:%n%s", expectedTasks, getOutput()), getExecutedTasks(), equalTo(expectedTasks));
@@ -220,7 +220,7 @@ public class ForkingGradleExecuter extends AbstractGradleExecuter {
         public Set<String> getSkippedTasks() {
             return new HashSet(grepTasks(skippedTaskPattern));
         }
-        
+
         public ExecutionResult assertTasksSkipped(String... taskPaths) {
             Set<String> expectedTasks = new HashSet<String>(Arrays.asList(taskPaths));
             assertThat(String.format("Expected skipped tasks %s not found in process output:%n%s", expectedTasks, getOutput()), getSkippedTasks(), equalTo(expectedTasks));

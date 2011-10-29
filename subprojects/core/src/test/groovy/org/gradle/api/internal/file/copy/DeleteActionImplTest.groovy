@@ -30,7 +30,7 @@ class DeleteActionImplTest extends Specification {
     TemporaryFolder tmpDir = new TemporaryFolder();
 
     FileResolver fileResolver = new BaseDirFileResolver(tmpDir.getDir())
-    
+
     DeleteActionImpl delete = new DeleteActionImpl(fileResolver);
 
     def deletesDirectory() {

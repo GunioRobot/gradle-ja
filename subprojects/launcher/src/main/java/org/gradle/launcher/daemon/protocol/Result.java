@@ -36,7 +36,7 @@ abstract public class Result<T> implements Serializable {
     public T getValue() {
         return value;
     }
-    
+
     @Override
     public String toString() {
         return String.format("DaemonCommandResult[type=%s, value=%s]", getClass().getSimpleName(), getValue());

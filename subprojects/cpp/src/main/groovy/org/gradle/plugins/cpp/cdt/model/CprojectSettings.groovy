@@ -87,7 +87,7 @@ class CprojectSettings {
         }
 
         def extension = binary.spec.extension ?: ""
-        def type 
+        def type
         if (binary instanceof Library) {
             type = "org.eclipse.cdt.build.core.buildArtefactType.sharedLib"
         } else if (binary instanceof Executable) {
@@ -95,7 +95,7 @@ class CprojectSettings {
         } else {
             throw new IllegalStateException("The binary $binary is of a type that we don't know about")
         }
-        
+
         descriptor.configurations.each { conf ->
             conf.@buildArtefactType = type
             conf.@artifactExtension = extension

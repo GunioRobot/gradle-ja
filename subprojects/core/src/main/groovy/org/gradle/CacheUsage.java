@@ -19,7 +19,7 @@ import org.gradle.api.InvalidUserDataException;
 
 /**
  * <p>{@code CacheUsage} specifies how compiled scripts should be cached.</p>
- * 
+ *
  * @author Hans Dockter
  */
 public enum CacheUsage {

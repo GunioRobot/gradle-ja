@@ -44,7 +44,7 @@ public class DefaultExcludeRuleConverterTest {
                 Matchers.equalTo(PatternMatcher.ANY_EXPRESSION));
         assertThat(ivyExcludeRule.getId().getExt(),
                 Matchers.equalTo(PatternMatcher.ANY_EXPRESSION));
-        assertThat(ivyExcludeRule.getId().getType(), 
+        assertThat(ivyExcludeRule.getId().getType(),
                 Matchers.equalTo(PatternMatcher.ANY_EXPRESSION));
         assertThat((ExactPatternMatcher) ivyExcludeRule.getMatcher(),
                 Matchers.equalTo(ExactPatternMatcher.INSTANCE));

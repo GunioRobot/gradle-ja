@@ -136,7 +136,7 @@ class PrintStreamLoggingSystemTest extends Specification {
         original.toString() == ''
         0 * listener._
     }
-    
+
     def restoreSetsLogLevelToTheLevelWhenSnapshotTaken() {
         loggingSystem.on(LogLevel.WARN)
         def snapshot = loggingSystem.snapshot()

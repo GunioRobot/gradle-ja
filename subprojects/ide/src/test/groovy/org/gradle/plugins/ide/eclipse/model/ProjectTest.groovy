@@ -27,7 +27,7 @@ import spock.lang.Specification
 public class ProjectTest extends Specification {
     def static final CUSTOM_REFERENCED_PROJECTS = ['refProject'] as LinkedHashSet
     def static final CUSTOM_BUILD_COMMANDS = [new BuildCommand('org.eclipse.jdt.core.scalabuilder', [climate: 'cold'])]
-    def static final CUSTOM_NATURES = ['org.eclipse.jdt.core.scalanature'] 
+    def static final CUSTOM_NATURES = ['org.eclipse.jdt.core.scalanature']
     def static final CUSTOM_LINKED_RESOURCES = [new Link('somename', 'sometype', 'somelocation', '')] as Set
 
     @Rule

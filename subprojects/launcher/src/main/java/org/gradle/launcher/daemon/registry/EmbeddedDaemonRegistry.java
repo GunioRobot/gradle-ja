@@ -118,7 +118,7 @@ public class EmbeddedDaemonRegistry implements DaemonRegistry {
             daemonsLock.unlock();
         }
     }
-    
+
     public void startDaemon(Daemon daemon) {
         daemonsLock.lock();
         try {
@@ -132,7 +132,7 @@ public class EmbeddedDaemonRegistry implements DaemonRegistry {
 
     public void stopDaemons() {
         List<Daemon> daemonsToStop;
-        
+
         daemonsLock.lock();
         try {
             daemonsToStop = new ArrayList(daemons);
@@ -140,7 +140,7 @@ public class EmbeddedDaemonRegistry implements DaemonRegistry {
         } finally {
             daemonsLock.unlock();
         }
-        
+
         new CompositeStoppable(daemonsToStop).stop();
     }
 }

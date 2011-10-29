@@ -37,7 +37,7 @@ public class DefaultBinary implements Binary {
     private final CompilerRegistry compilers;
     private final CompileSpec spec;
     private final DomainObjectSet<SourceSet> sourceSets;
-    
+
 
     public DefaultBinary(String name, ProjectInternal project) {
         this.name = name;
@@ -62,7 +62,7 @@ public class DefaultBinary implements Binary {
     public DomainObjectSet<SourceSet> getSourceSets() {
         return sourceSets;
     }
-    
+
     public CompileSpec spec(Closure closure) {
         return ConfigureUtil.configure(closure, spec);
     }

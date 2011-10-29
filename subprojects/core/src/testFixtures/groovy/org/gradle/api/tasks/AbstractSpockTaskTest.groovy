@@ -352,7 +352,7 @@ public abstract class AbstractSpockTaskTest extends Specification {
         Task task2 = Mock()
         TaskDependency dependencyMock = Mock()
         getTask().dependsOn(dependencyMock)
-        dependencyMock.getDependencies(getTask()) >> [task1, task2] 
+        dependencyMock.getDependencies(getTask()) >> [task1, task2]
 
         when:
         task1.getDidWork() >> false

@@ -94,7 +94,7 @@ public class PathAssemblerTest {
     private File file(String path) {
         return new File(path);
     }
-    
+
     private String currentDirPath() {
         return System.getProperty("user.dir");
     }

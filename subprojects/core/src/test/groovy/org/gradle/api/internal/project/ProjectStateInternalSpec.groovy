@@ -19,7 +19,7 @@ import spock.lang.*
 import org.gradle.util.ConfigureUtil
 
 class ProjectStateInternalSpec extends Specification {
-	
+
 	def "to string representation"() {
 		expect:
 		stateString {} == "NOT EXECUTED"
@@ -27,12 +27,12 @@ class ProjectStateInternalSpec extends Specification {
 		stateString { executed() } == "EXECUTED"
 		stateString { executed(new Error("bang")) } == "FAILED (bang)"
 	}
-	
+
 	String stateString(Closure closure) {
 		def state = ConfigureUtil.configure(closure, new ProjectStateInternal())
 		def matcher = state.toString() =~ /^project state '(.*?)'$/
 		assert matcher
 		matcher[0][1]
 	}
-	
+
 }

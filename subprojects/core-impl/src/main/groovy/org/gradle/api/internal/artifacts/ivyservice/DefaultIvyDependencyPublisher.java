@@ -56,6 +56,6 @@ public class DefaultIvyDependencyPublisher implements IvyDependencyPublisher {
             }
         } catch (IOException e) {
             throw new UncheckedIOException(e);
-        } 
+        }
     }
 }

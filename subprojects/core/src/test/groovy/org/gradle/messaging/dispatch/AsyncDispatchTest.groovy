@@ -196,7 +196,7 @@ public class AsyncDispatchTest extends MultithreadedTestCase {
             assertThat(e.message, equalTo('Cannot wait for messages to be dispatched, as there are no dispatch threads running.'))
         }
     }
-    
+
     @Test
     public void cannotDispatchMessagesAfterStop() {
         dispatch.stop()

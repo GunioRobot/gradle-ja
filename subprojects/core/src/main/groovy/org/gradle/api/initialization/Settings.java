@@ -169,7 +169,7 @@ public interface Settings {
 
     /**
      * Returns the {@link Gradle} instance for the current build.
-     * 
+     *
      * @return The Gradle instance. Never returns null.
      */
     Gradle getGradle();

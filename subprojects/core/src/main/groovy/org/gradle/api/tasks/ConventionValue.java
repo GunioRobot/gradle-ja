@@ -27,9 +27,9 @@ import org.gradle.api.plugins.Convention;
 public interface ConventionValue {
     /**
      * Returns some object.
-     * 
+     *
      * @param convention The convention object belonging to the task's project
-     * @param conventionAwareObject The convention aware object  
+     * @param conventionAwareObject The convention aware object
      */
     Object getValue(Convention convention, IConventionAware conventionAwareObject);
 }

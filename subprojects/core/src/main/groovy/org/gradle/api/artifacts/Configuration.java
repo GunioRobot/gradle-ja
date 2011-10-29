@@ -57,7 +57,7 @@ public interface Configuration extends FileCollection {
             return c.getName();
         }
     }
-    
+
     /**
      * Returns true if this is a visible configuration. A visible configuration is usable outside the project it belongs
      * to. The default value is true.
@@ -271,7 +271,7 @@ public interface Configuration extends FileCollection {
 
     /**
      * <p>Gets the set of dependencies of type T directly contained in this configuration (ignoring superconfigurations).</p>
-     * 
+     *
      * <p>The returned set is live, in that any future dependencies added to this configuration that match the type will appear in the returned set.</p>
      *
      * @param type the dependency type
@@ -286,7 +286,7 @@ public interface Configuration extends FileCollection {
      * Gets the set of dependencies of type T for this configuration including those contributed by superconfigurations.
      *
      * <p>The returned set is live, in that any future dependencies added to this configuration that match the type will appear in the returned set.</p>
-     * 
+     *
      * @param type the dependency type
      * @param <T> the dependency type
      * @return The (read-only) set.
@@ -306,14 +306,14 @@ public interface Configuration extends FileCollection {
 
     /**
      * Returns the artifacts of this configuration excluding the artifacts of extended configurations.
-     * 
+     *
      * @return The set.
      */
     PublishArtifactSet getArtifacts();
 
     /**
      * Returns the artifacts of this configuration including the artifacts of extended configurations.
-     * 
+     *
      * @return The (read-only) set.
      */
     PublishArtifactSet getAllArtifacts();

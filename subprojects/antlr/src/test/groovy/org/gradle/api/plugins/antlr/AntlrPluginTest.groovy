@@ -42,7 +42,7 @@ class AntlrPluginTest extends Specification {
         def custom = project.sourceSets.custom
         custom.antlr.srcDirs == [project.file('src/custom/antlr')] as Set
     }
-    
+
     def addsTaskForEachSourceSet() {
         when:
         plugin.apply(project)

@@ -19,7 +19,7 @@ package org.gradle.openapi.external.foundation;
  * This represents an execution or refresh request sent to Gradle. Execution requests are
  * just Gradle commands (what would be the command line arguments). A refresh request is
  * what updates the task tree.
- * 
+ *
  * This is a mirror of Request inside Gradle, but this is meant to aid backward and forward compatibility by shielding you
  * from direct changes within gradle.
  *

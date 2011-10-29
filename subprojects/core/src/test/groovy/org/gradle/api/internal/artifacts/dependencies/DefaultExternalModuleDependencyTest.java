@@ -75,7 +75,7 @@ public class DefaultExternalModuleDependencyTest extends AbstractModuleDependenc
     public void initWithNullNameShouldThrowInvalidUserDataEx() {
         new DefaultExternalModuleDependency(TEST_GROUP, null, TEST_VERSION);
     }
-    
+
     @Test
     public void contentEqualsWithEqualDependencies() {
         DefaultExternalModuleDependency dependency1 = createModuleDependency();

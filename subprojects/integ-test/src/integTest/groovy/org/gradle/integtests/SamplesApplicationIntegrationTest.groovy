@@ -57,7 +57,7 @@ class SamplesApplicationIntegrationTest extends Specification {
 
         checkApplicationImage(installDir.file('application-1.0.2'))
     }
-    
+
     private void checkApplicationImage(TestFile installDir) {
         installDir.file('bin/application').assertIsFile()
         installDir.file('bin/application.bat').assertIsFile()

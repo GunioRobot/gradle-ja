@@ -63,7 +63,7 @@ public class DefaultDependencyFactoryTest {
     @Test
     public void createDependencyWithDependencyObject() {
         final Dependency dependencyDummy = context.mock(Dependency.class);
-        assertSame(dependencyDummy, dependencyFactory.createDependency(dependencyDummy));    
+        assertSame(dependencyDummy, dependencyFactory.createDependency(dependencyDummy));
     }
 
     @Test

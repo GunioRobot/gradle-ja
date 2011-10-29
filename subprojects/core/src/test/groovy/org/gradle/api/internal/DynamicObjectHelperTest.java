@@ -67,7 +67,7 @@ public class DynamicObjectHelperTest {
             assertThat(e.getMessage(), equalTo("Cannot set the value of read-only property 'readOnlyProperty' on <bean>."));
         }
     }
-    
+
     @Test
     public void canSetWriteOnlyClassProperty() {
         Bean bean = new Bean();
@@ -138,7 +138,7 @@ public class DynamicObjectHelperTest {
     public void canGetButNotSetPropertiesOnJavaObjectFromGroovy() {
         DynamicObjectHelperTestHelper.assertCanGetProperties(new Bean());
     }
-    
+
     @Test
     public void canGetAndSetPropertiesOnGroovyObjectFromGroovy() {
         DynamicObjectHelperTestHelper.assertCanGetAndSetProperties(new GroovyBean());
@@ -269,7 +269,7 @@ public class DynamicObjectHelperTest {
 
         assertThat(otherObject.getProperty("otherObject"), equalTo((Object) "new value"));
     }
-    
+
     @Test
     public void classPropertyTakesPrecedenceOverAdditionalProperty() {
         Bean bean = new Bean();
@@ -446,7 +446,7 @@ public class DynamicObjectHelperTest {
         Bean bean = new Bean();
 
         assertFalse(bean.hasMethod("parentMethod", "a", "b"));
-        
+
         bean.setParent(parent);
 
         assertTrue(bean.hasMethod("parentMethod", "a", "b"));
@@ -486,7 +486,7 @@ public class DynamicObjectHelperTest {
         bean.setProperty("someMethod", HelperUtil.toClosure("{ param -> param.toLowerCase() }"));
         assertThat(bean.invokeMethod("someMethod", "Param"), equalTo((Object) "param"));
     }
-    
+
     @Test
     public void invokeMethodFailsForUnknownMethod() {
         Bean bean = new Bean();
@@ -718,7 +718,7 @@ public class DynamicObjectHelperTest {
         DynamicObject inherited = bean.getInheritable();
         assertFalse(inherited.hasMethod("javaMethod", "a", "b"));
     }
-    
+
     public static class Bean implements DynamicObject {
         private String readWriteProperty;
         private String readOnlyProperty;
@@ -778,7 +778,7 @@ public class DynamicObjectHelperTest {
         public String javaMethod(String a, String b) {
             return String.format("java:%s.%s", a, b);
         }
-        
+
         public Object getProperty(String name) {
             return helper.getProperty(name);
         }

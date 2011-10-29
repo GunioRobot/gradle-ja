@@ -99,10 +99,10 @@ public class DefaultScriptPluginFactoryTest {
 
             one(scriptHandlerMock).updateClassPath();
             inSequence(sequence);
-            
+
             one(scriptCompilerMock).setTransformer(with(notNullValue(Transformer.class)));
             inSequence(sequence);
-            
+
             one(scriptCompilerMock).compile(DefaultScript.class);
             will(returnValue(scriptRunnerMock));
             inSequence(sequence);
@@ -143,7 +143,7 @@ public class DefaultScriptPluginFactoryTest {
 
             one(scriptHandlerFactoryMock).create(sourceWithImportsMock, parentClassLoader);
             will(returnValue(scriptHandlerMock));
-            
+
             allowing(scriptHandlerMock).getClassLoader();
             will(returnValue(scriptClassLoader));
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.plugins
 
 /**
@@ -22,7 +22,7 @@ package org.gradle.api.plugins
 class TestPluginConvention1 {
     String a = 'a1'
     String b = 'b'
-    String c = 'c' 
+    String c = 'c'
 
     String meth() {
         'called1'

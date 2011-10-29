@@ -128,7 +128,7 @@ class FileTreeAdapterTest extends Specification {
         filteredAdapter.tree == filtered
         1 * tree.filter(filter) >> filtered
     }
-    
+
     def containsDelegatesToTargetTreeWhenItImplementsRandomAccessFileCollection() {
         TestFileTree tree = Mock()
         File f = new File('a')

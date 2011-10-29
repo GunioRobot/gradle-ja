@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public class DefaultIvyFactory implements IvyFactory {
     private final Map<IvySettings, Ivy> instanceCache = new HashMap<IvySettings, Ivy>();
-    
+
     public Ivy createIvy(IvySettings ivySettings) {
         Ivy ivy = instanceCache.get(ivySettings);
         if (ivy == null) {

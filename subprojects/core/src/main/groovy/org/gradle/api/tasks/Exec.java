@@ -42,7 +42,7 @@ import java.util.Map;
  *   commandLine './stop.sh'
  * }
  * </pre>
- * 
+ *
  * @author Hans Dockter
  */
 public class Exec extends ConventionTask implements ExecSpec {

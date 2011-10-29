@@ -88,7 +88,7 @@ class ScriptEvaluatingSettingsProcessorTest {
             one(configurerMock).setScriptBaseClass(SettingsScript)
             one(configurerMock).apply(expectedSettings)
         }
-        
+
         SettingsLocation settingsLocation = new SettingsLocation(TEST_ROOT_DIR, scriptSourceMock)
         assertSame(expectedSettings, settingsProcessor.process(gradleMock, settingsLocation, urlClassLoader, expectedStartParameter))
     }

@@ -29,7 +29,7 @@ class ExecHandleBuilderTest extends Specification {
         builder.executable == 'command'
         builder.args == []
     }
-    
+
     def convertsArgsToString() {
         when:
         builder.args(['1', 2, "${3}"])

@@ -58,7 +58,7 @@ class LoggingBackedStyledTextOutputTest extends OutputSpecification {
         1 * listener.onOutput({it.spans[0].text == toNative('another line\n')})
         0 * listener._
     }
-    
+
     def forwardsEachLineOfTextToListener() {
         when:
         output.text(toNative('message1\nmessage2')).println()
@@ -92,7 +92,7 @@ class LoggingBackedStyledTextOutputTest extends OutputSpecification {
         }
         0 * listener._
     }
-    
+
     def canChangeTheStyleInsideALine() {
         when:
         output.style(Header)

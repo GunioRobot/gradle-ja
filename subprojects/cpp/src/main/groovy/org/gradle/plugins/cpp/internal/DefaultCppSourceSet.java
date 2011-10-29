@@ -52,7 +52,7 @@ public class DefaultCppSourceSet implements CppSourceSet {
         this.libs = new DefaultDomainObjectSet<Library>(Library.class);
         this.nativeDependencySets = new DefaultDomainObjectSet<NativeDependencySet>(NativeDependencySet.class);
         this.configurationDependencySet = new ConfigurationBasedNativeDependencySet(project, name);
-        
+
         nativeDependencySets.add(configurationDependencySet);
     }
 

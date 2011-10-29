@@ -22,33 +22,33 @@ import org.gradle.plugins.signing.signatory.Signatory
  * Specifies how objects will be signed.
  */
 interface SignatureSpec {
-    
+
     /**
      * The signatory that will be performing the signing.
-     * 
+     *
      * @return the signatory, or {@code null} if none specified.
      */
     Signatory getSignatory()
-    
+
     /**
      * Sets the signatory that will be signing the input.
-     * 
+     *
      * @param signatory The signatory
      */
     void setSignatory(Signatory signatory)
 
     /**
      * The signature representation that will be created.
-     * 
+     *
      * @return the signature type, or {@code null} if none specified.
      */
     SignatureType getSignatureType()
-    
+
     /**
      * Sets the signature representation that the signatures will be produced as.
-     * 
+     *
      * @param type the signature type to use
      */
     void setSignatureType(SignatureType type)
-    
+
 }

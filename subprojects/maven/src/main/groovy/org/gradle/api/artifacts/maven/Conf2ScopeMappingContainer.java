@@ -43,7 +43,7 @@ public interface Conf2ScopeMappingContainer {
      * @param configuration a Gradle configuration name (must not be null).
      * @param scope A Maven scope name (must not be null)
      * @return this
-     * @see #getMapping(java.util.Collection) 
+     * @see #getMapping(java.util.Collection)
      */
     Conf2ScopeMappingContainer addMapping(int priority, Configuration configuration, String scope);
 
@@ -69,13 +69,13 @@ public interface Conf2ScopeMappingContainer {
      * Returns a map with all the configuration to scope mappings. If no such mapping has been defined,
      * an empty map is returned.
      *
-     * @see #addMapping(int, Configuration, String) 
+     * @see #addMapping(int, Configuration, String)
      */
     Map<Configuration, Conf2ScopeMapping> getMappings();
 
     /**
      * Returns whether unmapped configuration should be skipped or not. Defaults to true.
-     * @see #setSkipUnmappedConfs(boolean) 
+     * @see #setSkipUnmappedConfs(boolean)
      */
     boolean isSkipUnmappedConfs();
 

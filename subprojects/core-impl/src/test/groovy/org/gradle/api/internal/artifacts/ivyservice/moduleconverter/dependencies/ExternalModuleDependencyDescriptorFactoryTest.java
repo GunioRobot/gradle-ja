@@ -42,7 +42,7 @@ public class ExternalModuleDependencyDescriptorFactoryTest extends AbstractDepen
 
     ExternalModuleDependencyDescriptorFactory externalModuleDependencyDescriptorFactory =
             new ExternalModuleDependencyDescriptorFactory(excludeRuleConverterStub);
-    
+
     @Test
     public void canConvert() {
         assertThat(externalModuleDependencyDescriptorFactory.canConvert(context.mock(ProjectDependency.class)), Matchers.equalTo(false));

@@ -57,7 +57,7 @@ public class DefaultProjectDependencyTest extends AbstractModuleDependencyTest {
     }
 
     protected AbstractModuleDependency createDependency(String group, String name, String version) {
-        return createDependency(group, name, version, null);    
+        return createDependency(group, name, version, null);
     }
 
     protected AbstractModuleDependency createDependency(String group, String name, String version, String configuration) {
@@ -126,9 +126,9 @@ public class DefaultProjectDependencyTest extends AbstractModuleDependencyTest {
 
             allowing(resolveContext).isTransitive();
             will(returnValue(true));
-            
+
             one(resolveContext).add(projectSelfResolvingDependency);
-            
+
             one(resolveContext).add(transitiveProjectDependencyStub);
         }});
 
@@ -148,7 +148,7 @@ public class DefaultProjectDependencyTest extends AbstractModuleDependencyTest {
                 instruction);
         projectDependency.resolve(resolveContext);
     }
-    
+
     @Test
     public void resolveNotDelegatesToTransitiveProjectDependenciesIfProjectDependencyIsNonTransitive() {
         DependencyResolveContext resolveContext = context.mock(DependencyResolveContext.class);

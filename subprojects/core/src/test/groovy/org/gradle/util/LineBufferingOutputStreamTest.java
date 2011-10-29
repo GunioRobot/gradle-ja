@@ -86,7 +86,7 @@ public class LineBufferingOutputStreamTest {
 
         outputStream.write(String.format("line 1-line 2-").getBytes());
     }
-    
+
     @Test
     public void handlesMultiCharacterLineSeparator() throws IOException {
         context.checking(new Expectations() {{
@@ -129,7 +129,7 @@ public class LineBufferingOutputStreamTest {
         outputStream.write("line 1".getBytes());
         outputStream.close();
     }
-    
+
     @Test(expected = IOException.class)
     public void cannotWriteAfterClose() throws IOException {
         outputStream.close();

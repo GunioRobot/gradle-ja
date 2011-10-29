@@ -94,7 +94,7 @@ public class ProjectDependencyDescriptorFactoryTest extends AbstractDependencyDe
             allowing(descriptorStrategyStub).createModuleRevisionId(dependency2);
             will(returnValue(IvyUtil.createModuleRevisionId(dependency2)));
         }});
-        
+
         assertThataddDependenciesWithSameModuleRevisionIdAndDifferentConfsShouldBePartOfSameDependencyDescriptor(
                 dependency1, dependency2, projectDependencyDescriptorFactory
         );

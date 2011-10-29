@@ -170,7 +170,7 @@ class DefaultTaskInputsTest extends Specification {
         inputs.hasInputs
         inputs.hasSourceFiles
     }
-    
+
     def hasInputsWhenSourceFilesRegistered() {
         when:
         inputs.source('a')

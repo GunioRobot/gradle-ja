@@ -36,7 +36,7 @@ public class DefaultSelfResolvingDependency extends AbstractDependency implement
     public FileCollection getSource() {
         return source;
     }
-    
+
     public boolean contentEquals(Dependency dependency) {
         if (!(dependency instanceof DefaultSelfResolvingDependency)) {
             return false;

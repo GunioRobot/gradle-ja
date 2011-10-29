@@ -33,7 +33,7 @@ class AntScalaCompiler implements ScalaCompiler {
     Iterable<File> classpath
     Iterable<File> scalaClasspath
     ScalaCompileOptions scalaCompileOptions = new ScalaCompileOptions()
-    
+
     def AntScalaCompiler(IsolatedAntBuilder antBuilder) {
         this.antBuilder = antBuilder
         this.bootclasspathFiles = []

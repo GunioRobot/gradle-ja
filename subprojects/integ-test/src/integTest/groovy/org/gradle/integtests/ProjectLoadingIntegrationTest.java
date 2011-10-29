@@ -155,7 +155,7 @@ public class ProjectLoadingIntegrationTest extends AbstractIntegrationTest {
     public void settingsFileTakesPrecedenceOverBuildFileInSameDirectory() {
         testFile("settings.gradle").write("rootProject.buildFileName = 'root.gradle'");
         testFile("root.gradle").write("task('do-stuff')");
-        
+
         TestFile buildFile = testFile("build.gradle");
         buildFile.write("throw new RuntimeException()");
 

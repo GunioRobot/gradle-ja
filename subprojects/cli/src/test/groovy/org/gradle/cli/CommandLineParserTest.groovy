@@ -565,7 +565,7 @@ class CommandLineParserTest extends Specification {
         def e = thrown(CommandLineArgumentException)
         e.message == 'Command-line option \'-a\' does not take an argument.'
     }
-    
+
     def "allow unknown options mode collects unknown options"() {
         given:
         parser.option("a")
@@ -578,9 +578,9 @@ class CommandLineParserTest extends Specification {
 
         then:
         result.option("a") != null
-        
+
         and:
         result.extraArguments.contains("-b")
     }
-    
+
 }

@@ -56,7 +56,7 @@ public interface CppSourceSet extends HeaderExportingSourceSet, NativeDependency
      * Libs this source set requires
      */
     DomainObjectSet<Library> getLibs();
-    
+
     /**
      * Add a dependency to this source set
      */

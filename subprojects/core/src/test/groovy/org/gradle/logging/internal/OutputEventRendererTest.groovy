@@ -97,7 +97,7 @@ class OutputEventRendererTest extends OutputSpecification {
         then:
         listener.value.readLines() == ['10:00:00.000 [INFO] [category] message']
     }
-    
+
     def rendersErrorLogEventsToStdErrListener() {
         def listener = new TestListener()
 

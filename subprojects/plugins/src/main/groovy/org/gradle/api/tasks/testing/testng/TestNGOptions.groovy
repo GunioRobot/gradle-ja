@@ -68,7 +68,7 @@ public class TestNGOptions extends TestFrameworkOptions implements Serializable 
      *
      * Not required.
      *
-     * If not present, parallel mode will not be selected 
+     * If not present, parallel mode will not be selected
      */
     String parallel = null
 

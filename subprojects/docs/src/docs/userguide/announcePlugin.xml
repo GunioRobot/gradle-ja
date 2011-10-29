@@ -16,14 +16,14 @@
 <chapter id='announce_plugin'>
     <title>The Announce Plugin</title>
     <para>The Gradle announce plugin enables you to publish messages on succeeded tasks to your favourite platforms.
-	It supports 
+	It supports
 	<itemizedlist>
  		<listitem><ulink url='http://twitter.com'>Twitter</ulink></listitem>
  		<listitem><ulink url='http://ubuntu.com'>Ubuntu Notify</ulink></listitem>
         <listitem><ulink url="https://sites.google.com/site/snarlapp/home">Snarl</ulink>, a Windows Notification System</listitem>
         <listitem><ulink url="http://growl.info/">Growl</ulink>, a Mac OS X Notification System</listitem>
  	</itemizedlist>
-	
+
 	</para>
 
     <section>
@@ -108,17 +108,17 @@
     <section>
         <title>Convention properties</title>
 
-        <para>The announce plugin adds an 
-	
+        <para>The announce plugin adds an
+
 	TBD
         </para>
-     
+
         <para>
-        	
+
 
         </para>
       <!--  <sample id="anouncePlugin" dir="userguide/tutorial/announce" title="example of annunce plugin usage.">
-            <sourcefile file="build.gradle" snippet="full-example"/> 
+            <sourcefile file="build.gradle" snippet="full-example"/>
         </sample>-->
         <para>
 	TBD

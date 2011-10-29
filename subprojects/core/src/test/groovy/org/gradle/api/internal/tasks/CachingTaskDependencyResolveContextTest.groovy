@@ -31,7 +31,7 @@ class CachingTaskDependencyResolveContextTest extends Specification {
     def setup() {
         _ * task.getTaskDependencies() >> dependency
     }
-    
+
     def determinesTaskDependenciesByResolvingDependencyObjectForTask() {
         when:
         def tasks = context.getDependencies(task)

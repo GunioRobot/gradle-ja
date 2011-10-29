@@ -106,7 +106,7 @@ public abstract class AbstractDependencyDescriptorFactoryInternalTest {
         List<DependencyArtifactDescriptor> artifactDescriptors = WrapUtil.toList(dependencyDescriptor.getDependencyArtifacts(TEST_CONF));
         assertThat(artifactDescriptors.size(), equalTo(2));
 
-        
+
         DependencyArtifactDescriptor artifactDescriptorWithoutClassifier = findDescriptor(artifactDescriptors, artifact);
         assertEquals(new HashMap(), artifactDescriptorWithoutClassifier.getExtraAttributes());
         assertEquals(null, artifactDescriptorWithoutClassifier.getUrl());

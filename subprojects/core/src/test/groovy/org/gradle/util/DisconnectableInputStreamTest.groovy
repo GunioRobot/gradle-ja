@@ -222,7 +222,7 @@ class DisconnectableInputStreamTest extends MultithreadedTestCase {
 
         instr.close()
     }
-    
+
     @Test
     public void readerThreadStopsReadingAfterClose() {
         def source = stream()

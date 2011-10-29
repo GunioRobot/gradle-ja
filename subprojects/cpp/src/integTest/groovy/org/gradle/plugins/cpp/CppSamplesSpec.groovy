@@ -38,35 +38,35 @@ class CppSamplesSpec extends AbstractIntegrationSpec {
         and:
         file("cpp", "exewithlib", "exe", "build", "binaries", "main").exec().out == "Hello, World!\n"
     }
-    
+
     def "dependencies"() {
         given:
         sample dependencies
-        
+
         when:
         run ":lib:uploadArchives", ":exe:compileMain", ":exe:uploadArchives"
-        
+
         then:
         ":exe:mainExtractHeaders" in nonSkippedTasks
         ":exe:compileMain" in nonSkippedTasks
-        
+
         and:
         file("cpp", "dependencies", "exe", "build", "binaries", "main").exec().out == "Hello, World!\n"
         file("cpp", "dependencies", "exe", "build", "repo", "dependencies", "exe", "1.0", "exe-1.0.exe").exists()
     }
-    
+
     def "exe"() {
         given:
         sample exe
-        
+
         when:
         run "compileMain"
-        
+
         then:
         ":compileMain" in nonSkippedTasks
-        
+
         and:
         file("cpp", "exe", "build", "binaries", "main").exec().out == "Hello, World!\n"
     }
-    
+
 }

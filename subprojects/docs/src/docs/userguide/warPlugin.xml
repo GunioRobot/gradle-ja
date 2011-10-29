@@ -111,7 +111,7 @@
         </para>
         <para>War プラグインは <literal>providedCompile</literal> と <literal>providedRuntime</literal> の２つの依存構成を追加します。
             これらの構成は WAR アーカイブには追加されないという点を除けば、それぞれ <literal>compile</literal>、<literal>runtime</literal>
-            と同じスコープを持ちます。 
+            と同じスコープを持ちます。
             <literal>provided</literal> 構成が推移的に機能することは特筆すべき点です。
             そうですね。例えば provided 構成の何れかに <literal>commons-httpclient:commons-httpclient:3.0</literal> を追加したとします。
             この依存ライブラリは <literal>commons-codec</literal> に依存します。

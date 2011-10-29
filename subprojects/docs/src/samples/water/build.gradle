@@ -13,4 +13,3 @@ subprojects*.hello*.doLast {
 hello << {
     println 'As you all know, I cover three quarters of this planet!'
 }
-    

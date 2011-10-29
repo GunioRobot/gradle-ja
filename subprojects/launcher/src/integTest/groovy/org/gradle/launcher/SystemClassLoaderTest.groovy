@@ -22,38 +22,38 @@ import org.gradle.integtests.fixtures.internal.*
 
 /**
  * Verifies that Gradle doesn't pollute the system class loader.
- * 
+ *
  * This is important for plugins that need to use isolated class loaders to avoid conflicts.
- * 
+ *
  * When running without the daemon, success is dependant on the start scripts doing the right thing.
  * When running with the daemon, success is dependent on DaemonConnector forking the daemon process with the right classpath.
- * 
+ *
  * This test is not meaningfull when running the embedded integration test mode, so we short circuit in that case.
  */
 class SystemClassLoaderTest extends AbstractIntegrationSpec {
 
     static heading = "systemClassLoader info"
-    
+
     def "daemon bootstrap classpath is bare bones"() {
         given:
         buildFile << """
-            task echo << { 
+            task echo << {
                 def systemLoaderUrls = ClassLoader.systemClassLoader.URLs
                 println "$heading"
                 println systemLoaderUrls.size()
                 println systemLoaderUrls[0]
             }
         """
-        
+
         when:
         run "echo"
-        
+
         then:
         def lines = output.readLines()
         lines.find { it == heading } // here for nicer output if the output isn't what we expect
         def headingIndex = lines.indexOf(heading)
         !forkingExecuter || lines[headingIndex + 1] == "1"
-        !forkingExecuter || lines[headingIndex + 2].contains("gradle-launcher") 
+        !forkingExecuter || lines[headingIndex + 2].contains("gradle-launcher")
     }
 
     boolean isForkingExecuter() {

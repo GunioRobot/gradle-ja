@@ -38,6 +38,6 @@ public class DefaultSettings extends BaseSettings {
     }
 
     void setProperty(String name, value) {
-        dynamicObjectHelper.setProperty(name, value) 
+        dynamicObjectHelper.setProperty(name, value)
     }
 }

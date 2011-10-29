@@ -47,12 +47,12 @@ public class GradleDistributionExecuter extends AbstractGradleExecuter implement
     private Executer executerType;
 
     public enum Executer {
-        embedded(false), 
-        forking(true), 
+        embedded(false),
+        forking(true),
         daemon(true);
-        
+
         final public boolean forks;
-        
+
         Executer(boolean forks) {
             this.forks = forks;
         }
@@ -69,7 +69,7 @@ public class GradleDistributionExecuter extends AbstractGradleExecuter implement
     public GradleDistributionExecuter(Executer executerType) {
         this.executerType = executerType;
     }
-    
+
     public GradleDistributionExecuter(GradleDistribution dist) {
         this(getSystemPropertyExecuter(), dist);
     }

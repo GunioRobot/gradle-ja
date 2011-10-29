@@ -31,7 +31,7 @@ public class ArchivePublishArtifact extends AbstractPublishArtifact {
     private String classifier;
     private Date date;
     private File file;
-    
+
     private AbstractArchiveTask archiveTask;
 
     public ArchivePublishArtifact(AbstractArchiveTask archiveTask) {

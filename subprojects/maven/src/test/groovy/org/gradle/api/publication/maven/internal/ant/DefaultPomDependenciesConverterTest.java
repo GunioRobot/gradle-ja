@@ -47,7 +47,7 @@ import static org.junit.Assert.*;
 @RunWith(JMock.class)
 public class DefaultPomDependenciesConverterTest {
     private JUnit4Mockery context = new JUnit4GroovyMockery();
-    
+
     private DefaultPomDependenciesConverter dependenciesConverter;
     private Conf2ScopeMappingContainer conf2ScopeMappingContainerMock = context.mock(Conf2ScopeMappingContainer.class);
     private ExcludeRuleConverter excludeRuleConverterMock = context.mock(ExcludeRuleConverter.class);
@@ -89,7 +89,7 @@ public class DefaultPomDependenciesConverterTest {
     private Configuration createNamedConfigurationStubWithDependencies(final String confName, final ModuleDependency... dependencies) {
         return createNamedConfigurationStubWithDependencies(confName, new HashSet<ExcludeRule>(), dependencies);
     }
-    
+
     private Configuration createNamedConfigurationStubWithDependencies(final String confName, final Set<ExcludeRule> excludeRules, final ModuleDependency... dependencies) {
         final Configuration configurationStub = context.mock(Configuration.class, confName);
         final DependencySet dependencySet = context.mock(DependencySet.class);
@@ -230,10 +230,10 @@ public class DefaultPomDependenciesConverterTest {
         assertThat(((Exclusion) mavenDependency.getExclusions().get(0)).getGroupId(), equalTo(mavenExclude.getGroupId()));
         assertThat(((Exclusion) mavenDependency.getExclusions().get(0)).getArtifactId(), equalTo(mavenExclude.getArtifactId()));
     }
-    
+
     @Test
     public void convertWithConvertableConfigurationExcludes() {
-        final Configuration someConfigurationStub = createNamedConfigurationStubWithDependencies("someConfiguration", 
+        final Configuration someConfigurationStub = createNamedConfigurationStubWithDependencies("someConfiguration",
                 WrapUtil.<ExcludeRule>toSet(new DefaultExcludeRule(toMap("key", "value"))), dependency1);
         final Exclusion mavenExclude = new Exclusion();
         mavenExclude.setGroupId("a");

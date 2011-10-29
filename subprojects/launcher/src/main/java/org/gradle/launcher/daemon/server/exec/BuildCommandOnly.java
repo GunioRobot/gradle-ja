@@ -20,7 +20,7 @@ import org.gradle.launcher.daemon.protocol.Command;
 
 /**
  * Superclass template for actions that only work for Build.
- * 
+ *
  * If an action of this type receives a command that is not Build it will throw an exception.
  */
 abstract public class BuildCommandOnly implements DaemonCommandAction {

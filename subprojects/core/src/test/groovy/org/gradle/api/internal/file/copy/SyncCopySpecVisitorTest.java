@@ -54,7 +54,7 @@ public class SyncCopySpecVisitorTest {
             allowing(delegate).endVisit();
         }});
     }
-    
+
     @Test
     public void deletesExtraFilesFromDestinationDirectoryAtTheEndOfVisit() {
         TestFile destDir = tmpDir.createDir("dest");

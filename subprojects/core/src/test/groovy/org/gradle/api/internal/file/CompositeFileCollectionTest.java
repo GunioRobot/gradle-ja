@@ -104,7 +104,7 @@ public class CompositeFileCollectionTest {
 
         assertFalse(collection.contains(file1));
     }
-    
+
     @Test
     public void isEmptyWhenHasNoSets() {
         CompositeFileCollection set = new TestCompositeFileCollection();
@@ -156,7 +156,7 @@ public class CompositeFileCollectionTest {
         }});
         assertThat(collection.getAsFileTrees(), equalTo((Collection) toList(set1, set2)));
     }
-    
+
     @Test
     public void getAsFileTreeDelegatesToEachSet() {
         final File file1 = new File("dir1");

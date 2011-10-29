@@ -24,7 +24,7 @@ class ParameterMetaDataTest extends Specification {
     def formatsSignature() {
         def type = new TypeMetaData('org.gradle.SomeType')
         parameter.type = type
-        
+
         expect:
         parameter.signature == 'org.gradle.SomeType param'
     }

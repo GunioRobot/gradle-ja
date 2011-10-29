@@ -22,7 +22,7 @@ import static org.gradle.util.TextUtil.*
 import org.junit.*
 
 abstract class SigningIntegrationSpec extends AbstractIntegrationSpec {
-    
+
     @Rule public final TestResources resources = new TestResources("keys")
 
     def setup() {
@@ -37,7 +37,7 @@ abstract class SigningIntegrationSpec extends AbstractIntegrationSpec {
         String keyId
         String password
         String keyRingFilePath
-        
+
         Map<String, String> asProperties(String name = null) {
             def prefix = name ? "signing.${name}." : "signing."
             def properties = [:]
@@ -46,14 +46,14 @@ abstract class SigningIntegrationSpec extends AbstractIntegrationSpec {
             properties[prefix + "secretKeyRingFile"] = keyRingFilePath
             properties
         }
-        
+
         String addAsPropertiesScript(addTo = "project", name = null) {
             asProperties(name).collect { k, v ->
                 "${addTo}.setProperty('${escapeString(k)}', '${escapeString(v)}')"
             }.join(";")
         }
     }
-    
+
     KeyInfo getKeyInfo(set = "default") {
         new KeyInfo(
             keyId: file(set, "keyId.txt").text.trim(),
@@ -61,20 +61,20 @@ abstract class SigningIntegrationSpec extends AbstractIntegrationSpec {
             keyRingFilePath: file(set, "secring.gpg")
         )
     }
-    
+
     String getJavadocAndSourceJarsScript(String configurationName = null) {
         def tasks = """
-            task("sourcesJar", type: Jar, dependsOn: classes) { 
-                classifier = 'sources' 
+            task("sourcesJar", type: Jar, dependsOn: classes) {
+                classifier = 'sources'
                 from sourceSets.main.allSource
-            } 
+            }
 
-            task("javadocJar", type: Jar, dependsOn: javadoc) { 
-                classifier = 'javadoc' 
-                from javadoc.destinationDir 
-            } 
+            task("javadocJar", type: Jar, dependsOn: javadoc) {
+                classifier = 'javadoc'
+                from javadoc.destinationDir
+            }
         """
-        
+
         if (configurationName == null) {
             tasks
         } else {
@@ -82,12 +82,12 @@ abstract class SigningIntegrationSpec extends AbstractIntegrationSpec {
                 configurations {
                     $configurationName
                 }
-                
+
                 artifacts {
                     $configurationName sourcesJar, javadocJar
                 }
             """
         }
     }
-    
+
 }

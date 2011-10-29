@@ -43,7 +43,7 @@ public class ClassPathDependencyFactory implements IDependencyImplementationFact
             FileCollection files = fileResolver.resolveFiles(classPathRegistry.getClassPathFiles(classPathNotation.name()));
             return type.cast(instantiator.newInstance(DefaultSelfResolvingDependency.class, files));
         }
-        
+
         throw new IllegalDependencyNotation();
     }
 }

@@ -16,11 +16,11 @@
 package org.gradle.plugins.signing.signatory
 
 abstract class SignatorySupport implements Signatory {
-    
+
     byte[] sign(InputStream toSign) {
         def signature = new ByteArrayOutputStream()
         sign(toSign, signature)
         signature.toByteArray()
     }
-    
+
 }

@@ -38,7 +38,7 @@ import static org.junit.Assert.*;
 @RunWith(JMock.class)
 public class BasePomFilterContainerTest {
     private static final String TEST_NAME = "testName";
-    
+
     private BasePomFilterContainer pomFilterContainer;
     protected Factory<MavenPom> mavenPomFactoryMock;
     protected MavenPom pomMock;

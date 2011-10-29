@@ -45,7 +45,7 @@ public class DefaultProjectDependencyFactory implements ProjectDependencyFactory
         }
         throw new IllegalDependencyNotation();
     }
-    
+
     public ProjectDependency createProjectDependencyFromMap(ProjectFinder projectFinder,
                                                    Map<? extends String, ? extends Object> map) {
         Map<String, Object> args = new HashMap<String, Object>(map);

@@ -7,7 +7,7 @@
 useTestFixtures = { params = [:] ->
     def projectPath = params.project ?: ":core"
     def sourceSet = params.sourceSet ?: "test"
-    
+
     dependencies {
         delegate."${sourceSet}Compile" project(path: projectPath, configuration: "testFixturesUsageCompile")
         delegate."${sourceSet}Compile" project(':internalTesting')

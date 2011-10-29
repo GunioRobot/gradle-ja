@@ -79,7 +79,7 @@ class DefaultResolverFactoryTest {
 
     @Test public void testCreateResolverWithResolverDescription() {
         DependencyResolver resolver = context.mock(DependencyResolver)
-        
+
         ArtifactRepository repository = factory.createRepository(resolver)
 
         assert repository instanceof FixedResolverArtifactRepository

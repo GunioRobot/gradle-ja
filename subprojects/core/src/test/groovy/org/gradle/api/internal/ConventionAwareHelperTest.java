@@ -89,13 +89,13 @@ public class ConventionAwareHelperTest {
         conventionAware.map("list1", callable);
         assertThat(conventionAware.getConventionValue("list1"), equalTo((Object) toList("a")));
     }
-    
+
     @Test
     public void canSetMappingUsingDynamicProperty() {
         HelperUtil.call("{ it.list1 = { ['a'] } }", conventionAware);
         assertThat(conventionAware.getConventionValue("list1"), equalTo((Object) toList("a")));
     }
-    
+
     @Test (expected = InvalidUserDataException.class) public void cannotMapUnknownProperty() {
         conventionAware.map(WrapUtil.<String, ConventionValue>toMap("unknownProp", null));
     }
@@ -145,7 +145,7 @@ public class ConventionAwareHelperTest {
         List<Object> value = toList();
         assertThat(conventionAware.getConventionValue(value, "list1", true), sameInstance(value));
     }
-    
+
     @Test public void usesConventionValueForEmptyCollection() {
         conventionAware.map("list1", new ConventionValue() {
             public Object getValue(Convention convention, IConventionAware conventionAwareObject) {

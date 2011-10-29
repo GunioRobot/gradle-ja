@@ -32,7 +32,7 @@ import java.io.File;
 
 /**
  * Uploads the artifacts of a {@link Configuration} to a set of repositories.
- * 
+ *
  * @author Hans Dockter
  */
 public class Upload extends ConventionTask {
@@ -112,7 +112,7 @@ public class Upload extends ConventionTask {
 
     /**
      * Returns the artifacts which will be uploaded.
-     * 
+     *
      * @return the artifacts.
      */
     @InputFiles

@@ -24,7 +24,7 @@ class ArmoredSignatureType extends AbstractSignatureType {
     String getExtension() {
         "asc"
     }
-    
+
     void sign(Signatory signatory, InputStream toSign, OutputStream destination) {
         def armoredOutputStream = new ArmoredOutputStream(destination)
         super.sign(signatory, toSign, armoredOutputStream)

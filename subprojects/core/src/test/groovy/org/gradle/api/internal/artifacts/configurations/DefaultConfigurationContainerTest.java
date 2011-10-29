@@ -73,7 +73,7 @@ public class DefaultConfigurationContainerTest {
         context.checking(new Expectations(){{
             one(configuration).setDescription(TEST_DESCRIPTION);
         }});
-        
+
         checkAddGetWithName(configurationContainer.add(TEST_NAME, TEST_CLOSURE));
     }
 

@@ -34,7 +34,7 @@ public class OutputFilePropertyAnnotationHandler implements PropertyAnnotationHa
             if (fileValue.exists() && fileValue.isDirectory()) {
                 messages.add(String.format("Cannot write to file '%s' specified for property '%s' as it is a directory.", fileValue, propertyName));
             }
-            
+
             for (File candidate = fileValue.getParentFile(); candidate != null && !candidate.isDirectory(); candidate = candidate.getParentFile()) {
                 if (candidate.exists() && !candidate.isDirectory()) {
                     messages.add(String.format("Cannot write to file '%s' specified for property '%s', as ancestor '%s' is not a directory.", fileValue, propertyName, candidate));

@@ -61,7 +61,7 @@ public class ProjectReportsPluginTest {
         assertThat(task, instanceOf(DependencyReportTask.class));
         assertThat(task.property("outputFile"), equalTo((Object) new File(project.getBuildDir(), "reports/project/dependencies.txt")));
         assertThat(task.property("projects"), equalTo((Object) WrapUtil.toSet(project)));
-        
+
         task = project.getTasks().getByName(ProjectReportsPlugin.PROJECT_REPORT);
         assertThat(task, dependsOn(ProjectReportsPlugin.TASK_REPORT, ProjectReportsPlugin.PROPERTY_REPORT, ProjectReportsPlugin.DEPENDENCY_REPORT));
     }

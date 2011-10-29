@@ -134,7 +134,7 @@ public class ExecuteActionsTaskExecuterTest {
 
             one(state).executed(null);
             inSequence(sequence);
-            
+
             one(state).setExecuting(false);
             inSequence(sequence);
 

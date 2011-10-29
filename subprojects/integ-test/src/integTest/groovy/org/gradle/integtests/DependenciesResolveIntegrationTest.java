@@ -38,5 +38,5 @@ public class DependenciesResolveIntegrationTest {
         // the actual testing is done in the build script.
         File projectDir = sample.getDir();
         executer.inDirectory(projectDir).withTasks("test").run();
-    }   
+    }
 }

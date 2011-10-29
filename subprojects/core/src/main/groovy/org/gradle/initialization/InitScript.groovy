@@ -26,7 +26,7 @@ abstract class InitScript extends DefaultScript {
     void initscript(Closure configureClosure) {
         buildscript(configureClosure)
     }
-    
+
     def String toString() {
         return "initialization script"
     }

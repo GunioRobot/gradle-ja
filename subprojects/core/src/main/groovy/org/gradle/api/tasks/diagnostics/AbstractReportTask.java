@@ -38,7 +38,7 @@ import java.util.TreeSet;
 public abstract class AbstractReportTask extends ConventionTask {
     private File outputFile;
 
-    // todo annotate as required 
+    // todo annotate as required
     private Set<Project> projects;
 
     protected AbstractReportTask() {

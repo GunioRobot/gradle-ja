@@ -47,7 +47,7 @@ public class DefaultDependencyFactory implements DependencyFactory {
         if (dependencyNotation instanceof Dependency) {
             return (Dependency) dependencyNotation;
         }
-        
+
         Dependency dependency = null;
         for (IDependencyImplementationFactory factory : dependencyFactories) {
             try {

@@ -288,7 +288,7 @@ class BaseDirFileResolverTest {
     @Test public void testResolveUriStringWithEncodedCharsToUri() {
         assertEquals(new URI("http://www.gradle.org/white%20space"), baseDirConverter.resolveUri("http://www.gradle.org/white%20space"))
     }
-    
+
     @Test public void testResolveRelativePathToRelativePath() {
         assertEquals("relative", baseDirConverter.resolveAsRelativePath("relative"))
     }
@@ -324,7 +324,7 @@ class BaseDirFileResolverTest {
         src = 'file1'
         assertEquals(new File(baseDir, 'file1'), source.get())
     }
-    
+
     @Test public void testCreateFileResolver() {
         File newBaseDir = new File(baseDir, 'subdir')
         assertEquals(new File(newBaseDir, 'file'), baseDirConverter.withBaseDir('subdir').resolve('file'))

@@ -24,7 +24,7 @@ import groovy.lang.Closure;
 
 /**
  * <p>A {@code PluginCollection} represents a collection of {@link org.gradle.api.Plugin} instances.</p>
- * 
+ *
  * @author Hans Dockter
  * @param <T> The type of plugins which this collection contains.
  */

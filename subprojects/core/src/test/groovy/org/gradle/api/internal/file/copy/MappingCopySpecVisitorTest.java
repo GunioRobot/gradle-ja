@@ -124,7 +124,7 @@ public class MappingCopySpecVisitorTest {
 
         assertThat(copyDetails.getRelativePath(), equalTo(new RelativePath(true, "spec", "file")));
     }
-    
+
     @Test
     public void relativePathForDirIsSpecPathPlusFilePath() {
         FileVisitDetails visitDetails = expectSpecAndDirVisited();
@@ -313,5 +313,5 @@ public class MappingCopySpecVisitorTest {
             }
         };
     }
-    
+
 }

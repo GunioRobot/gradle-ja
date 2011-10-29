@@ -24,7 +24,7 @@ import java.util.Collection;
 /**
  * <p>A {@code DomainObjectCollection} is a specialised {@link Collection} that adds the ability to modification notifications and live filtered sub collections.</p>
  *
- * <p>The filtered collections returned by the filtering methods, such as {@link #matching(Closure)}, return collections that are <em>live</em>. That is, they reflect 
+ * <p>The filtered collections returned by the filtering methods, such as {@link #matching(Closure)}, return collections that are <em>live</em>. That is, they reflect
  * changes made to the source collection that they were created from. This is true for filtered collections made from filtered collections etc.</p>
  * <p>
  * You can also add actions which are executed as elements are added to the collection. Actions added to filtered collections will be fired if an addition/removal

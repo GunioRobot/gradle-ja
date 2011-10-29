@@ -34,7 +34,7 @@ class DefaultProjectConnectionTest extends Specification {
         expect:
         connection.newBuild() instanceof DefaultBuildLauncher
     }
-    
+
     def modelFailsForUnknownModelType() {
         when:
         connection.model(TestBuild.class)
@@ -54,5 +54,5 @@ class DefaultProjectConnectionTest extends Specification {
 }
 
 interface TestBuild extends Project {
-    
+
 }

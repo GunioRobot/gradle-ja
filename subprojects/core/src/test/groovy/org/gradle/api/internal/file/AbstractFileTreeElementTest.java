@@ -55,7 +55,7 @@ public class AbstractFileTreeElementTest {
         dest.assertIsFile();
         assertThat(dest.getText(), equalTo("content"));
     }
-    
+
     private class TestFileTreeElement extends AbstractFileTreeElement {
         private final TestFile file;
 

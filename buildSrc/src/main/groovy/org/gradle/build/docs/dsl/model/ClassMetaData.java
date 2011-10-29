@@ -226,7 +226,7 @@ public class ClassMetaData implements Serializable, Attachable<ClassMetaData>, L
     public Map<String, String> getConstants() {
         return constants;
     }
-    
+
     public void attach(ClassMetaDataRepository<ClassMetaData> metaDataRepository) {
         this.metaDataRepository = metaDataRepository;
     }

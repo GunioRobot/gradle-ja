@@ -25,11 +25,11 @@ import org.gradle.StartParameter
 
 /**
  * Spockified version of AbstractIntegrationTest.
- * 
+ *
  * Plan is to bring features over as needed.
  */
 class AbstractIntegrationSpec extends Specification {
-    
+
     @Rule public final GradleDistribution distribution = new GradleDistribution()
     @Rule public final GradleDistributionExecuter executer = new GradleDistributionExecuter()
 
@@ -51,7 +51,7 @@ class AbstractIntegrationSpec extends Specification {
     protected GradleExecuter sample(Sample sample) {
         inDirectory(sample.dir)
     }
-    
+
     protected GradleExecuter inDirectory(File directory) {
         executer.inDirectory(directory);
     }
@@ -62,7 +62,7 @@ class AbstractIntegrationSpec extends Specification {
     protected ExecutionResult run(String... tasks) {
         succeeds(*tasks)
     }
-    
+
     protected ExecutionResult succeeds(String... tasks) {
         result = executer.withTasks(*tasks).run()
     }
@@ -70,36 +70,36 @@ class AbstractIntegrationSpec extends Specification {
     protected ExecutionFailure runAndFail(String... tasks) {
         fails(*tasks)
     }
-    
+
     protected ExecutionFailure fails(String... tasks) {
         failure = executer.withTasks(*tasks).runWithFailure()
     }
-    
+
     protected List<String> getExecutedTasks() {
         assertHasResult()
         result.executedTasks
     }
-    
+
     protected Set<String> getSkippedTasks() {
         assertHasResult()
         result.skippedTasks
     }
-    
+
     protected List<String> getNonSkippedTasks() {
         executedTasks - skippedTasks
     }
-    
+
     protected void executedAndNotSkipped(String... tasks) {
         tasks.each {
             assert it in executedTasks
             assert !skippedTasks.contains(it)
         }
     }
-    
+
     protected void failureHasCause(String cause) {
         failure.assertHasCause(cause)
     }
-    
+
     private assertHasResult() {
         assert result != null : "result is null, you haven't run succeeds()"
     }

@@ -75,7 +75,7 @@ public class GlobalServicesRegistry extends DefaultServiceRegistry {
     protected ListenerManager createListenerManager() {
         return new DefaultListenerManager();
     }
-   
+
     protected ClassLoaderFactory createClassLoaderFactory() {
         return new DefaultClassLoaderFactory();
     }

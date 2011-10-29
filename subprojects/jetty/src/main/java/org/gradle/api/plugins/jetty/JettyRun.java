@@ -271,7 +271,7 @@ public class JettyRun extends AbstractJettyRunTask {
                 Resource resource = getWebAppConfig().getBaseResource();
                 ResourceCollection rc = new ResourceCollection();
                 if (resource == null) {
-                    // nothing configured, so we automagically enable the overlays                    
+                    // nothing configured, so we automagically enable the overlays
                     int size = overlays.size() + 1;
                     Resource[] resources = new Resource[size];
                     resources[0] = Resource.newResource(getWebAppSourceDirectory().toURI().toURL());
@@ -295,7 +295,7 @@ public class JettyRun extends AbstractJettyRunTask {
                     } else {
                         // baseResource was already configured w/c could be src/main/webapp
                         if (!resource.isDirectory() && String.valueOf(resource.getFile()).endsWith(".war")) {
-                            // its a war                            
+                            // its a war
                             resource = Resource.newResource("jar:" + resource.getURL().toString() + "!/");
                         }
                         int size = overlays.size() + 1;

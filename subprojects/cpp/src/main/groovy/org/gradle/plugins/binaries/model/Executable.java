@@ -19,5 +19,5 @@ package org.gradle.plugins.binaries.model;
  * An executable binary
  */
 public interface Executable extends Binary {
-    
+
 }

@@ -95,7 +95,7 @@ public abstract class AbstractStyledTextOutput implements StyledTextOutput, Stan
     public Style getStyle() {
         return style;
     }
-    
+
     protected abstract void doAppend(String text);
 
     protected void doStyleChange(Style style) {

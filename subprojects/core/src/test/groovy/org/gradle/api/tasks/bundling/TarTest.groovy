@@ -42,7 +42,7 @@ class TarTest extends AbstractArchiveTaskTest {
         assertThat(tar.compression, equalTo(Compression.NONE))
         assertThat(tar.extension, equalTo('tar'))
     }
-    
+
     @Test public void testCompressionDeterminesDefaultExtension() {
         tar.compression = Compression.GZIP
         assertThat(tar.extension, equalTo('tgz'))

@@ -57,7 +57,7 @@ class HandshakeIncomingConnectorTest extends Specification {
         1 * target.accept(!null, false) >> localAddress
         0 * target._
     }
-    
+
     def performsHandshakeOnAccept() {
         Action<ConnectEvent<Connection<Message>>> action = Mock()
         Address remoteAddress = Mock()

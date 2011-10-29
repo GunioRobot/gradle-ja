@@ -127,7 +127,7 @@ class DynamicOwner {
     def ownerMethod(String value) {
         return value
     }
-    
+
     def getOwnerProp() {
         return 'ownerProp'
     }

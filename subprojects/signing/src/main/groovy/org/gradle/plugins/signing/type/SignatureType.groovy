@@ -22,11 +22,11 @@ interface SignatureType {
     String getExtension()
 
     File fileFor(File toSign)
-    
+
     String combinedExtension(File toSign)
-    
+
     File sign(Signatory signatory, File toSign)
-    
+
     void sign(Signatory signatory, InputStream toSign, OutputStream destination)
-    
+
 }

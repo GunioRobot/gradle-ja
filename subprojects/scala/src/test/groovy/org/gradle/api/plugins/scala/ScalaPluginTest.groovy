@@ -77,7 +77,7 @@ public class ScalaPluginTest {
         task = project.tasks[JavaPlugin.TEST_CLASSES_TASK_NAME]
         assertThat(task, dependsOn(hasItem('compileTestScala')))
     }
-    
+
     @Test public void addsScalaDocTasksToTheProject() {
         scalaPlugin.apply(project)
 

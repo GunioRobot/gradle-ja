@@ -25,7 +25,7 @@ import org.gradle.api.tasks.SourceSet
 public class OsgiPluginTest extends Specification {
     private final Project project = HelperUtil.createRootProject();
     private final OsgiPlugin osgiPlugin = new OsgiPlugin();
-    
+
     public void appliesTheJavaPlugin() {
         osgiPlugin.apply(project);
 
@@ -37,7 +37,7 @@ public class OsgiPluginTest extends Specification {
     public void addsAnOsgiManifestToTheDefaultJar() {
         project.apply(plugin: 'java')
         osgiPlugin.apply(project);
-        
+
         expect:
         OsgiManifest osgiManifest = project.jar.manifest
         osgiManifest.mergeSpecs[0].mergePaths[0] == project.manifest

@@ -58,7 +58,7 @@ class DefaultArtifactHandler implements ArtifactHandler {
         Object[] normalizedArgs = GUtil.flatten(args as List, false)
         if (normalizedArgs.length == 2 && normalizedArgs[1] instanceof Closure) {
             return pushArtifact(configuration, normalizedArgs[0], (Closure) normalizedArgs[1])
-        } 
+        }
         args.each {notation ->
             pushArtifact(configuration, notation, null)
         }

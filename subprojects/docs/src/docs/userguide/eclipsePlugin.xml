@@ -16,7 +16,7 @@
 
 <chapter id="eclipse_plugin" xml:lang="ja">
     <title>Eclipse プラグイン<phrase role="original">The Eclipse Plugin</phrase></title>
-    
+
     <para role="original">The Eclipse plugin generates files that are used by the <ulink url="http://eclipse.org">Eclipse IDE</ulink>, thus
         making it possible to import the project into Eclipse (<guimenuitem>File</guimenuitem> - <guimenuitem>Import...</guimenuitem> - <guimenuitem>Existing Projects into Workspace</guimenuitem>).
         Both external dependencies (including associated source and javadoc files) and project dependencies are considered.</para>
@@ -213,7 +213,7 @@
                     <literal>-</literal>
                 </td>
                 <td><apilink class="org.gradle.plugins.ide.eclipse.GenerateEclipseClasspath"/></td>
-                <td><filename>.classpath</filename>ファイルを生成します。 
+                <td><filename>.classpath</filename>ファイルを生成します。
                     <phrase role="original">Generates the <filename>.classpath</filename> file.</phrase></td>
             </tr>
             <tr>
@@ -270,7 +270,7 @@
                     <apilink class="org.gradle.plugins.ide.eclipse.model.EclipseModel"/>
                 </td>
                 <td><literal>eclipse</literal></td>
-                <td>DSLにあったやり方でEclipseプラグインの設定が可能なトップレベル要素 
+                <td>DSLにあったやり方でEclipseプラグインの設定が可能なトップレベル要素
                     <phrase role="original">Top level element that enables configuration of the eclipse plugin in a DSL-friendly fashion</phrase></td>
             </tr>
             <tr>

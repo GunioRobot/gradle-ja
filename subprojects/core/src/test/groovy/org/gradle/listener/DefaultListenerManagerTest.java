@@ -163,7 +163,7 @@ public class DefaultListenerManagerTest {
 
         manager.createChild().getBroadcaster(TestFooListener.class).foo("param");
     }
-    
+
     @Test
     public void listenerDoesNotReceiveEventsFromParent() {
         manager.createChild().addListener(fooListener1);

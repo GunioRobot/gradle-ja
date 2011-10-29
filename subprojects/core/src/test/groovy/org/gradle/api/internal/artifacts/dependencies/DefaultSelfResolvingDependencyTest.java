@@ -54,7 +54,7 @@ public class DefaultSelfResolvingDependencyTest {
 
         dependency.resolve(resolveContext);
     }
-    
+
     @Test
     public void usesSourceFileCollectionToResolveFiles() {
         final File file = new File("file");

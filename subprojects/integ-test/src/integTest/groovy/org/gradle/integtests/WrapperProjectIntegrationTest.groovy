@@ -48,14 +48,14 @@ class WrapperProjectIntegrationTest extends AbstractIntegrationTest {
                 println 'hello'
             }
         """
-        
+
         executer.withTasks('wrapper').run()
     }
-    
+
     GradleDistributionExecuter getWrapperExecuter() {
         executer.usingExecutable('gradlew').inDirectory(testDir)
     }
-    
+
     @Test
     public void hasNonZeroExitCodeOnBuildFailure() {
         ExecutionFailure failure = wrapperExecuter.withTasks('unknown').runWithFailure()

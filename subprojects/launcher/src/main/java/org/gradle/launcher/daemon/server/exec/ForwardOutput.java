@@ -23,13 +23,13 @@ import org.gradle.logging.internal.LoggingOutputInternal;
  * Registers a logging event listener to forward any output back to the client.
  */
 public class ForwardOutput implements DaemonCommandAction {
-    
+
     private final LoggingOutputInternal loggingOutput;
-    
+
     public ForwardOutput(LoggingOutputInternal loggingOutput) {
         this.loggingOutput = loggingOutput;
     }
-    
+
     public void execute(final DaemonCommandExecution execution) {
         OutputEventListener listener = new OutputEventListener() {
             public void onOutput(OutputEvent event) {

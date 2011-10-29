@@ -21,7 +21,7 @@ import java.io.File;
 
 /**
  * Implementation of AlternateUIInteractionVersion1 for testing purposes.
- * This would lend itself well for mocking. 
+ * This would lend itself well for mocking.
  *
  * @author mhunsicker
   */

@@ -68,7 +68,7 @@ public class SkipUpToDateTaskExecuterTest {
 
         executer.execute(task, taskState);
     }
-    
+
     @Test
     public void executesTaskWhenOutputsAreNotUpToDate() {
         context.checking(new Expectations() {{

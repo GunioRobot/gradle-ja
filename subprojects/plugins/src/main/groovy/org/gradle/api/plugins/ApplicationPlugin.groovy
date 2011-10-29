@@ -48,9 +48,9 @@ class ApplicationPlugin implements Plugin<Project> {
         addPluginConvention()
         addRunTask()
         addCreateScriptsTask()
-        
+
         configureDistSpec(pluginConvention.applicationDistribution)
-        
+
         addInstallTask()
         addDistZipTask()
     }
@@ -127,7 +127,7 @@ class ApplicationPlugin implements Plugin<Project> {
                 fileMode = 0755
             }
         }
-        
+
         distSpec
     }
 }

@@ -51,19 +51,19 @@ class CdtIdePlugin implements Plugin<Project> {
 
     private addCreateCprojectDescriptor(Project project) {
         project.task("cdtCproject", type: GenerateMetadataFileTask) { task ->
-            
+
             [project.executables, project.libraries]*.all { binary ->
                 if (binary.name == "main") {
                     task.settings = new CprojectSettings(binary)
                 }
             }
-            
+
             doFirst {
                 if (task.settings == null) {
                     throw new InvalidUserDataException("There is neither a main binary or library")
                 }
             }
-            
+
             inputs.files { task.settings.includeRoots }
             inputFile = project.file(".cproject")
             outputFile = project.file(".cproject")

@@ -27,7 +27,7 @@ class Slf4jLoggingConfigurerTest extends Specification {
     private final Logger logger = LoggerFactory.getLogger("cat1");
     private final OutputEventListener listener = Mock()
     private final Slf4jLoggingConfigurer configurer = new Slf4jLoggingConfigurer(listener)
-    
+
     def cleanup() {
         LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
         lc.reset();
@@ -54,7 +54,7 @@ class Slf4jLoggingConfigurerTest extends Specification {
         1 * listener.onOutput({it.category == 'cat1' && it.message == 'message' && it.logLevel == LogLevel.INFO && it.throwable == failure})
         0 * listener._
     }
-    
+
     def mapsSlf4jLogLevelsToGradleLogLevels() {
         when:
         configurer.configure(LogLevel.DEBUG)

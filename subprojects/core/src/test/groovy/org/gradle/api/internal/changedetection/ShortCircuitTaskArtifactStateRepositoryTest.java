@@ -51,7 +51,7 @@ public class ShortCircuitTaskArtifactStateRepositoryTest {
         state.afterTask();
         state.finished();
     }
-    
+
     @Test
     public void delegatesToBackingRepositoryToCreateStateObjectForTaskThatHasDeclaredSomeOutputs() {
         TaskInternal task = taskWithOutputs();

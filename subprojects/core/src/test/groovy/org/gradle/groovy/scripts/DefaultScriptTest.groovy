@@ -71,7 +71,7 @@ class DefaultScriptTest {
 // We leave out the path to check import adding
 getName() // call a project method
 assert hasProperty('custom')
-repositories { } 
+repositories { }
 def scriptMethod() { 'scriptMethod' }
 scriptProperty = project.path + 'mySuffix'
 String internalProp = 'a'

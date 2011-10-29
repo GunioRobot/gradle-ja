@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * Provides the general connection mechanics of connecting to a daemon, leaving implementations
  * to define how new daemons should be created if needed.
- * 
+ *
  * Subclassing instead of delegation with regard to creating new daemons seems more appropriate
  * as the way that new daemons are launched is likely to be coupled to the DaemonRegistry implementation.
  */

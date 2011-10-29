@@ -24,7 +24,7 @@ import org.gradle.util.MultiParentClassLoader;
 
 /**
  * An internal interface for Gradle that exposed objects and concepts that are not intended for public
- * consumption.  
+ * consumption.
  */
 public interface GradleInternal extends Gradle {
     /**

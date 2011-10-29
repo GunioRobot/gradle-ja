@@ -195,7 +195,7 @@
             </para>
             <para>このレポートでは、ビルド時間に関する概要のほか、設定フェーズとタスク実行に要した時間がタスクごとに表示されます。設定フェーズ、タスク実行に関するレポートは必要時間の降順でソートされており、さらにタスク実行については、タスクがスキップされたかどうか、作業が発生したかどうかみることができるようになっています。</para>
             <para role="original">Builds which utilize a buildSrc directory will generate a second profile report for buildSrc in the
-                <filename>buildSrc/build</filename> directory.                
+                <filename>buildSrc/build</filename> directory.
             </para>
             <para>なお、<filename>buildSrc</filename>ディレクトリを使っている場合、<filename>buildSrc/build</filename>に<filename>buildSrc</filename>のレポートが別途出力されます。</para>
             <imageobject>

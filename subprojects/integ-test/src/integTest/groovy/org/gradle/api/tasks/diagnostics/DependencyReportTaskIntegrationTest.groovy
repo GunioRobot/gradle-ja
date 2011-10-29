@@ -44,15 +44,15 @@ class DependencyReportTaskIntegrationTest extends AbstractIntegrationSpec {
         and:
         file("client", "build.gradle") << """
             apply plugin: 'java'
-            
+
             dependencies {
                 compile project(":a")
             }
         """
-        
+
         when:
         run ":client:dependencies"
-        
+
         then:
         output.contains "(*) - dependencies omitted (listed previously)"
     }

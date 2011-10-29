@@ -56,7 +56,7 @@ public class LifecycleProjectEvaluatorTest {
 
         evaluator.evaluate(project, state);
     }
-    
+
     @Test
     public void createsAndExecutesScriptAndNotifiesListener() {
         context.checking(new Expectations() {{
@@ -112,7 +112,7 @@ public class LifecycleProjectEvaluatorTest {
 
             one(state).executed();
             inSequence(sequence);
-            
+
             one(listener).afterEvaluate(project, state);
             inSequence(sequence);
         }});

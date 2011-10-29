@@ -64,7 +64,7 @@ artifacts { archives otherJar }
     public void addsDependenciesForFileCollectionInSameProject() {
         fail()
     }
-    
+
     @Test @Ignore
     public void addsDependenciesForFileCollectionInProjectWithNoArtifacts() {
         fail()

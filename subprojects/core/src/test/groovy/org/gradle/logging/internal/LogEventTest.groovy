@@ -31,7 +31,7 @@ class LogEventTest extends Specification {
         1 * output.println()
         0 * output._
     }
-    
+
     def renderWritesMessageAndExceptionToTextOutput() {
         def failure = new RuntimeException()
 

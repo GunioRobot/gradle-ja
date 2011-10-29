@@ -29,7 +29,7 @@ class TaskDetailsFactoryTest extends TaskModelSpecification {
         project.allprojects >> [project, subproject]
         factory = new TaskDetailsFactory(project)
     }
-    
+
     def createsDetailsForTaskInMainProject() {
         task.project >> project
         task.path >> ':path'

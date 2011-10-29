@@ -30,7 +30,7 @@ public class CustomDeployTask extends DeployTask implements CustomInstallDeployT
     public synchronized Settings getSettings() {
         return super.getSettings();
     }
-    
+
     @Override
     public synchronized PlexusContainer getContainer() {
         return super.getContainer();

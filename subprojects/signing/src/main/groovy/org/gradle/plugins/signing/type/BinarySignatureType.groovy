@@ -16,9 +16,9 @@
 package org.gradle.plugins.signing.type
 
 class BinarySignatureType extends AbstractSignatureType {
-    
+
     String getExtension() {
         "sig"
     }
-    
+
 }

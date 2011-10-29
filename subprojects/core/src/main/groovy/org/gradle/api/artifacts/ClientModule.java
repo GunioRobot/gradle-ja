@@ -31,9 +31,9 @@ public interface ClientModule extends ExternalDependency {
     /**
      * Add a dependency to the client module. Such a dependency is transitive dependency for the
      * project that has a dependency on the client module.
-     *  
+     *
      * @param dependency The dependency to add to the client module.
-     * @see #getDependencies() 
+     * @see #getDependencies()
      */
     void addDependency(ModuleDependency dependency);
 

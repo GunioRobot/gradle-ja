@@ -20,7 +20,7 @@ public class PersonIntegrationTest {
         Person person = PersonTestFixture.create("Larry");
         assertEquals("Larry", person.getName());
     }
-    
+
     @Test
     public void resourcesAreAvailableInClasspath() throws Exception {
         Properties properties = new Properties();

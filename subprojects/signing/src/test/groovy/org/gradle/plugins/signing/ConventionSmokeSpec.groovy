@@ -19,19 +19,19 @@ package org.gradle.plugins.signing
 import org.gradle.plugins.signing.signatory.SignatoryProvider
 
 class ConventionSmokeSpec extends SigningProjectSpec {
-    
+
     def setup() {
         applyPlugin()
     }
-    
+
     def "signing block"() {
         when:
         signing {
             signatories {
-                
+
             }
         }
-        
+
         then:
         notThrown Exception
     }
@@ -41,23 +41,23 @@ class ConventionSmokeSpec extends SigningProjectSpec {
         signing.signatories != null
         signing.signatories instanceof SignatoryProvider
     }
-    
+
     def "signing configuration"() {
         expect:
         signing != null
         signing instanceof SigningSettings
         signing.project == project
     }
-    
+
     def "default signatory with no properties"() {
         expect:
         signing.signatory == null
     }
-    
+
     def "default type"() {
         expect:
         signing.signatureType.extension == "asc"
     }
-    
+
 
 }

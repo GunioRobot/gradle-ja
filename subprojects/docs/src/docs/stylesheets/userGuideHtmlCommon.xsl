@@ -83,9 +83,9 @@
     </xsl:param>
 
     <xsl:template match="tip[@role='exampleLocation']" mode="class.value"><xsl:value-of select="@role"/></xsl:template>
-    
+
     <xsl:param name="admon.textlabel">0</xsl:param>
-    
+
     <!-- BOOK TITLEPAGE -->
 
     <!-- Customise the contents of the book titlepage -->
@@ -118,7 +118,7 @@
             <xsl:apply-templates select=".." mode="object.title.markup"/>
         </h1>
     </xsl:template>
-    
+
     <!-- TABLES -->
 
     <!-- Duplicated from docbook stylesheets, to fix problem where html table does not get a title -->

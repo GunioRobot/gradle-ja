@@ -35,7 +35,7 @@ class AbstractMultiCauseExceptionTest extends Specification {
         failure.cause == null
         failure.causes == []
     }
-    
+
     def printStackTraceWithMultipleCauses() {
         RuntimeException cause1 = new RuntimeException('cause1')
         RuntimeException cause2 = new RuntimeException('cause2')
@@ -52,7 +52,7 @@ class AbstractMultiCauseExceptionTest extends Specification {
         outstr.toString().contains("Cause 1: ${RuntimeException.name}: cause1")
         outstr.toString().contains("Cause 2: ${RuntimeException.name}: cause2")
     }
-    
+
     def printStackTraceWithSingleCause() {
         RuntimeException cause1 = new RuntimeException('cause1')
         def failure = new TestMultiCauseException('message', [cause1])

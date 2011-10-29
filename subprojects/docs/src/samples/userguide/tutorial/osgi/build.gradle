@@ -17,7 +17,7 @@ jar {
 }
 task fooJar(type: Jar) {
     manifest = osgiManifest {
-        instruction 'Bundle-Vendor', 'MyCompany'    
+        instruction 'Bundle-Vendor', 'MyCompany'
     }
 }
 // END SNIPPET configure-jar

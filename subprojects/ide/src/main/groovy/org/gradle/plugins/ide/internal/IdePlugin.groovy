@@ -61,7 +61,7 @@ public abstract class IdePlugin implements Plugin<Project> {
             cleanTask.dependsOn(cleanWorker)
         }
     }
-    
+
     protected void onApply(Project target) {
     }
 

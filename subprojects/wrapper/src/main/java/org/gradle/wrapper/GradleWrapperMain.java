@@ -44,7 +44,7 @@ public class GradleWrapperMain {
 
         Properties systemProperties = System.getProperties();
         systemProperties.putAll(parseSystemPropertiesFromArgs(args));
-        
+
         addSystemProperties(rootDir);
 
         boolean alwaysDownload = Boolean.parseBoolean(System.getenv(ALWAYS_DOWNLOAD_ENV));
@@ -62,11 +62,11 @@ public class GradleWrapperMain {
             public CommandLineParser create() {
                 return new CommandLineParser().allowUnknownOptions();
             }
-        }); 
-        
+        });
+
         return converter.convert(Arrays.asList(args));
     }
-    
+
     private static void addSystemProperties(File rootDir) {
         System.getProperties().putAll(SystemPropertiesHandler.getSystemProperties(new File(gradleUserHome(), "gradle.properties")));
         System.getProperties().putAll(SystemPropertiesHandler.getSystemProperties(new File(rootDir, "gradle.properties")));

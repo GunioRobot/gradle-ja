@@ -83,13 +83,13 @@ public class DefaultDependenciesToModuleDescriptorConverterTest {
 
         converter.addDependencyDescriptors(moduleDescriptor, toSet(configurationStub1, configurationStub2, configurationStub3),
                 ivySettingsDummy);
-                
+
         assertThat(moduleDescriptor.getExcludeRules(toArray(configurationStub1.getName())), equalTo(toArray(
                 ivyExcludeRuleStub1)));
         assertThat(moduleDescriptor.getExcludeRules(toArray(configurationStub2.getName())), equalTo(toArray(
                 ivyExcludeRuleStub2)));
         assertIsCorrectConflictResolver(moduleDescriptor);
-        
+
     }
 
     private void assertIsCorrectConflictResolver(DefaultModuleDescriptor moduleDescriptor) {
@@ -119,7 +119,7 @@ public class DefaultDependenciesToModuleDescriptorConverterTest {
                     with(equal(parent)), with(sameInstance(dependency)));
         }});
     }
-    
+
     private Configuration createNamedConfigurationStubWithDependenciesAndExcludeRules(final String name, final ExcludeRule excludeRule,
                                                                                       final ModuleDependency... dependencies) {
         final Configuration configurationStub = IvyConverterTestUtil.createNamedConfigurationStub(name, context);

@@ -98,7 +98,7 @@ public class UploadTest extends AbstractTaskTest {
 
         context.checking(new Expectations(){{
             one(repositoriesMock).configure(with(any(Closure.class)));
-            will(new CustomAction("execution configure") { 
+            will(new CustomAction("execution configure") {
                 public Object invoke(Invocation invocation) {
                     return ConfigureUtil.configure((Closure)invocation.getParameter(0), invocation.getInvokedObject(), false);
                 }

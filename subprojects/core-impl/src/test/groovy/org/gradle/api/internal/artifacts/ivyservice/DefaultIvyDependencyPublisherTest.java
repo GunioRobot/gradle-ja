@@ -36,7 +36,7 @@ public class DefaultIvyDependencyPublisherTest {
     JUnit4Mockery context = new JUnit4Mockery() {{
             setImposteriser(ClassImposteriser.INSTANCE);
     }};
-    
+
     private ModuleDescriptor moduleDescriptorDummy = context.mock(ModuleDescriptor.class);
     private PublishOptionsFactory publishOptionsFactoryStub = context.mock(PublishOptionsFactory.class);
     private PublishEngine publishEngineMock = context.mock(PublishEngine.class);

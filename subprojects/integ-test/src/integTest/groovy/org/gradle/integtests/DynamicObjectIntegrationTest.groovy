@@ -351,7 +351,7 @@ assert 'overridden value' == global
 
         executer.inDirectory(testDir).withTasks("test").run();
     }
-    
+
     @Test
     public void canInjectMethodsFromParentProject() {
         TestFile testDir = dist.getTestDir();

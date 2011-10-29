@@ -84,7 +84,7 @@
              that helps keep track of all the settings and properties being passed to plugins. You can capture user input by telling
              the extension container about your plugin. To capture input, simply add a Java Bean compliant class into the extension container's list of
              extensions. Groovy is a good language choice for a plugin because plain old Groovy objects contain all the getter and setter methods
-             that a Java Bean requires. 
+             that a Java Bean requires.
         </para>
 
         <para>Let's add a simple extension object to the project. Here we add a <literal>greeting</literal> extension object to the
@@ -115,7 +115,7 @@
             Then, when the closure is executed, the fields on the extension object will be mapped to the variables within the closure
             based on the standard Groovy closure delegate feature.
         </para>
-        
+
         <section>
             <title>Using extensions for default values</title>
             <para>
@@ -133,7 +133,7 @@
                 <sourcefile file="build.gradle" snippet="plugin"/>
             </sample>
             <para>
-                By using the convention mapping above to map the value of the project property <literal>greeting</literal> as the value for the 
+                By using the convention mapping above to map the value of the project property <literal>greeting</literal> as the value for the
                 <literal>greeting</literal> property on all <literal>GreetingTask</literal> tasks, we have effectively configured this as the default value.
                 That is, individual tasks can be overridden in such a way to override this default.
             </para>
@@ -148,11 +148,11 @@
             </sample>
             <para>
                 Note that the convention mapping is “live” in that the convention mapping closure will be evaluated everytime that the value is requested.
-                In this example this means that the default value for the task property will always be the value of <literal>project.greeting</literal>, 
+                In this example this means that the default value for the task property will always be the value of <literal>project.greeting</literal>,
                 no matter when or how it changes.
             </para>
         </section>
-        
+
     </section>
 
     <section>
@@ -168,12 +168,12 @@
         <para>
             In this example, we configure the <literal>greet</literal> task <literal>destination</literal> property as a closure, which is evaluated with
             the <apilink class="org.gradle.api.Project" method="file(java.lang.Object)"/> method to turn the return value of the closure into a file object
-            at the last minute. You will notice that in the above example we specify the <literal>greetingFile</literal> property value after we have 
-            configured to use it for the task. This kind of lazy evaluation is a key benefit of accepting any value when setting a file property, then 
+            at the last minute. You will notice that in the above example we specify the <literal>greetingFile</literal> property value after we have
+            configured to use it for the task. This kind of lazy evaluation is a key benefit of accepting any value when setting a file property, then
             resolving that value when reading the property.
         </para>
     </section>
-    
+
     <section>
         <title>A standalone project</title>
         <para>Now we will move our plugin to a standalone project, so we can publish it and share it with others.
@@ -193,7 +193,7 @@
 
         <sample id="customPluginStandalone" dir="customPlugin" title="Wiring for a custom plugin">
             <sourcefile file="src/main/resources/META-INF/gradle-plugins/greeting.properties"/>
-        </sample>	
+        </sample>
 
 	<para>
 	    Notice that the properties filename matches the plugin's name and is placed in the resources folder, and
@@ -234,8 +234,8 @@
         <para>
             The <apilink class="org.gradle.api.Project" method="container(java.lang.Class)"/> methods create instances of <apilink class="org.gradle.api.NamedDomainObjectContainer"/>, that have many useful methods for managing and configuring the objects. In order
             to use a type with any of the <literal>project.container</literal> methods, it MUST expose a property named “<literal>name</literal>”
-            as the unique, and constant, name for the object. The <literal>project.container(Class)</literal> variant of the container method creates 
-            new instances by attempting to invoke the constructor of the class that takes a single string argument, which is the desired name of the object. 
+            as the unique, and constant, name for the object. The <literal>project.container(Class)</literal> variant of the container method creates
+            new instances by attempting to invoke the constructor of the class that takes a single string argument, which is the desired name of the object.
             See the above link for <literal>project.container</literal> method variants taht allow custom instantiation strategies.
         </para>
     </section>

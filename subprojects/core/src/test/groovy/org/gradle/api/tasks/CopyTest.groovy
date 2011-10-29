@@ -54,7 +54,7 @@ public class CopyTest extends AbstractTaskTest {
 
         copyTask.copy()
     }
-    
+
     @Test public void usesConventionValuesForDestDirWhenNotSpecified() {
         copyTask.conventionMapping.destinationDir = { new File('convention') }
 

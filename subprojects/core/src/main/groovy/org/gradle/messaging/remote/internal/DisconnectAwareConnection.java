@@ -20,9 +20,9 @@ import org.gradle.api.Action;
 /**
  * A {@code DisconnectAwareConnection} is a connection capable of executing an action when
  * the other side of connection disconnects before the stop method is called on this connection.
- * 
+ *
  * This can be used in situations where messages are consumed and “processed” in a synchronous manner,
- * but knowing that the other side of the connection is not going to send anymore information 
+ * but knowing that the other side of the connection is not going to send anymore information
  * (i.e. it has disconnected) is important.
  */
 public interface DisconnectAwareConnection<T> extends Connection<T> {
@@ -38,7 +38,7 @@ public interface DisconnectAwareConnection<T> extends Connection<T> {
      * <p>
      * If the {@code stop()} method is called on this connection before a disconnection is detected, the disconnect action
      * will never be called.
-     * 
+     *
      * @param disconnectAction The action to perform on disconnection, or {@code null} to remove any existing action.
      * @return The previous disconnect action, or {@code null} if no action had been previously registered.
      */

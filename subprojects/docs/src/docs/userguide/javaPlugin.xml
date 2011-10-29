@@ -55,7 +55,7 @@
         <para>Javaプラグインは、<literal>main</literal>と<literal>test</literal>という二つの標準ソースセットを定義します。<literal>main</literal>ソースセットは、コンパイルされJARファイルを構成する製品ソースコードを含みます。<literal>test</literal>ソースセットは、コンパイルされJUnitやTestNGで実行されるユニットテストコードを含みます。
         </para>
     </section>
-    
+
     <section>
         <title>タスク<phrase role="original">Tasks</phrase></title>
         <para role="original">The Java plugin adds a number of tasks to your project, as shown below.</para>
@@ -262,7 +262,7 @@
                 <phrase role="original">Assembles the given source set's classes directory.</phrase></td>
             </tr>
         </table>
-        
+
         <para role="original">The Java plugin also adds a number of tasks which form a lifecycle for the project:</para>
         <para>Javaプラグインは、プロジェクトのライフサイクルを構成する数多くのタスクも追加します：</para>
 
@@ -322,7 +322,7 @@
                 </td>
                 <td>
                     <literal>build</literal> と、<literal>testRuntime</literal>コンフィギュレーションのプロジェクトライブラリ依存先すべての
-                    <literal>build</literal>タスク                   
+                    <literal>build</literal>タスク
                     <phrase role="original"><literal>build</literal> and <literal>build</literal> tasks in all project lib dependencies of the
                     <literal>testRuntime</literal> configuration.</phrase>
                 </td>
@@ -336,7 +336,7 @@
                 </td>
                 <td>
                     <literal>build</literal> と、<literal>testRuntime</literal>コンフィギュレーションのプロジェクトライブラリ依存先がこのプロジェクトであるすべてのプロジェクトの
-                    <literal>build</literal>タスク 
+                    <literal>build</literal>タスク
                     <phrase role="original"><literal>build</literal> and <literal>build</literal> tasks in all projects with a project lib
                     dependency on this project in a <literal>testRuntime</literal> configuration.</phrase>
                 </td>
@@ -1048,11 +1048,11 @@
             <ulink url='http://download.oracle.com/javase/1.5.0/docs/tooldocs/windows/javadoc.html#referenceguide'>reference documentation</ulink>
             of the Javadoc executable.
             For a complete list of supported Javadoc options consult the API documentation of the following classes:
-            <apilink class="org.gradle.external.javadoc.CoreJavadocOptions"/> and <apilink class="org.gradle.external.javadoc.StandardJavadocDocletOptions"/>. 
+            <apilink class="org.gradle.external.javadoc.CoreJavadocOptions"/> and <apilink class="org.gradle.external.javadoc.StandardJavadocDocletOptions"/>.
         </para>
         <para><literal>javadoc</literal>タスクは<apilink class="org.gradle.api.tasks.javadoc.Javadoc"/>のインスタンスです。
         javadocの主なオプションと、javadocコマンドの<ulink url='http://download.oracle.com/javase/1.5.0/docs/tooldocs/windows/javadoc.html#referenceguide'>リファレンスガイド</ulink>に記載されている標準docletのオプションをサポートしています。
-        サポートしているjavadocオプションの完全なリストについては、次のクラスのAPIドキュメントを参照してください: 
+        サポートしているjavadocオプションの完全なリストについては、次のクラスのAPIドキュメントを参照してください:
             <apilink class="org.gradle.external.javadoc.CoreJavadocOptions"/>および<apilink class="org.gradle.external.javadoc.StandardJavadocDocletOptions"/>。
         </para>
         <table>
@@ -1241,7 +1241,7 @@
             これにより、テストのデバッグがとても簡単になります。
             このモードは、後述するシステムプロパティを使って有効にすることもできます。
             </para>
-            <para role="original">You can specify whether or not to execute your tests in parallel. Gradle provides parallel test execution 
+            <para role="original">You can specify whether or not to execute your tests in parallel. Gradle provides parallel test execution
                 by running multiple test processes concurrently. Each test process executes only a single test at a time, so you
                 generally don't need to do anything special to your tests to take advantage of this.
                 The <literal>maxParallelForks</literal> property specifies the maximum number of test processes to run
@@ -1330,7 +1330,7 @@
             </para>
             <para role="original">Setting a system property of <literal>taskName.debug</literal> will run the tests in debug mode,
                   suspended and listening on port 5005.  For example:
-                  <literal>gradle test -Dtest.single=ThisUniquelyNamedTest -Dtest.debug</literal>                
+                  <literal>gradle test -Dtest.single=ThisUniquelyNamedTest -Dtest.debug</literal>
             </para>
             <para><literal>taskName.debug</literal>システムプロパティを設定すれば、テストはデバッグモードで実行され、一時停止してポート5005でlistenした状態になります。
             実行例: <literal>gradle test -Dtest.single=ThisUniquelyNamedTest -Dtest.debug</literal>
@@ -1529,5 +1529,5 @@ metaInf << new FileSet(someDir)
         <para>作成したアーカイブをアップロードする方法は、<xref linkend="artifact_management"/>で説明しています。
         </para>
     </section>
-    
+
 </chapter>

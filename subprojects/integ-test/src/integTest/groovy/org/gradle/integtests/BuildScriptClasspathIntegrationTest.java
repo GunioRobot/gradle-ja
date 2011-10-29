@@ -208,7 +208,7 @@ public class BuildScriptClasspathIntegrationTest extends AbstractIntegrationTest
     public void canInjectClassPathIntoSubProjects() {
         fail("implement me");
     }
-    
+
     @Test @Ignore
     public void canReuseClassPathRepositories() {
         fail("implement me");

@@ -21,11 +21,11 @@ import org.gradle.plugins.binaries.model.Library;
  * Can compile against libraries
  */
 public interface AgainstLibrary {
-    
+
     /**
      * Compile against the given libs (collection must be live, i.e. changes respected)
      */
     void libs(Iterable<Library> libs);
-    
+
 
 }

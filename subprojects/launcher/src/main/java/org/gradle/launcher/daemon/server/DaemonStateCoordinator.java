@@ -108,7 +108,7 @@ public class DaemonStateCoordinator implements Stoppable, AsyncStoppable {
                 } else if (hasBeenIdleFor(timeout)) {
                     return false;
                 }
-            
+
                 try {
                     if (!isStarted()) {
                         LOGGER.debug("waiting for daemon to stop or idle timeout, daemon has not yet started, sleeping until then");
@@ -261,7 +261,7 @@ public class DaemonStateCoordinator implements Stoppable, AsyncStoppable {
     public boolean isBusy() {
         return isRunning() && !isIdle();
     }
-    
+
     public boolean isRunning() {
         return isStarted() && !isStopped();
     }

@@ -44,7 +44,7 @@ class TaskStateInternalTest {
         assertFalse(state.skipped)
         assertThat(state.getFailure(), nullValue())
     }
-    
+
     @Test
     public void canMarkTaskAsExecutedWithFailure() {
         RuntimeException failure = new RuntimeException()

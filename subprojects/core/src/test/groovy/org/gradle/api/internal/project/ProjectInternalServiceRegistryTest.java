@@ -197,13 +197,13 @@ public class ProjectInternalServiceRegistryTest {
         assertThat(registry.get(FileOperations.class), instanceOf(DefaultFileOperations.class));
         assertThat(registry.get(FileOperations.class), sameInstance(registry.get(FileOperations.class)));
     }
-    
+
     @Test
     public void providesATemporaryFileProvider() {
         assertThat(registry.get(TemporaryFileProvider.class), instanceOf(DefaultTemporaryFileProvider.class));
         assertThat(registry.get(TemporaryFileProvider.class), sameInstance(registry.get(TemporaryFileProvider.class)));
     }
-    
+
     @Test
     public void providesALoggingManager() {
         final Factory<LoggingManagerInternal> loggingManagerFactory = context.mock(Factory.class);

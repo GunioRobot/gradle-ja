@@ -32,7 +32,7 @@ project(":exe") {
     apply plugin: "maven"
 
     version = 1.0
-    
+
     repositories {
         maven {
             url new File(project(":lib").buildDir, "repo")
@@ -48,7 +48,7 @@ cpp {
     }
 }
 // END SNIPPET declaring-dependencies
-    
+
     uploadArchives {
         repositories {
             mavenDeployer {

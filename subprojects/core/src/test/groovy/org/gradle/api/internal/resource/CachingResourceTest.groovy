@@ -51,7 +51,7 @@ class CachingResourceTest {
         assertThat(resource.text, equalTo('content'))
         assertTrue(resource.exists)
     }
-    
+
     @Test
     public void fetchesAndCachesContentForResourceThatDoesNotExist() {
         context.checking {

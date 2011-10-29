@@ -963,7 +963,7 @@ public class OpenApiUiTest {
     }
 
   /**
-   * This appends a specified string to the command line when executing a command. 
+   * This appends a specified string to the command line when executing a command.
    */
   private class TestCommandLineArgumentAlteringListenerVersion1 implements CommandLineArgumentAlteringListenerVersion1
   {

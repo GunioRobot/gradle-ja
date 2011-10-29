@@ -15,7 +15,7 @@
  */
 
 
- 
+
 package org.gradle.api.plugins
 
 import org.gradle.api.DefaultTask
@@ -56,7 +56,7 @@ class JavaBasePluginTest extends Specification {
         when:
         javaBasePlugin.apply(project)
         project.sourceSets.add('custom')
-        
+
         then:
         def set = project.sourceSets.custom
         set.java.srcDirs == toLinkedSet(project.file('src/custom/java'))

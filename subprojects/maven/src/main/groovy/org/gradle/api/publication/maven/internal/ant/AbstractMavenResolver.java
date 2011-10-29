@@ -63,7 +63,7 @@ import java.util.Set;
 public abstract class AbstractMavenResolver implements MavenResolver, DependencyResolver, ArtifactRepositoryInternal {
 
     private String name;
-    
+
     private ArtifactPomContainer artifactPomContainer;
 
     private PomFilterContainer pomFilterContainer;

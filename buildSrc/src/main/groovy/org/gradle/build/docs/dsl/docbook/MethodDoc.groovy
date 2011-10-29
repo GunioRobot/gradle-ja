@@ -53,7 +53,7 @@ class MethodDoc {
     Element getDescription() {
         return comment.find { it.nodeName == 'para' }
     }
-    
+
     List<Element> getComment() {
         return comment
     }

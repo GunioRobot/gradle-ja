@@ -97,7 +97,7 @@ public class WrapperTest extends AbstractTaskTest {
         wrapper.setJarFile("build/gradle-wrapper.jar");
         assertEquals(getProject().file("build/gradle-wrapper.properties"), wrapper.getPropertiesFile());
     }
-    
+
     @Test
     public void testDownloadsFromReleaseRepositoryForReleaseVersions() {
         wrapper.setGradleVersion("0.9.1");

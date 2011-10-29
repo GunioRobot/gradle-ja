@@ -164,13 +164,13 @@ class DefaultArtifactRepositoryContainerTest {
             allowing(repository1).getName(); will(returnValue('repo1'))
             allowing(repository2).getName(); will(returnValue('repo2'))
         }
-        
+
         resolverContainer.addLast(repository1)
         resolverContainer.addLast(repository2)
 
         assert resolverContainer.all as List == [repository1, repository2]
     }
-    
+
     @Test public void testAddFirstUsingUserDescription() {
         assert resolverContainer.addFirst(expectedUserDescription).is(expectedResolver)
         resolverContainer.addFirst(expectedUserDescription2)

@@ -112,7 +112,7 @@ public class DefaultInternalRepository extends BasicResolver implements Internal
     @Override
     protected ResolvedResource findArtifactRef(Artifact artifact, Date date) {
         String path = artifact.getExtraAttribute(DefaultIvyDependencyPublisher.FILE_PATH_EXTRA_ATTRIBUTE);
-        if (path == null) {            
+        if (path == null) {
             return null;
         }
         File file = new File(path);

@@ -30,7 +30,7 @@ public class CompositeIdGenerator implements IdGenerator<Object> {
     public Object generateId() {
         return new CompositeId(scope, generator.generateId());
     }
-    
+
     private static class CompositeId implements Serializable {
         private final Object scope;
         private final Object id;

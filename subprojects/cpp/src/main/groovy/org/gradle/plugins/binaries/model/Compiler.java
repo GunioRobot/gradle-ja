@@ -19,7 +19,7 @@ import org.gradle.api.Named;
 
 /**
  * A kind of compiler
- * 
+ *
  * @param <T> The kind of CompileSpec this compiler exposes
  */
 public interface Compiler<T extends CompileSpec> extends Named {

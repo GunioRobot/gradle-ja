@@ -30,7 +30,7 @@ class ProxyDispatchAdapterTest extends Specification {
         then:
         1 * dispatch.dispatch(new MethodInvocation(ProxyTest.class.getMethod('doStuff', String.class), ['param'] as Object[]))
     }
-    
+
     def proxyIsEqualWhenItHasTheSameTypeAndDispatch() {
         def other = new ProxyDispatchAdapter<ProxyTest>(ProxyTest.class, dispatch)
         def differentType = new ProxyDispatchAdapter<Runnable>(Runnable.class, dispatch)

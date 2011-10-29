@@ -65,7 +65,7 @@ public class DefaultFileOperations implements FileOperations {
     public URI uri(Object path) {
         return fileResolver.resolveUri(path);
     }
-    
+
     public ConfigurableFileCollection files(Object... paths) {
         return new DefaultConfigurableFileCollection(fileResolver, taskResolver, paths);
     }

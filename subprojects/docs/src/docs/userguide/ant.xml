@@ -108,7 +108,7 @@
             </sample>
             <para>
                 You can use Gradle's dependency management to assemble the classpath to use for the custom tasks.
-                To do this, you need to define a custom configuration for the classpath, then add some dependencies 
+                To do this, you need to define a custom configuration for the classpath, then add some dependencies
                 to the configuration. This is described in more detail in <xref linkend='sec:how_to_declare_your_dependencies'/>.
             </para>
             <sample id="useExternalAntTaskWithConfig" dir="userguide/ant/useExternalAntTaskWithConfig" title="Declaring the classpath for a custom Ant task">

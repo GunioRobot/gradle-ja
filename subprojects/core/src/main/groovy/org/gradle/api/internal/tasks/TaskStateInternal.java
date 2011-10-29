@@ -76,7 +76,7 @@ public class TaskStateInternal implements TaskState {
     public void upToDate() {
         skipped("UP-TO-DATE");
     }
-    
+
     public boolean getExecuting() {
         return executing;
     }

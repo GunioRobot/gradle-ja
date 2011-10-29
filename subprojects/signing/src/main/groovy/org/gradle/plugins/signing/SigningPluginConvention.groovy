@@ -21,13 +21,13 @@ import org.gradle.api.internal.Instantiator
 import org.gradle.util.ConfigureUtil
 
 class SigningPluginConvention {
-    
+
     private SigningSettings settings
-    
+
     SigningPluginConvention(SigningSettings settings) {
         this.settings = settings
     }
-    
+
     /**
      * Configures the signing settings of this project.
      *
@@ -48,23 +48,23 @@ class SigningPluginConvention {
         ConfigureUtil.configure(closure, settings)
         settings
     }
-    
+
     /**
      * The {@link SigningSettings signing settings} for the project.
      */
     SigningSettings getSigning() {
         settings
     }
-    
+
     /**
      * Digitally signs the publish artifacts, generating signature files alongside them.
-     * 
-     * <p>The project's default signatory and default signature type from the 
+     *
+     * <p>The project's default signatory and default signature type from the
      * {@link SigningSettings signing settings} will be used to generate the signature.
      * The returned {@link SignOperation sign operation} gives access to the created signature files.
      * <p>
      * If there is no configured default signatory available, the sign operation will fail.
-     * 
+     *
      * @param publishArtifacts The publish artifacts to sign
      * @return The executed {@link SignOperation sign operation}
      */
@@ -76,13 +76,13 @@ class SigningPluginConvention {
 
     /**
      * Digitally signs the files, generating signature files alongside them.
-     * 
-     * <p>The project's default signatory and default signature type from the 
+     *
+     * <p>The project's default signatory and default signature type from the
      * {@link SigningSettings signing settings} will be used to generate the signature.
      * The returned {@link SignOperation sign operation} gives access to the created signature files.
      * <p>
      * If there is no configured default signatory available, the sign operation will fail.
-     * 
+     *
      * @param publishArtifacts The files to sign.
      * @return The executed {@link SignOperation sign operation}.
      */
@@ -91,16 +91,16 @@ class SigningPluginConvention {
             sign(*files)
         }
     }
-    
+
     /**
      * Digitally signs the files, generating signature files alongside them.
-     * 
-     * <p>The project's default signatory and default signature type from the 
+     *
+     * <p>The project's default signatory and default signature type from the
      * {@link SigningSettings signing settings} will be used to generate the signature.
      * The returned {@link SignOperation sign operation} gives access to the created signature files.
      * <p>
      * If there is no configured default signatory available, the sign operation will fail.
-     * 
+     *
      * @param classifier The classifier to assign to the created signature artifacts.
      * @param publishArtifacts The publish artifacts to sign.
      * @return The executed {@link SignOperation sign operation}.
@@ -110,27 +110,27 @@ class SigningPluginConvention {
             sign(classifier, *files)
         }
     }
-    
+
     /**
      * Creates a new {@link SignOperation sign operation} using the given closure to configure it before executing it.
-     * 
-     * <p>The project's default signatory and default signature type from the 
+     *
+     * <p>The project's default signatory and default signature type from the
      * {@link SigningSettings signing settings} will be used to generate the signature.
      * The returned {@link SignOperation sign operation} gives access to the created signature files.
      * <p>
-     * If there is no configured default signatory available (and one is not explicitly specified in this operation's configuration), 
+     * If there is no configured default signatory available (and one is not explicitly specified in this operation's configuration),
      * the sign operation will fail.
-     * 
+     *
      * @param closure The configuration of the {@link SignOperation sign operation}.
      * @return The executed {@link SignOperation sign operation}.
      */
     SignOperation sign(Closure closure) {
         doSignOperation(closure)
     }
-    
+
     /**
      * Signs the POM artifact for the given maven deployment.
-     * 
+     *
      * <p>You can use this method to sign the generated pom when publishing to a maven repository with the maven plugin.
      * </p>
      * <pre autoTested=''>
@@ -145,7 +145,7 @@ class SigningPluginConvention {
      * }
      * </pre>
      * <p>You can optionally provide a configuration closure to fine tune the {@link SignOperation sign operation} for the POM.</p>
-     * 
+     *
      * @param mavenDeployment The deployment to sign the POM of
      * @param closure the configuration of the underlying {@link SignOperation sign operation} for the pom (optional)
      * @return the generated signature artifact
@@ -155,17 +155,17 @@ class SigningPluginConvention {
             sign(mavenDeployment.pomArtifact)
             ConfigureUtil.configure(closure, delegate)
         }
-        
+
         def pomSignature = signOperation.singleSignature
-        
+
         // Have to alter the “type” of the artifact to match what is published
         // See http://issues.gradle.org/browse/GRADLE-1589
         pomSignature.type = "pom." + pomSignature.signatureType.extension
-        
+
         mavenDeployment.addArtifact(pomSignature)
         pomSignature
     }
-    
+
     protected SignOperation doSignOperation(Closure setup) {
         def operation = settings.project.services.get(Instantiator).newInstance(SignOperation)
         settings.addSignatureSpecConventions(operation)

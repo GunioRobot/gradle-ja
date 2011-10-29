@@ -22,7 +22,7 @@ import org.bouncycastle.openpgp.PGPSignature
  * A normalised form for keys, which are friendliest for users as hex strings but used internally as longs.
  */
 class PgpKeyId implements Comparable<PgpKeyId> {
-    
+
     final String asHex
     final long asLong
 
@@ -47,12 +47,12 @@ class PgpKeyId implements Comparable<PgpKeyId> {
     static String toHex(long keyId) {
         String.format("%08X", (0xFFFFFFFFL & keyId))
     }
-    
+
     static long toLong(String keyId) {
         if (keyId == null) {
             throw new IllegalArgumentException("'keyId' cannot be null")
         }
-        
+
         def normalised
         def keyIdUpped = keyId.toUpperCase()
         if (keyIdUpped.size() == 10) {
@@ -65,12 +65,12 @@ class PgpKeyId implements Comparable<PgpKeyId> {
             if (keyId.startsWith("0X")) {
                 throw new IllegalArgumentException("8 character key IDs must not start with 0x (given value: $keyId)")
             }
-            
+
             normalised = keyIdUpped
         } else {
             throw new IllegalStateException("The key ID must be in a valid form (eg 00B5050F or 0x00B5050F), given value: $keyId")
         }
-        
+
         try {
             Long.parseLong(normalised, 16)
         } catch (NumberFormatException e) {

@@ -55,7 +55,7 @@ public class DefaultIvyArtifactRepository implements IvyArtifactRepository, Arti
 
         RepositoryResolver resolver = createResolver(schemes);
         resolver.setName(name);
-        
+
         layout.apply(uri, resolver);
         additionalPatternsLayout.apply(uri, resolver);
 

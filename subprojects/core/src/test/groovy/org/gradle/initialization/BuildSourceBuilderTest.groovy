@@ -87,7 +87,7 @@ class BuildSourceBuilderTest {
             one(gradleMock).run(); will(returnValue(expectedBuildResult))
         }
         expectValueWrittenToCache()
-        
+
         createBuildFile()
         Set<File> actualClasspath = buildSourceBuilder.createBuildSourceClasspath(expectedStartParameter)
         assertEquals(testDependencies, actualClasspath)

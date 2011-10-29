@@ -166,7 +166,7 @@ public class DefaultScriptCompilationHandler implements ScriptCompilationHandler
         if (new File(scriptCacheDir, EMPTY_SCRIPT_MARKER_FILE_NAME).isFile()) {
             return emptyScriptGenerator.generate(scriptBaseClass);
         }
-        
+
         try {
             URLClassLoader urlClassLoader = new URLClassLoader(WrapUtil.toArray(scriptCacheDir.toURI().toURL()),
                     classLoader);

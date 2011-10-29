@@ -33,7 +33,7 @@ public class AndSpecTest extends AbstractCompositeSpecTest {
     public void isSatisfiedWhenNoSpecs() {
         assertTrue(new AndSpec<Object>().isSatisfiedBy(new Object()));
     }
-    
+
     @Test
     public void isSatisfiedByWithAllTrue() {
         assertTrue(new AndSpec<Object>(createAtomicElements(true, true, true)).isSatisfiedBy(new Object()));
@@ -43,14 +43,14 @@ public class AndSpecTest extends AbstractCompositeSpecTest {
     public void isSatisfiedByWithOneFalse() {
         assertFalse(new AndSpec<Object>(createAtomicElements(true, false, true)).isSatisfiedBy(new Object()));
     }
-    
+
     @Test
     public void canAddSpecs() {
         AndSpec<Object> spec = new AndSpec<Object>(createAtomicElements(true));
         spec = spec.and(createAtomicElements(false));
         assertFalse(spec.isSatisfiedBy(new Object()));
     }
-    
+
     @Test
     public void canAddClosureAsASpec() {
         AndSpec<Object> spec = new AndSpec<Object>(createAtomicElements(true));

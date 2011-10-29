@@ -27,7 +27,7 @@ public interface ManifestMergeSpec {
      * {@link org.gradle.api.java.archives.Manifest} or a path that is evaluated as for
      * {@link org.gradle.api.Project#files(Object...)} . If multiple merge paths are specified, the manifest are merged
      * in the order in which they are added.
-     * 
+     *
      * @param mergePaths The paths of manifests to be merged
      * @return this
      */

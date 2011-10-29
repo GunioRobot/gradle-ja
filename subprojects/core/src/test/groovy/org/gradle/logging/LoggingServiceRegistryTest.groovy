@@ -41,7 +41,7 @@ class LoggingServiceRegistryTest extends Specification {
         def factory = registry.get(StyledTextOutputFactory.class)
         factory instanceof DefaultStyledTextOutputFactory
     }
-    
+
     def providesAProgressLoggerFactory() {
         expect:
         def factory = registry.get(ProgressLoggerFactory.class)
@@ -69,7 +69,7 @@ class LoggingServiceRegistryTest extends Specification {
         System.out != outputs.stdOutPrintStream
         System.err != outputs.stdErrPrintStream
     }
-    
+
     def canDisableSystemOutAndErrCapture() {
         def loggingManager = registry.newInstance(LoggingManagerInternal)
         loggingManager.disableStandardOutputCapture()

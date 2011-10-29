@@ -31,7 +31,7 @@ import java.util.Set;
  */
 public class ArchivePublishArtifactTest extends AbstractPublishArtifactTest {
     private AbstractArchiveTask archiveTask = context.mock(AbstractArchiveTask.class);
-    
+
     @Override
     protected PublishArtifact createPublishArtifact(final String classifier) {
         prepareMocks(classifier, "");
@@ -69,7 +69,7 @@ public class ArchivePublishArtifactTest extends AbstractPublishArtifactTest {
         assertCommonPropertiesAreSet(publishArtifact, true);
         assertThat(publishArtifact.getArchiveTask(), sameInstance(archiveTask));
     }
-    
+
     @Test
     public void nameWithAppendix() {
         String testAppendix = "appendix";

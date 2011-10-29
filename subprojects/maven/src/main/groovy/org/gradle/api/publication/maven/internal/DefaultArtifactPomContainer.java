@@ -52,7 +52,7 @@ public class DefaultArtifactPomContainer implements ArtifactPomContainer {
                 if (artifactPoms.get(activePomFilter.getName()) == null) {
                     artifactPoms.put(activePomFilter.getName(), artifactPomFactory.createArtifactPom(activePomFilter.getPomTemplate()));
                 }
-                artifactPoms.get(activePomFilter.getName()).addArtifact(artifact, src); 
+                artifactPoms.get(activePomFilter.getName()).addArtifact(artifact, src);
             }
         }
     }

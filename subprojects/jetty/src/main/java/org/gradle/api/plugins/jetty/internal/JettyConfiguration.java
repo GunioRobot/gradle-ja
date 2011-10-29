@@ -98,7 +98,7 @@ public class JettyConfiguration extends Configuration {
         int major = Integer.parseInt(version[0]);
         int minor = Integer.parseInt(version[1]);
         if ((major >= 1) && (minor >= 5)) {
-            //TODO it would be nice to be able to re-use the parseAnnotations() method on 
+            //TODO it would be nice to be able to re-use the parseAnnotations() method on
             //the org.mortbay.jetty.annotations.Configuration class, but it's too difficult?
 
             //able to use annotations on on jdk1.5 and above

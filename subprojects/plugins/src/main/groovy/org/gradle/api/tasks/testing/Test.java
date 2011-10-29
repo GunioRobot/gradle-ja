@@ -789,7 +789,7 @@ public class Test extends ConventionTask implements JavaForkOptions, PatternFilt
      * @return The candidate class files.
      */
     @InputFiles
-    @Input // Also marked as input to force tests to run when the set of candidate class files changes 
+    @Input // Also marked as input to force tests to run when the set of candidate class files changes
     public FileTree getCandidateClassFiles() {
         return getProject().fileTree(getTestClassesDir()).matching(patternSet);
     }

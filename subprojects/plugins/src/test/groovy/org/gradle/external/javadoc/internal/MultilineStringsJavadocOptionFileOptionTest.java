@@ -75,7 +75,7 @@ public class MultilineStringsJavadocOptionFileOptionTest {
             tempList.add(docUrl2);
             one(writerContextMock).writeMultilineValuesOption(optionName, tempList);
         }});
-       
+
         linksOption.writeCollectionValue(writerContextMock);
     }
 }

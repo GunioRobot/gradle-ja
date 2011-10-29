@@ -47,7 +47,7 @@ public class DefaultGradleLauncherFactory implements GradleLauncherFactory {
     public DefaultGradleLauncherFactory(ServiceRegistry loggingServices) {
         this(new GlobalServicesRegistry(loggingServices));
     }
-    
+
     public DefaultGradleLauncherFactory() {
         this(new GlobalServicesRegistry());
     }
@@ -56,7 +56,7 @@ public class DefaultGradleLauncherFactory implements GradleLauncherFactory {
         sharedServices = globalServices;
         tracker = new NestedBuildTracker();
 
-        // Register default loggers 
+        // Register default loggers
         ListenerManager listenerManager = sharedServices.get(ListenerManager.class);
         listenerManager.addListener(new BuildProgressLogger(sharedServices.get(ProgressLoggerFactory.class)));
         listenerManager.useLogger(new DependencyResolutionLogger(sharedServices.get(ProgressLoggerFactory.class)));

@@ -103,7 +103,7 @@ public class DefaultTaskArtifactStateRepository implements TaskArtifactStateRepo
 
         public boolean snapshot() {
             calcCurrentState();
-            
+
             if (upToDate) {
                 return false;
             }

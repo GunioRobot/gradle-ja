@@ -31,7 +31,7 @@ public class JavadocOptionFileTest {
     private final JUnit4Mockery context = new JUnit4Mockery();
     private JavadocOptionFileOption optionFileOptionMock;
     private final String optionName = "testOption";
-    
+
 
     private JavadocOptionFile optionFile;
 

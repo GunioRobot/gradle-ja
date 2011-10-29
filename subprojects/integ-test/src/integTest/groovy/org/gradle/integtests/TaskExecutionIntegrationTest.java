@@ -105,7 +105,7 @@ public class TaskExecutionIntegrationTest extends AbstractIntegrationTest {
         );
         usingBuildFile(buildFile).withTasks().run().assertTasksExecuted(":a", ":b");
     }
-    
+
     @Test
     public void doesNotExecuteTaskActionsWhenDryRunSpecified() {
         TestFile buildFile = testFile("build.gradle");

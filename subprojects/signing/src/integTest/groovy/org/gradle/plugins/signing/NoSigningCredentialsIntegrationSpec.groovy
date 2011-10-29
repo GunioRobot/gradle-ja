@@ -16,7 +16,7 @@
 package org.gradle.plugins.signing
 
 class NoSigningCredentialsIntegrationSpec extends SigningIntegrationSpec {
-    
+
     def "trying to perform a signing operation without a signatory produces reasonable error"() {
         when:
         buildFile << """
@@ -24,13 +24,13 @@ class NoSigningCredentialsIntegrationSpec extends SigningIntegrationSpec {
                 sign jar
             }
         """
-        
+
         then:
         fails ":signJar"
-        
+
         and:
         failureHasCause "Cannot perform signing task ':signJar' because it has no configured signatory"
     }
-    
-    
+
+
 }

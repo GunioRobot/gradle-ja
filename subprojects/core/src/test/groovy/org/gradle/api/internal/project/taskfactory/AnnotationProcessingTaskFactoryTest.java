@@ -149,7 +149,7 @@ public class AnnotationProcessingTaskFactoryTest {
 
         assertThat(task.getActions().get(0), sameInstance((Action) task2.getActions().get(0)));
     }
-    
+
     @Test
     public void failsWhenStaticMethodHasTaskActionAnnotation() {
         assertTaskCreationFails(TaskWithStaticMethod.class,
@@ -181,7 +181,7 @@ public class AnnotationProcessingTaskFactoryTest {
         }});
         task.execute();
     }
-    
+
     @Test
     public void taskActionWorksForOverriddenMethods() {
         final Runnable action = context.mock(Runnable.class);
@@ -240,7 +240,7 @@ public class AnnotationProcessingTaskFactoryTest {
         TaskWithInputFile task = expectTaskCreated(TaskWithInputFile.class, new Object[]{null});
         assertThat(task.getInputs().getFiles().getFiles(), isEmpty());
     }
-    
+
     @Test
     public void validationActionSucceedsWhenSpecifiedOutputFileIsAFile() {
         TaskWithOutputFile task = expectTaskCreated(TaskWithOutputFile.class, existingFile);
@@ -398,7 +398,7 @@ public class AnnotationProcessingTaskFactoryTest {
         TaskWithInputDir task = expectTaskCreated(TaskWithInputDir.class, new Object[]{null});
         assertValidationFails(task, "No value has been specified for property 'inputDir'.");
     }
-    
+
     @Test
     public void validationActionFailsWhenInputDirectoryDoesNotExist() {
         TaskWithInputDir task = expectTaskCreated(TaskWithInputDir.class, missingDir);

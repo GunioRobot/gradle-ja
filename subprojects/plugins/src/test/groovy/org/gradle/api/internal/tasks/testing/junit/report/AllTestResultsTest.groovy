@@ -30,7 +30,7 @@ class AllTestResultsTest extends Specification {
         test.classResults.packageResults.name == 'org.gradle'
         results.packages.contains(test.classResults.packageResults)
     }
-    
+
     def addsTestInDefaultPackage() {
         when:
         def test = results.addTest('Test', 'test', 90)

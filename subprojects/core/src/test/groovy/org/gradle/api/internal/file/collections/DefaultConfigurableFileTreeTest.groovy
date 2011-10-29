@@ -110,7 +110,7 @@ class DefaultConfigurableFileTreeTest extends AbstractTestForPatternSet {
 
         fileSet.resolve(resolveContext)
     }
-    
+
     @Test public void testCanScanForFiles() {
         File included1 = new File(testDir, 'subDir/included1')
         File included2 = new File(testDir, 'subDir2/included2')

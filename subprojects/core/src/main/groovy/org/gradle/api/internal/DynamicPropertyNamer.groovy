@@ -37,11 +37,11 @@ class DynamicPropertyNamer implements Namer<Object> {
         } catch (MissingPropertyException e) {
             throw new NoNamingPropertyException(thing, propertyName)
         }
-        
+
         if (name == null) {
             throw new NullNamingPropertyException(thing, propertyName)
         }
-        
+
         name.toString()
     }
 
@@ -50,11 +50,11 @@ class DynamicPropertyNamer implements Namer<Object> {
             super("Unable to determine the name of '$thing' because it does not have a '$property' property")
         }
     }
-    
+
     private static class NullNamingPropertyException extends RuntimeException {
         NullNamingPropertyException(Object thing, String property) {
             super("Unable to determine the name of '$thing' because its value for the naming property '$property' is null")
         }
     }
-    
+
 }

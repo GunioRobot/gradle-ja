@@ -52,7 +52,7 @@ class SamplesWebQuickstartIntegrationTest {
                 'WEB-INF/lib/log4j-1.2.15.jar',
                 'WEB-INF/lib/commons-io-1.4.jar',
         )
-        
+
         ExecutionResult result = executer.inDirectory(webProjectDir).withTasks('clean', 'runTest').run()
         checkServletOutput(result)
         result = executer.inDirectory(webProjectDir).withTasks('clean', 'runWarTest').run()

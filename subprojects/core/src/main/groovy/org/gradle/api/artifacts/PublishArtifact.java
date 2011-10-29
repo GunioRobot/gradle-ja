@@ -51,7 +51,7 @@ public interface PublishArtifact extends Buildable {
     String getType();
 
     /**
-     * Returns the classifier of this published artifact. 
+     * Returns the classifier of this published artifact.
      */
     String getClassifier();
 
@@ -64,7 +64,7 @@ public interface PublishArtifact extends Buildable {
      * Returns the date that should be used when publishing this artifact. This is used
      * in the module descriptor accompanying this artifact (the ivy.xml). If the date is
      * not specified, the current date is used. If this artifact
-     * is published without an module descriptor, this property has no relevance. 
+     * is published without an module descriptor, this property has no relevance.
      */
     Date getDate();
 }

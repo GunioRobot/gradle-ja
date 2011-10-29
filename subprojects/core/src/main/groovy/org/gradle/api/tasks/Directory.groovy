@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.tasks
 
 import org.gradle.api.DefaultTask
@@ -26,7 +26,7 @@ import org.gradle.api.InvalidUserDataException
  */
 public class Directory extends DefaultTask {
     File dir
-    
+
     Directory() {
         if (new File(name).isAbsolute()) { throw new InvalidUserDataException('Path must not be absolute.')}
         dir = project.file(name)

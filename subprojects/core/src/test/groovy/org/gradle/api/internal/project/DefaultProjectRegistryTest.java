@@ -103,7 +103,7 @@ public class DefaultProjectRegistryTest {
         assertThat(projectRegistry.getAllProjects(), equalTo(toSet((ProjectInternal) rootMock, childMock,
                 childChildMock)));
     }
-    
+
     @Test
     public void canLocateAllProjectsWhichMatchSpec() {
         Spec<Project> spec = new Spec<Project>() {

@@ -28,13 +28,13 @@ import org.gradle.logging.LoggingManagerInternal
 class DefaultGroovyMavenDeployer extends BaseMavenDeployer implements GroovyMavenDeployer, PomFilterContainer {
     public static final String REPOSITORY_BUILDER = "repository"
     public static final String SNAPSHOT_REPOSITORY_BUILDER = 'snapshotRepository'
-    
+
     private RepositoryBuilder repositoryBuilder = new RepositoryBuilder()
 
     DefaultGroovyMavenDeployer(PomFilterContainer pomFilterContainer, ArtifactPomContainer artifactPomContainer, LoggingManagerInternal loggingManager) {
         super(pomFilterContainer, artifactPomContainer, loggingManager)
     }
-    
+
     def methodMissing(String name, args) {
         if (name == REPOSITORY_BUILDER || name == SNAPSHOT_REPOSITORY_BUILDER) {
             Object repository = InvokerHelper.invokeMethod(repositoryBuilder, REPOSITORY_BUILDER, args)

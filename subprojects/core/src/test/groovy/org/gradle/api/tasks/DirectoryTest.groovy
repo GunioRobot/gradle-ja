@@ -63,7 +63,7 @@ class DirectoryTest extends AbstractTaskTest {
     @Test public void testWithExistingDir() {
         File dir = new File(project.projectDir, TASK_DIR_NAME)
         dir.mkdirs()
-        // create new file to check later that dir has not been recreated 
+        // create new file to check later that dir has not been recreated
         File file = new File(dir, 'somefile')
         file.createNewFile()
         directory.execute()

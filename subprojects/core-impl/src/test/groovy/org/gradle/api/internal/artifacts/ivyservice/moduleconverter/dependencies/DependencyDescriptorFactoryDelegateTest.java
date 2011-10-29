@@ -47,7 +47,7 @@ public class DependencyDescriptorFactoryDelegateTest {
             one(dependencyDescriptorFactoryInternal2).addDependencyDescriptor(configurationName, moduleDescriptorDummy, projectDependency);
         }});
         DependencyDescriptorFactoryDelegate dependencyDescriptorFactoryDelegate = new DependencyDescriptorFactoryDelegate(
-            dependencyDescriptorFactoryInternal1, dependencyDescriptorFactoryInternal2            
+            dependencyDescriptorFactoryInternal1, dependencyDescriptorFactoryInternal2
         );
         dependencyDescriptorFactoryDelegate.addDependencyDescriptor(configurationName, moduleDescriptorDummy, projectDependency);
     }
@@ -60,7 +60,7 @@ public class DependencyDescriptorFactoryDelegateTest {
             will(returnValue(false));
         }});
         DependencyDescriptorFactoryDelegate dependencyDescriptorFactoryDelegate = new DependencyDescriptorFactoryDelegate(
-            dependencyDescriptorFactoryInternal1            
+            dependencyDescriptorFactoryInternal1
         );
         dependencyDescriptorFactoryDelegate.addDependencyDescriptor(configurationName, moduleDescriptorDummy, projectDependency);
     }

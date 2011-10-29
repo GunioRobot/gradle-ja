@@ -118,7 +118,7 @@ class DefaultAntBuilderTest {
         ant.test()
         Thread.currentThread().setContextClassLoader(original)
     }
-    
+
     @Test
     public void discardsTasksAfterExecution() {
         ant.echo(message: 'message')

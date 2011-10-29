@@ -19,5 +19,5 @@ package org.gradle.plugins.cpp.compiler.capability;
  * Wraps up the standard capabilities you'd expect a cpp compiler to have
  */
 public interface StandardCppCompiler extends AgainstLibrary, CompilesCpp {
-    
+
 }

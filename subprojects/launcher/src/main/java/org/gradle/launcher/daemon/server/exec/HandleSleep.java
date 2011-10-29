@@ -20,7 +20,7 @@ import org.gradle.launcher.daemon.protocol.Sleep;
 
 /**
  * Handles the special sleep command.
- * 
+ *
  * If a Sleep is received, processing does not proceed past this point.
  */
 public class HandleSleep implements DaemonCommandAction {

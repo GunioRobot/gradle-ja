@@ -54,7 +54,7 @@ public class FileJavadocOptionFileOptionTest {
         context.checking(new Expectations() {{
             one(writerContextMock).writeValueOption(optionName, testValue.getAbsolutePath());
         }});
-        
+
         fileOption.write(writerContextMock);
     }
 }

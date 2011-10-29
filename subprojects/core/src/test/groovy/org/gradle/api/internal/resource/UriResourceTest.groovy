@@ -101,7 +101,7 @@ class UriResourceTest {
             assertThat(e.message, equalTo("Could not read <display-name> '$dir' as it is a directory." as String))
         }
     }
-    
+
     @Test
     public void readsFileContentUsingFileUriWhenFileExists() {
         file.text = '<content>'

@@ -180,7 +180,7 @@ public class DefaultGradleLauncher extends GradleLauncher {
     public void useLogger(Object logger) {
         gradle.useLogger(logger);
     }
-    
+
     /**
      * <p>Adds a {@link StandardOutputListener} to this build instance. The listener is notified of any text written to
      * standard output by Gradle's logging system

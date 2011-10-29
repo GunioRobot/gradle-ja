@@ -44,7 +44,7 @@ class JarDirectory {
         JarDirectory that = (JarDirectory) o;
 
         if (recursive != that.recursive) { return false }
-        if (path != that.path) { return false }             
+        if (path != that.path) { return false }
 
         return true;
     }

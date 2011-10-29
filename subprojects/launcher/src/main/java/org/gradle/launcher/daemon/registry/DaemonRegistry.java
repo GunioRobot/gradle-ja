@@ -28,7 +28,7 @@ public interface DaemonRegistry {
     List<DaemonStatus> getAll();
     List<DaemonStatus> getIdle();
     List<DaemonStatus> getBusy();
-    
+
     void store(Address address);
     void remove(Address address);
     void markBusy(Address address);

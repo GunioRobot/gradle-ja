@@ -52,7 +52,7 @@ class IncrementalJavaCompileIntegrationTest {
 
         // Update interface, compile should fail
         distribution.testFile('src/main/java/IPerson.java').assertIsFile().copyFrom(distribution.testFile('NewIPerson.java'))
-        
+
         ExecutionFailure failure = executer.withTasks("classes").runWithFailure();
         failure.assertHasDescription("Execution failed for task ':compileJava'.");
     }

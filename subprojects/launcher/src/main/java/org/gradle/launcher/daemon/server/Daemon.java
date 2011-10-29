@@ -56,7 +56,7 @@ public class Daemon implements Runnable, Stoppable {
 
     /**
      * Creates a new daemon instance.
-     * 
+     *
      * @param loggingServices The service registry for logging services used by this daemon
      * @param connector The provider of server connections for this daemon
      * @param daemonRegistry The registry that this daemon should advertise itself in
@@ -69,7 +69,7 @@ public class Daemon implements Runnable, Stoppable {
 
     /**
      * Starts the daemon, receiving connections asynchronously (i.e. returns immediately).
-     * 
+     *
      * @throws IllegalStateException if this daemon is already running, or has already been stopped.
      */
     public void start() {
@@ -79,7 +79,7 @@ public class Daemon implements Runnable, Stoppable {
             if (stateCoordinator != null) {
                 throw new IllegalStateException("cannot start daemon as it is already running");
             }
-            
+
 
             // Get ready to accept connections, but we are assuming that no connections will be established
             // because we have not yet advertised that we are open for business by entering our address into
@@ -105,14 +105,14 @@ public class Daemon implements Runnable, Stoppable {
             });
 
             registryUpdater = new DomainRegistryUpdater(daemonRegistry, connectorAddress);
-            
+
             Runnable onStart = new Runnable() {
                 public void run() {
                     LOGGER.debug("Daemon starting at: " + new Date() + ", with address: " + connectorAddress);
                     registryUpdater.onStart();
                 }
             };
-            
+
             Runnable onStartCommand = new Runnable() {
                 public void run() {
                     registryUpdater.onStartActivity();
@@ -124,7 +124,7 @@ public class Daemon implements Runnable, Stoppable {
                     registryUpdater.onCompleteActivity();
                 }
             };
-            
+
             Runnable onStop = new Runnable() {
                 public void run() {
                     LOGGER.info("Stop requested. Daemon is stopping accepting new connections...");

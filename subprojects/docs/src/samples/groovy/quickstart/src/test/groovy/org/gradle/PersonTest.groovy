@@ -17,7 +17,7 @@ class PersonTest {
     @Test public void usingCorrectVersionOfGroovy() {
         assertEquals('1.7.10', GroovySystem.version)
     }
-    
+
     @Test public void testResourcesAreAvailable() {
         assertNotNull(getClass().getResource('/testResource.txt'))
         assertNotNull(getClass().getResource('/testScript.groovy'))

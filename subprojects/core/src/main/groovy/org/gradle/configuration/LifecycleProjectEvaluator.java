@@ -21,7 +21,7 @@ import org.gradle.api.internal.project.ProjectStateInternal;
 
 /**
  * Manages lifecycle concerns while delegating actual evaluation to another evaluator
- * 
+ *
  * @see org.gradle.api.internal.project.TopLevelBuildServiceRegistry#createProjectEvaluator()
  */
 public class LifecycleProjectEvaluator implements ProjectEvaluator {

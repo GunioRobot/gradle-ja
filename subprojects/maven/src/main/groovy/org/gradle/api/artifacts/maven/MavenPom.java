@@ -74,7 +74,7 @@ public interface MavenPom {
 
     /**
      * Returns the artifact id for this POM.
-     * 
+     *
      * @see org.apache.maven.model.Model#getArtifactId()
      */
     String getArtifactId();
@@ -127,7 +127,7 @@ public interface MavenPom {
 
     /**
      * Returns the dependencies for this POM.
-     * 
+     *
      * @see org.apache.maven.model.Model#getDependencies()
      */
     List<?> getDependencies();
@@ -147,7 +147,7 @@ public interface MavenPom {
      *
      * @param model
      * @return this
-     * @see #getModel() 
+     * @see #getModel()
      */
     MavenPom setModel(Object model);
 

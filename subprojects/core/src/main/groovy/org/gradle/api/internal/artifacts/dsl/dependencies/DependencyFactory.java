@@ -29,7 +29,7 @@ public interface DependencyFactory {
     enum ClassPathNotation {
         GRADLE_API, LOCAL_GROOVY
     }
-    
+
     Dependency createDependency(Object dependencyNotation);
     ClientModule createModule(Object dependencyNotation, Closure configureClosure);
     ProjectDependency createProjectDependencyFromMap(ProjectFinder projectFinder, Map<? extends String, ? extends Object> map);

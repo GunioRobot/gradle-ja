@@ -33,7 +33,7 @@ public class JavaMethodTest {
         JavaMethod<CharSequence, CharSequence> method = JavaMethod.create(CharSequence.class, CharSequence.class, "subSequence", int.class, int.class);
         assertThat(method.invoke("string", 0, 3), equalTo((CharSequence) "str"));
     }
-    
+
     @Test
     public void propagatesExceptionThrownByMethod() {
         final CharSequence mock = context.mock(CharSequence.class);

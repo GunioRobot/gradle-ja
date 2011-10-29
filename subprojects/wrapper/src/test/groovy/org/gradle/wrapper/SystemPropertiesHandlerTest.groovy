@@ -31,7 +31,7 @@ class SystemPropertiesHandlerTest extends Specification {
         Properties props = new Properties()
         props.putAll a: 'b', 'systemProp.c': 'd', 'systemProp.': 'e'
         props.store(new FileOutputStream(propFile), "")
-        
+
         expect:
         [c: 'd'] == SystemPropertiesHandler.getSystemProperties(propFile)
     }

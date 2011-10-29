@@ -17,7 +17,7 @@
 package org.gradle.external.javadoc;
 
 /**
- * This enum maps to the -public, -protected, -package and -private options of the javadoc executable. 
+ * This enum maps to the -public, -protected, -package and -private options of the javadoc executable.
  *
  * @author Tom Eyckmans
  */
@@ -35,7 +35,7 @@ public enum JavadocMemberLevel {
      */
     PACKAGE,
     /**
-     * Shows all classes and members. 
+     * Shows all classes and members.
      */
     PRIVATE
 }

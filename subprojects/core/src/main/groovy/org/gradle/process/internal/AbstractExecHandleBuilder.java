@@ -108,7 +108,7 @@ public abstract class AbstractExecHandleBuilder extends DefaultProcessForkOption
         this.listeners.add(listener);
         return this;
     }
-    
+
     public ExecHandle build() {
         String executable = getExecutable();
         if (StringUtils.isEmpty(executable)) {

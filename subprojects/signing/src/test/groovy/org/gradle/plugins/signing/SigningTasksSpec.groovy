@@ -16,51 +16,51 @@
 package org.gradle.plugins.signing
 
 class SigningTasksSpec extends SigningProjectSpec {
-    
+
     def setup() {
         applyPlugin()
     }
-        
+
     def "sign jar with defaults"() {
         given:
         useJavadocAndSourceJars()
-        
+
         when:
         signing {
             sign jar
             sign sourcesJar, javadocJar
         }
-        
+
         then:
         def signingTasks = [signJar, signSourcesJar, signJavadocJar]
-        
+
         and:
         jar in signJar.dependsOn
         sourcesJar in signSourcesJar.dependsOn
         javadocJar in signJavadocJar.dependsOn
-        
+
         and:
         signingTasks.every { it.singleSignature in configurations.signatures.artifacts }
 
         and:
         signingTasks.every { it.signatory == signing.signatory }
     }
-    
+
     def "sign method return values"() {
         given:
         useJavadocAndSourceJars()
-        
+
         when:
         def signJarTask = signing.sign(jar)
-        
+
         then:
         signJarTask.name == "signJar"
-        
+
         when:
         def (signSourcesJarTask, signJavadocJarTask) = signing.sign(sourcesJar, javadocJar)
-        
+
         then:
         [signSourcesJarTask, signJavadocJarTask]*.name == ["signSourcesJar", "signJavadocJar"]
     }
-    
+
 }

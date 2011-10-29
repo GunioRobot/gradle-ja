@@ -16,12 +16,12 @@
 package org.gradle.plugins.signing.type
 
 interface SignatureTypeProvider {
-    
+
     SignatureType getDefaultType()
-    
+
     void setDefaultType(String extension)
-    
+
     SignatureType getTypeForExtension(String extension)
-    
+
     boolean hasTypeForExtension(String extension)
 }

@@ -62,7 +62,7 @@ class StreamingStyledTextOutputTest extends OutputSpecification {
         then:
         0 * appendable._
     }
-    
+
     def closeClosesTargetWhenItImplementsCloseable() {
         Writer writer = Mock()
         StreamingStyledTextOutput output = new StreamingStyledTextOutput(writer)

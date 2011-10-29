@@ -49,5 +49,5 @@ class LoggingSystemAdapterTest extends Specification {
         then:
         1 * loggingConfigurer.configure(LogLevel.LIFECYCLE)
     }
-    
+
 }

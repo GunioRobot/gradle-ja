@@ -72,7 +72,7 @@ class StyledTextOutputBackedRendererTest extends OutputSpecification {
         then:
         output.value == '10:00:00.000 [INFO] [category] message\n'
     }
-    
+
     def continuesLineWhenPreviousOutputEventDidNotEndWithEOL() {
         TestStyledTextOutput output = new TestStyledTextOutput()
         StyledTextOutputBackedRenderer renderer = new StyledTextOutputBackedRenderer(output)

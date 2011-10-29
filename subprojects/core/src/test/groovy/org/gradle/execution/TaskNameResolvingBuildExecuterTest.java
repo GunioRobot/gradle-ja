@@ -117,7 +117,7 @@ public class TaskNameResolvingBuildExecuterTest {
         executer.select(gradle);
         assertThat(executer.getDisplayName(), equalTo(String.format("primary task '%s'", matches)));
     }
-    
+
     @Test
     public void selectsTaskWithMatchingRelativePath() {
         final Task task1 = task("b");
@@ -266,7 +266,7 @@ public class TaskNameResolvingBuildExecuterTest {
         executer.select(gradle);
         executer.execute();
     }
-    
+
     @Test
     public void treatsEachProvidedNameAsASeparateGroup() {
         final Task task1 = task("name1");

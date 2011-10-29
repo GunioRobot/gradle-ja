@@ -51,7 +51,7 @@ public class ParsedCommandLine implements Serializable {
         }
         return output.toString();
     }
-    
+
     /**
      * Returns true if the given option is present in this command-line.
      *

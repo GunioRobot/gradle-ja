@@ -1049,7 +1049,7 @@ def scriptMethod(Closure closure) {
 
 class TaskContainerDynamicObject {
     Task someTask
-    
+
     def someTask(Closure closure) {
         closure.call()
     }

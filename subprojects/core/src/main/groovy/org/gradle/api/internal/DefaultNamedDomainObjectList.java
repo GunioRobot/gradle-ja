@@ -138,7 +138,7 @@ public class DefaultNamedDomainObjectList<T> extends DefaultNamedDomainObjectCol
         public ListIteratorImpl(ListIterator<T> iterator) {
             this.iterator = iterator;
         }
-        
+
         public boolean hasNext() {
             return iterator.hasNext();
         }

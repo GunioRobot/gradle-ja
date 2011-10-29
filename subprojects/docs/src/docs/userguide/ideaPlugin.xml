@@ -291,7 +291,7 @@
                             title="Export Dependencies">
                         <sourcefile file="build.gradle" snippet="module-when-merged"/>
                     </sample>
-                    
+
                 </para>
             </section>
             <section>

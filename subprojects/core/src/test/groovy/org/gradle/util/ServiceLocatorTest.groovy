@@ -61,7 +61,7 @@ class ServiceLocatorTest extends Specification {
     def "ignores comments and whitespace in service meta data resource"() {
         def serviceFile = stream('''#comment
 
-    org.gradle.ImplClass  
+    org.gradle.ImplClass
 ''')
 
         when:
@@ -174,7 +174,7 @@ class ServiceLocatorTest extends Specification {
         then:
         result instanceof String
     }
-    
+
     def implementationDeclared(Class<?> serviceType, Class<?> implementationType) {
         def serviceFile = stream(implementationType.name)
         _ * classLoader.getResource("META-INF/services/${serviceType.name}") >> serviceFile

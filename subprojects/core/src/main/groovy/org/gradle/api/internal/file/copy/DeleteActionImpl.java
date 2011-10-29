@@ -28,7 +28,7 @@ import java.io.File;
  */
 public class DeleteActionImpl implements DeleteAction {
     private static Logger logger = LoggerFactory.getLogger(DeleteActionImpl.class);
-    
+
     private FileResolver fileResolver;
 
     public DeleteActionImpl(FileResolver fileResolver) {

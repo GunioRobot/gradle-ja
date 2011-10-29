@@ -56,10 +56,10 @@ public class ProjectStateInternal implements ProjectState {
         }
         throw UncheckedException.asUncheckedException(failure);
     }
-    
+
     public String toString() {
         String state;
-        
+
         if (getExecuting()) {
             state = "EXECUTING";
         } else if (getExecuted()) {
@@ -71,7 +71,7 @@ public class ProjectStateInternal implements ProjectState {
         } else {
             state = "NOT EXECUTED";
         }
-        
+
         return String.format("project state '%s'", state);
     }
 }

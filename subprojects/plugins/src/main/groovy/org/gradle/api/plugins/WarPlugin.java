@@ -72,7 +72,7 @@ public class WarPlugin implements Plugin<Project> {
                 }});
             }
         });
-        
+
         War war = project.getTasks().add(WAR_TASK_NAME, War.class);
         war.setDescription("Generates a war archive with all the compiled classes, the web-app content and the libraries.");
         war.setGroup(BasePlugin.BUILD_GROUP);

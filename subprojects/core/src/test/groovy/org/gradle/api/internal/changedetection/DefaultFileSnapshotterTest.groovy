@@ -50,7 +50,7 @@ public class DefaultFileSnapshotterTest {
 
         assertThat(snapshot.files.files as List, equalTo([file]))
     }
-    
+
     @Test
     public void notifiesListenerWhenFileAdded() {
         TestFile file1 = tmpDir.createFile('file1')
@@ -326,5 +326,5 @@ public class DefaultFileSnapshotterTest {
         }
         return collection
     }
-    
+
 }

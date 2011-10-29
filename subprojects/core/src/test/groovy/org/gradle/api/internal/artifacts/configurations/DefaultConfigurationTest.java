@@ -348,7 +348,7 @@ public class DefaultConfigurationTest {
     private DefaultConfiguration createNamedConfiguration(String confName) {
         return new DefaultConfiguration(confName, confName, configurationContainer, dependencyResolver, listenerManager, metaDataProvider);
     }
-    
+
     private DefaultConfiguration createNamedConfiguration(String path, String confName) {
         return new DefaultConfiguration(path, confName, configurationContainer, dependencyResolver, listenerManager, metaDataProvider);
     }
@@ -378,7 +378,7 @@ public class DefaultConfigurationTest {
 
             allowing(otherArtifact).getBuildDependencies();
             will(returnValue(otherArtifactTaskDependencyMock));
-            
+
             allowing(otherArtifactTaskDependencyMock).getDependencies(with(any(Task.class)));
             will(returnValue(toSet(otherConfTaskMock)));
 
@@ -908,7 +908,7 @@ public class DefaultConfigurationTest {
             }
         });
     }
-    
+
     @Test
     public void dumpString() {
         Dependency configurationDependency = HelperUtil.createDependency("dumpgroup1", "dumpname1", "dumpversion1");

@@ -30,7 +30,7 @@ public class EmbeddedDaemonConnector extends AbstractDaemonConnector<EmbeddedDae
     public EmbeddedDaemonConnector() {
         this(new EmbeddedDaemonRegistry());
     }
-    
+
     public EmbeddedDaemonConnector(EmbeddedDaemonRegistry daemonRegistry) {
         super(daemonRegistry);
     }

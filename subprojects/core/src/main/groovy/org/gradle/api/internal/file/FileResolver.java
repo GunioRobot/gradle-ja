@@ -28,7 +28,7 @@ public interface FileResolver {
     File resolve(Object path, PathValidation validation);
 
     FileSource resolveLater(Object path);
-    
+
     FileCollection resolveFiles(Object... paths);
 
     FileTree resolveFilesAsTree(Object... paths);

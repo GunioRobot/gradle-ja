@@ -25,7 +25,7 @@ class SimpleStaleClassCleanerTest extends Specification {
     @Rule public final TemporaryFolder tmpDir = new TemporaryFolder()
     private final TaskOutputsInternal outputs = Mock()
     private final SimpleStaleClassCleaner cleaner = new SimpleStaleClassCleaner(outputs)
-    
+
     def deletesAllPreviousOutputFiles() {
         def file1 = tmpDir.file('file1').createFile()
         def file2 = tmpDir.file('file2').createFile()

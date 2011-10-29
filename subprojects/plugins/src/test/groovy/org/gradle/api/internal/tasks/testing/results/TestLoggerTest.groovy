@@ -123,7 +123,7 @@ class TestLoggerTest extends Specification {
     private def test() {
         [:] as TestDescriptor
     }
-    
+
     private def suite(boolean root = false) {
         [getParent: {root ? null : [:] as TestDescriptor}] as TestDescriptor
     }

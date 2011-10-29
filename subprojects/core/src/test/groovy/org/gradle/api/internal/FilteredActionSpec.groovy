@@ -33,19 +33,19 @@ class FilteredActionSpec extends Specification {
     protected fa(Spec spec, Action action) {
         new FilteredAction(spec, action)
     }
-    
+
     def "filtered action fires for matching"() {
         given:
         def called = false
         def spec = s { true }
         def action = fa(spec, a { called = true })
-        
+
         expect:
         spec.isSatisfiedBy "object"
-        
+
         when:
         action.execute "object"
-        
+
         then:
         called == true
     }
@@ -55,15 +55,15 @@ class FilteredActionSpec extends Specification {
         def called = false
         def spec = s { false }
         def action = fa(spec, a { called = true })
-        
+
         expect:
         !spec.isSatisfiedBy("object")
-        
+
         when:
         action.execute "object"
-        
+
         then:
         called == false
     }
-    
+
 }

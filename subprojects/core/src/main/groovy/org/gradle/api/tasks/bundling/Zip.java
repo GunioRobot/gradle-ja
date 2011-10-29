@@ -24,7 +24,7 @@ import java.io.File;
 
 /**
  * Assembles a ZIP archive.
- * 
+ *
  * @author Hans Dockter
  */
 public class Zip extends AbstractArchiveTask {

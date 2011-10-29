@@ -27,7 +27,7 @@ class DefaultGroupTaskReportModelTest extends TaskModelSpecification {
         _ * target.getTasksForGroup('a') >> [task1]
         _ * target.getTasksForGroup('') >> [task2]
         _ * target.getTasksForGroup('other') >> [task3]
-        
+
         when:
         model.build(target)
 

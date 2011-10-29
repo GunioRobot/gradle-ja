@@ -5,7 +5,7 @@ repositories {
 //END SNIPPET maven-central
 
 //START SNIPPET maven-password-protected-repo
-org.apache.ivy.util.url.CredentialsStore.INSTANCE.addCredentials("REALM", "HOST", "USER", "PASSWORD"); 
+org.apache.ivy.util.url.CredentialsStore.INSTANCE.addCredentials("REALM", "HOST", "USER", "PASSWORD");
 //END SNIPPET maven-password-protected-repo
 
 //START SNIPPET maven-central-jar-repo

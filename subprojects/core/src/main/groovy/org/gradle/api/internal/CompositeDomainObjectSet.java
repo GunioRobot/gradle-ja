@@ -33,7 +33,7 @@ public class CompositeDomainObjectSet<T> extends DefaultDomainObjectSet<T> {
 
     private Spec<T> uniqueSpec = new ItemIsUniqueInCompositeSpec();
     private Spec<T> notInSpec = new ItemNotInCompositeSpec();
-    
+
     public CompositeDomainObjectSet(Class<T> type) {
         super(type, new CompositeCollection());
     }
@@ -77,7 +77,7 @@ public class CompositeDomainObjectSet<T> extends DefaultDomainObjectSet<T> {
     public Action<? super T> whenObjectRemoved(Action<? super T> action) {
         return super.whenObjectRemoved(new FilteredAction<T>(notInSpec, action));
     }
-    
+
     public void addCollection(DomainObjectCollection<? extends T> collection) {
         getStore().addComposited(collection);
         collection.all(getEventRegister().getAddAction());
@@ -99,7 +99,7 @@ public class CompositeDomainObjectSet<T> extends DefaultDomainObjectSet<T> {
     public int size() {
         return new LinkedHashSet<T>(getStore()).size();
     }
-    
+
     public void all(Action<? super T> action) {
         whenObjectAdded(action);
 

@@ -72,7 +72,7 @@ class MultiParentClassLoaderTest {
             assertThat(e.message, equalTo('string not found.'))
         }
     }
-    
+
     @Test
     public void loadsPackageFromParentsInOrderSpecified() {
         Package stringPackage = String.class.getPackage()
@@ -124,7 +124,7 @@ class MultiParentClassLoaderTest {
         assertThat(loader.getResource('resource1'), equalTo(resource1))
         assertThat(loader.getResource('resource2'), equalTo(resource2))
     }
-    
+
     @Test
     public void containsUnionOfResourcesFromAllParents() {
         URL resource1 = new File('res1').toURI().toURL()

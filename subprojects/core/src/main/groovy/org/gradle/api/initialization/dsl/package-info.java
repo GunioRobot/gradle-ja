@@ -15,6 +15,6 @@
  */
 
 /**
- * Classes used in the initialization DSL. 
+ * Classes used in the initialization DSL.
  */
 package org.gradle.api.initialization.dsl;

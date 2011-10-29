@@ -28,13 +28,13 @@ import org.gradle.logging.StyledTextOutputFactory;
  * Reports the execution exception if it exists after execution.
  */
 public class ReportExceptions implements DaemonCommandAction {
-    
+
     final private ServiceRegistry loggingServices;
-    
+
     public ReportExceptions(ServiceRegistry loggingServices) {
         this.loggingServices = loggingServices;
     }
-    
+
     public void execute(final DaemonCommandExecution execution) {
         execution.proceed();
 

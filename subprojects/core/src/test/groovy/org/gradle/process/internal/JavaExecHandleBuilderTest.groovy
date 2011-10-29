@@ -25,7 +25,7 @@ import static java.util.Arrays.asList
 public class JavaExecHandleBuilderTest extends Specification {
     FileResolver fileResolver = new IdentityFileResolver()
     JavaExecHandleBuilder builder = new JavaExecHandleBuilder(fileResolver)
-    
+
     public void cannotSetAllJvmArgs() {
         when:
         builder.setAllJvmArgs(asList("arg"))

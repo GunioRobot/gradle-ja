@@ -301,7 +301,7 @@ class TestResultsFixture {
         assert counter != null
         assert counter.text() == '-'
     }
-    
+
     void assertHasSuccessRate(int rate) {
         Node testDiv = content.depthFirst().find { it.'@id' == 'successRate' }
         assert testDiv != null

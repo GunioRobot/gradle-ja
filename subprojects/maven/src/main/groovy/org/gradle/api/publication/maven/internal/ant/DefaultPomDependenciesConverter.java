@@ -52,8 +52,8 @@ public class DefaultPomDependenciesConverter implements PomDependenciesConverter
         }
         return mavenDependencies;
     }
-    
-    private Map<ModuleDependency, String> createDependencyToScopeMap(Conf2ScopeMappingContainer conf2ScopeMappingContainer, 
+
+    private Map<ModuleDependency, String> createDependencyToScopeMap(Conf2ScopeMappingContainer conf2ScopeMappingContainer,
             Map<ModuleDependency, Set<Configuration>> dependencyToConfigurations) {
         Map<ModuleDependency, String> dependencyToScope = new HashMap<ModuleDependency, String>();
         for (ModuleDependency dependency : dependencyToConfigurations.keySet()) {
@@ -93,14 +93,14 @@ public class DefaultPomDependenciesConverter implements PomDependenciesConverter
         return dependencySetMap;
     }
 
-    private void addFromArtifactDescriptor(List<Dependency> mavenDependencies, ModuleDependency dependency, String scope, 
+    private void addFromArtifactDescriptor(List<Dependency> mavenDependencies, ModuleDependency dependency, String scope,
             Set<Configuration> configurations) {
         for (DependencyArtifact artifact : dependency.getArtifacts()) {
             mavenDependencies.add(createMavenDependencyFromArtifactDescriptor(dependency, artifact, scope, configurations));
         }
     }
 
-    private void addFromDependencyDescriptor(List<Dependency> mavenDependencies, ModuleDependency dependency, String scope, 
+    private void addFromDependencyDescriptor(List<Dependency> mavenDependencies, ModuleDependency dependency, String scope,
             Set<Configuration> configurations) {
         mavenDependencies.add(createMavenDependencyFromDependencyDescriptor(dependency, scope, configurations));
     }

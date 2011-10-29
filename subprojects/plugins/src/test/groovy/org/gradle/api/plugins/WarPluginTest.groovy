@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.plugins
 
 import org.gradle.api.Project
@@ -48,7 +48,7 @@ class WarPluginTest {
         assertTrue(project.getPlugins().hasPlugin(JavaPlugin));
         assertThat(project.convention.plugins.war, instanceOf(WarPluginConvention))
     }
-    
+
     @Test public void createsConfigurations() {
         warPlugin.apply(project)
 
@@ -131,7 +131,7 @@ class WarPluginTest {
         warPlugin.apply(project)
 
         Configuration archiveConfiguration = project.getConfigurations().getByName(Dependency.ARCHIVES_CONFIGURATION);
-        assertThat(archiveConfiguration.getAllArtifacts().size(), equalTo(1)); 
-        assertThat(archiveConfiguration.getAllArtifacts().iterator().next().getType(), equalTo("war")); 
+        assertThat(archiveConfiguration.getAllArtifacts().size(), equalTo(1));
+        assertThat(archiveConfiguration.getAllArtifacts().iterator().next().getType(), equalTo("war"));
     }
 }

@@ -56,7 +56,7 @@ public class UnionFileTree extends CompositeFileTree {
         if (!(source instanceof FileTree)) {
             throw new UnsupportedOperationException(String.format("Can only add FileTree instances to %s.", getDisplayName()));
         }
-        
+
         sourceTrees.add((FileTree) source);
         return this;
     }

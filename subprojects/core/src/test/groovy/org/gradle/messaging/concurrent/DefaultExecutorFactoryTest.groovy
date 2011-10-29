@@ -64,7 +64,7 @@ class DefaultExecutorFactoryTest extends MultithreadedTestCase {
             }
         }
     }
-    
+
     @Test
     public void factoryStopBlocksUntilAllJobsAreComplete() {
         Runnable runnable = context.mock(Runnable.class)

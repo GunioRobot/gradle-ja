@@ -79,22 +79,22 @@ public class GlobalServicesRegistryTest {
     public void providesALoggingManagerFactory() {
         assertThat(registry.getFactory(LoggingManagerInternal.class), instanceOf(DefaultLoggingManagerFactory.class));
     }
-    
+
     @Test
     public void providesAListenerManager() {
         assertThat(registry.get(ListenerManager.class), instanceOf(DefaultListenerManager.class));
     }
-    
+
     @Test
     public void providesAProgressLoggerFactory() {
         assertThat(registry.get(ProgressLoggerFactory.class), instanceOf(DefaultProgressLoggerFactory.class));
     }
-    
+
     @Test
     public void providesAGradleDistributionLocator() {
         assertThat(registry.get(GradleDistributionLocator.class), instanceOf(DefaultModuleRegistry.class));
     }
-    
+
     @Test
     public void providesAClassLoaderFactory() {
         assertThat(registry.get(ClassLoaderFactory.class), instanceOf(DefaultClassLoaderFactory.class));
@@ -109,7 +109,7 @@ public class GlobalServicesRegistryTest {
     public void providesAClassGenerator() {
         assertThat(registry.get(ClassGenerator.class), instanceOf(AsmBackedClassGenerator.class));
     }
-    
+
     @Test
     public void providesAnInstantiator() {
         assertThat(registry.get(Instantiator.class), instanceOf(ClassGeneratorBackedInstantiator.class));

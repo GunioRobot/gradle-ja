@@ -103,7 +103,7 @@ public class Groovydoc extends SourceTask {
      * Returns the classpath containing the Groovy library to be used.
      *
      * @return The classpath containing the Groovy library to be used
-     */   
+     */
     @InputFiles
     public FileCollection getGroovyClasspath() {
         return groovyClasspath;

@@ -36,23 +36,23 @@ import java.util.Date;
 abstract public class DaemonMain  {
 
     private static final Logger LOGGER = Logging.getLogger(DaemonMain.class);
-    
+
     public static void main(String[] args) throws IOException {
         StartParameter startParameter = new DefaultCommandLineConverter().convert(Arrays.asList(args));
         redirectOutputsAndInput(startParameter);
-        
+
         LoggingServiceRegistry loggingServices = LoggingServiceRegistry.newChildProcessLogging();
         DaemonServerConnector connector = new DaemonTcpServerConnector();
-        
+
         File registryDir = startParameter.getGradleUserHomeDir();
         DaemonRegistry daemonRegistry = new PersistentDaemonRegistry(registryDir);
-        
+
         int idleTimeout = getIdleTimeout(startParameter);
         float idleTimeoutSecs = idleTimeout / 1000;
-        
+
         LOGGER.lifecycle("Starting daemon (at {}) with settings: idleTimeout = {} secs, registryDir = {}", new Date(), idleTimeoutSecs, registryDir);
         Daemon daemon = new Daemon(connector, daemonRegistry, new DefaultDaemonCommandExecuter(loggingServices));
-        
+
         daemon.start();
         boolean wasStopped = daemon.awaitStopOrIdleTimeout(idleTimeout);
         if (wasStopped) {
@@ -79,7 +79,7 @@ abstract public class DaemonMain  {
         // TODO - make this work on windows
 //        originalIn.close();
     }
-    
+
     private static int getIdleTimeout(StartParameter startParameter) {
         return new DaemonTimeout(startParameter.getSystemPropertiesArgs()).getIdleTimeout();
     }

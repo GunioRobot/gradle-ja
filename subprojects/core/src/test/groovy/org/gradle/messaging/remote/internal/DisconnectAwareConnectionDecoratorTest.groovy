@@ -144,7 +144,7 @@ class DisconnectAwareConnectionDecoratorTest extends Specification {
 
         then:
         receieved.get() + uncollectedMessages == toSend
-        
+
         where: // run this ten times to give it more of a shake (probably unnecessary and should be removed at some point)
         iteration << [0,1,2,3,4,5,6,7,8,9]
     }

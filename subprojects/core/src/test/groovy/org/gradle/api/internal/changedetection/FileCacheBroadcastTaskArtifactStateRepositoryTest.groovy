@@ -38,7 +38,7 @@ class FileCacheBroadcastTaskArtifactStateRepositoryTest extends Specification {
         _ * task.outputs >> taskOutputs
         _ * taskOutputs.files >> outputs
     }
-    
+
     def marksTaskInputsAndOutputsAsCacheableWhenCheckingUpToDate() {
         when:
         def state = repository.getStateFor(task)
@@ -70,7 +70,7 @@ class FileCacheBroadcastTaskArtifactStateRepositoryTest extends Specification {
     def invalidatesEverythingWhenTaskWhichDoesNotDeclareAnyOutputsIsToBeExecuted() {
         given:
         taskOutputs.hasOutput >> false
-        
+
         when:
         def state = repository.getStateFor(task)
         state.beforeTask()

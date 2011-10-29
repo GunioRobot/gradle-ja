@@ -48,7 +48,7 @@ class SamplesMavenPomGenerationIntegrationTest {
     void setUp() {
         pomProjectDir = sample.dir
     }
-    
+
     @Test
     void "can deploy to local repository"() {
         def repo = new MavenRepository(pomProjectDir.file('pomRepo'))
@@ -98,7 +98,7 @@ class SamplesMavenPomGenerationIntegrationTest {
         executer.inDirectory(pomProjectDir).withTasks('writeDeployerPom').run()
         compareXmlWithIgnoringOrder(expectedPom(version, groupId), pomProjectDir.file("target/deployerpom.xml").text)
     }
-    
+
     private String expectedPom(String version, String groupId, String path = 'pomGeneration/expectedPom.txt') {
         SimpleTemplateEngine templateEngine = new SimpleTemplateEngine();
         String text = resources.getResource(path).text

@@ -59,7 +59,7 @@ public class DefaultAttributes implements Attributes {
         try {
             new java.util.jar.Attributes.Name(key);
         } catch(IllegalArgumentException e) {
-            throw new ManifestException(String.format("The Key=%s violates the Manifest spec!", key));   
+            throw new ManifestException(String.format("The Key=%s violates the Manifest spec!", key));
         }
         return attributes.put(key, value);
     }

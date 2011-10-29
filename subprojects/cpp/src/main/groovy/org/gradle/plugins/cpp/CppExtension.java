@@ -43,7 +43,7 @@ public class CppExtension {
     public NamedDomainObjectContainer<CppSourceSet> sourceSets(Closure closure) {
         return sourceSets.configure(closure);
     }
-    
+
     public NamedDomainObjectContainer<CppSourceSet> getSourceSets() {
         return sourceSets;
     }

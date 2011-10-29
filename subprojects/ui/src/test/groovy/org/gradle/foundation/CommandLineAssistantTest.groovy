@@ -59,7 +59,7 @@ class CommandLineAssistantTest extends Specification {
         CommandLineAssistant.breakUpCommandLine('""') == ['']
         CommandLineAssistant.breakUpCommandLine("''") == ['']
     }
-    
+
     def canHaveQuoteInsideQuotedArgument() {
         expect:
         CommandLineAssistant.breakUpCommandLine('"\'quoted\'"') == ['\'quoted\'']

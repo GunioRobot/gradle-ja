@@ -58,7 +58,7 @@ public class ForkingTestClassProcessor implements TestClassProcessor {
             builder.worker(new TestWorker(processorFactory));
             options.copyTo(builder.getJavaCommand());
             buildConfigAction.execute(builder);
-            
+
             workerProcess = builder.build();
             workerProcess.start();
 

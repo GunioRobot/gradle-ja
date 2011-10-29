@@ -42,7 +42,7 @@ public class ImportsScriptSourceTest {
         resource = context.mock(Resource.class);
         source = new ImportsScriptSource(backingSource, importsReader);
     }
-    
+
     @Test
     public void prependsImportsToScriptText() {
         context.checking(new Expectations() {{

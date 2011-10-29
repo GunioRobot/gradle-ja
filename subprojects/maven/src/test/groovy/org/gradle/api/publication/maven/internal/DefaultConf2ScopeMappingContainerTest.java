@@ -112,7 +112,7 @@ public class DefaultConf2ScopeMappingContainerTest {
         assertThat(conf2ScopeMappingContainer.getMapping(asList(testConf1, testConf2)), equalTo(
                 new Conf2ScopeMapping(TEST_PRIORITY_2, testConf2, TEST_SCOPE_2)));
     }
-    
+
     @Test(expected = InvalidUserDataException.class)
     public void mappingWithSamePrioritiesDifferentConfsSameScope() {
         conf2ScopeMappingContainer.addMapping(TEST_PRIORITY_1, testConf2, TEST_SCOPE_1);

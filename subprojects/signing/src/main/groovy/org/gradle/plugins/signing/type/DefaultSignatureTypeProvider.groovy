@@ -18,12 +18,12 @@ package org.gradle.plugins.signing.type
 import org.gradle.plugins.signing.type.pgp.ArmoredSignatureType
 
 class DefaultSignatureTypeProvider extends AbstractSignatureTypeProvider {
-    
+
     DefaultSignatureTypeProvider() {
         register(new BinarySignatureType())
         def armored = new ArmoredSignatureType()
         register(armored)
         setDefaultType(armored.extension)
     }
-    
+
 }

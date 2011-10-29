@@ -27,7 +27,7 @@ class IncrementalJavaSourceCompilerTest extends Specification {
             return cleaner
         }
     }
-    
+
     def cleansStaleClassesAndThenInvokesCompiler() {
         WorkResult result = Mock()
         File destDir = new File('dest')

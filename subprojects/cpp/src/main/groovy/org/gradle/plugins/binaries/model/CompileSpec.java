@@ -28,21 +28,21 @@ public interface CompileSpec extends Named {
      * The ultimate output of the compilation.
      */
     File getOutputFile();
-    
+
     /**
      * Do the compile
      */
     void compile();
-    
+
     /**
-     * Configures the spec to include the source set 
+     * Configures the spec to include the source set
      */
     // void from(SourceSet sourceSet);
     /*
         notes on from():
-        
+
         The CompileSpec interface is likely to just have from(SourceSet) which the default impl of which would be to throw
         unsupported operation exception, with implementations overriding this method to handle different kinds of source sets
     */
-    
+
 }

@@ -21,5 +21,5 @@ import org.gradle.api.Named;
  * A generic model of a collection of source
  */
 public interface SourceSet extends Named {
-    
+
 }

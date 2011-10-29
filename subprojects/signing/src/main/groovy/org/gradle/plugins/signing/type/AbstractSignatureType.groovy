@@ -28,7 +28,7 @@ abstract class AbstractSignatureType implements SignatureType {
         }
         signatureFile
     }
-    
+
     void sign(Signatory signatory, InputStream toSign, OutputStream destination) {
         signatory.sign(toSign, destination)
     }
@@ -36,7 +36,7 @@ abstract class AbstractSignatureType implements SignatureType {
     File fileFor(File toSign) {
         new File(toSign.path + ".${getExtension()}")
     }
-    
+
     String combinedExtension(File toSign) {
         def name = toSign.name
         def dotIndex = name.lastIndexOf(".")
@@ -46,5 +46,5 @@ abstract class AbstractSignatureType implements SignatureType {
             name[++dotIndex..-1] + ".${getExtension()}"
         }
     }
-    
+
 }

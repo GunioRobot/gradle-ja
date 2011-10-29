@@ -88,10 +88,10 @@ public class AsciiReportRenderer extends TextReportRenderer implements Dependenc
         if (hasCyclicDependencies) {
             getTextOutput().withStyle(Info).println("\n(*) - dependencies omitted (listed previously)");
         }
-        
+
         super.complete();
     }
-    
+
     private void render(final MergedResolvedDependency resolvedDependency, Set<String> visitedDependencyNames, boolean lastChild) {
         final boolean isFirstVisitOfDependencyInConfiguration = visitedDependencyNames.add(resolvedDependency.getName());
         if (!isFirstVisitOfDependencyInConfiguration) {

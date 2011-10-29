@@ -17,7 +17,7 @@ package org.gradle.plugins.binaries.model;
 
 /**
  * Producer of compile specs
- * 
+ *
  * @param <T> The type of compile spec produced
  */
 public interface CompileSpecFactory<T extends CompileSpec> {

@@ -41,7 +41,7 @@ class ProjectDescriptorSpec extends Specification {
         descriptor.store(baos)
         baos.toString()
     }
-    
+
     def getXml() {
         new XmlParser().parseText(getString())
     }

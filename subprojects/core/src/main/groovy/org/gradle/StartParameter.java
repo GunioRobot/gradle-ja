@@ -140,7 +140,7 @@ public class StartParameter {
         startParameter.cacheUsage = cacheUsage;
         startParameter.buildScriptSource = buildScriptSource;
         startParameter.settingsScriptSource = settingsScriptSource;
-        startParameter.initScripts = new ArrayList<File>(initScripts); 
+        startParameter.initScripts = new ArrayList<File>(initScripts);
         startParameter.buildExecuter = buildExecuter;
         startParameter.defaultProjectSelector = defaultProjectSelector;
         startParameter.logLevel = logLevel;
@@ -245,7 +245,7 @@ public class StartParameter {
     public StartParameter useEmbeddedBuildFile(String buildScriptText) {
         return setBuildScriptSource(new StringScriptSource("embedded build file", buildScriptText));
     }
-    
+
     /**
      * <p>Specifies that the given script should be used as the build file for this build. Uses an empty settings file.
      * </p>

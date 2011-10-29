@@ -63,7 +63,7 @@ public class JavaVersionTest {
     public void convertsVersionToVersion() {
         assertThat(JavaVersion.toVersion(JavaVersion.VERSION_1_4), equalTo(JavaVersion.VERSION_1_4));
     }
-    
+
     @Test
     public void convertsNumberToVersion() {
         assertThat(JavaVersion.toVersion(1.3), equalTo(JavaVersion.VERSION_1_3));
@@ -73,7 +73,7 @@ public class JavaVersionTest {
         assertThat(JavaVersion.toVersion(7), equalTo(JavaVersion.VERSION_1_7));
         assertThat(JavaVersion.toVersion(1.7), equalTo(JavaVersion.VERSION_1_7));
     }
-    
+
     @Test
     public void failsToConvertNumberToVersionForUnknownVersion() {
         conversionFails(1);

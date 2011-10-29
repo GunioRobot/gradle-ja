@@ -66,7 +66,7 @@ public class ScalaBasePluginTest {
         assertThat(task.defaultSource, equalTo(project.sourceSets.custom.scala))
         assertThat(task, dependsOn('compileCustomJava'))
     }
-    
+
     @Test public void dependenciesOfJavaPluginTasksIncludeScalaCompileTasks() {
         scalaPlugin.apply(project)
 

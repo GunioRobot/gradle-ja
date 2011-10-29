@@ -51,7 +51,7 @@ public class DefaultBuildExecuterTest {
             will(returnValue(project));
         }});
     }
-    
+
     @Test
     public void usesProjectDefaultExecuterWhenNoTaskNamesProvided() {
         DefaultBuildExecuter executer = new DefaultBuildExecuter(Collections.EMPTY_LIST, Collections.EMPTY_LIST);

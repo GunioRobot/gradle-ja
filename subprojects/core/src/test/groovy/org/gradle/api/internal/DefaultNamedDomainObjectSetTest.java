@@ -62,11 +62,11 @@ public class DefaultNamedDomainObjectSetTest {
         Bean bean1 = new Bean("a");
         Bean bean2 = new Bean("b");
         Bean bean3 = new Bean("c");
-    
+
         container.add(bean2);
         container.add(bean1);
         container.add(bean3);
-    
+
         assertThat(toList(container), equalTo(toList(bean1, bean2, bean3)));
     }
 
@@ -81,11 +81,11 @@ public class DefaultNamedDomainObjectSetTest {
         Bean bean1 = new Bean("a");
         Bean bean2 = new Bean("b");
         Bean bean3 = new Bean("c");
-    
+
         container.add(bean2);
         container.add(bean1);
         container.add(bean3);
-    
+
         Iterator<Bean> iterator = container.iterator();
         assertThat(iterator.next(), sameInstance(bean1));
         assertThat(iterator.next(), sameInstance(bean2));
@@ -661,7 +661,7 @@ public class DefaultNamedDomainObjectSetTest {
 
         Bean withType = new Bean("withType");
         container.add(withType);
-        
+
         // Try with an element with the same name as a method
         ConfigureUtil.configure(toClosure("{ withType.beanProperty = 'value 6' }"), container);
         assertThat(withType.getBeanProperty(), equalTo("value 6"));

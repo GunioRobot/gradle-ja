@@ -33,7 +33,7 @@ public interface DaemonCommandExecuter {
     /**
      * Handle the given command, and communicate as necessary with the client over the given connection.
      * <p>
-     * If an error occurs during the action of the command that is to be reasonably expected 
+     * If an error occurs during the action of the command that is to be reasonably expected
      * (e.g. a failure in actually running the build for a Build command), the exception should be
      * reported to the client and <b>NOT</b> thrown from this method.
      * <p>

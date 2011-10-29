@@ -169,7 +169,7 @@ public class DefaultCommandLineConverterTest {
         expectedInitScripts.add(script2);
         checkConversion("-Iinit1.gradle", "-Iinit2.gradle");
     }
-    
+
     @Test
     public void withSystemProperties() {
         final String prop1 = "gradle.prop1";

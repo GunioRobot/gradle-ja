@@ -60,7 +60,7 @@ class DomBuilder extends BuilderSupport {
     protected Element createNode(Object name, Map attributes, Object value) {
         Element element = createNode(name, attributes)
         if (value instanceof Node) {
-            element.appendChild(document.importNode(value, true))       
+            element.appendChild(document.importNode(value, true))
         } else {
             element.appendChild(document.createTextNode(value as String))
         }

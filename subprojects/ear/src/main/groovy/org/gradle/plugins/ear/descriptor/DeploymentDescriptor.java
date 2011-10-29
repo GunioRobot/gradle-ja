@@ -26,7 +26,7 @@ import java.util.Set;
 
 /**
  * A deployment descriptor such as application.xml.
- * 
+ *
  * @author David Gileadi
  */
 public interface DeploymentDescriptor {
@@ -92,7 +92,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Add a module to the deployment descriptor.
-     * 
+     *
      * @param module
      *            The module to add.
      * @param type
@@ -103,7 +103,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Add a module to the deployment descriptor.
-     * 
+     *
      * @param path
      *            The path of the module to add.
      * @param type
@@ -114,7 +114,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Add a web module to the deployment descriptor.
-     * 
+     *
      * @param path
      *            The path of the module to add.
      * @param contextRoot
@@ -132,7 +132,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Add a security role to the deployment descriptor.
-     * 
+     *
      * @param role
      *            The security role to add.
      * @return this.
@@ -141,7 +141,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Add a security role to the deployment descriptor.
-     * 
+     *
      * @param role
      *            The name of the security role to add.
      * @return this.
@@ -161,7 +161,7 @@ public interface DeploymentDescriptor {
      * parameter in form of a {@link groovy.util.Node}. The closure can modify the XML before it is written to the
      * output file. This allows additional JavaEE version 6 elements like "data-source" or "resource-ref" to be
      * included.
-     * 
+     *
      * @param closure
      *            The closure to execute when the XML has been created
      * @return this
@@ -172,7 +172,7 @@ public interface DeploymentDescriptor {
      * Adds an action to be called when the XML document has been created. The XML is passed to the action as a
      * parameter in form of a {@link groovy.util.Node}. The action can modify the XML before it is written to the output
      * file. This allows additional JavaEE version 6 elements like "data-source" or "resource-ref" to be included.
-     * 
+     *
      * @param action
      *            The action to execute when the XML has been created
      * @return this
@@ -181,7 +181,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Reads the deployment descriptor from a reader.
-     * 
+     *
      * @param reader
      *            The reader to read the deployment descriptor from
      * @return this
@@ -191,7 +191,7 @@ public interface DeploymentDescriptor {
     /**
      * Reads the deployment descriptor from a file. The paths are resolved as defined by
      * {@link org.gradle.api.Project#files(Object...)}
-     * 
+     *
      * @param path
      *            The path of the file to read the deployment descriptor from
      * @return whether the descriptor could be read from the given path
@@ -200,7 +200,7 @@ public interface DeploymentDescriptor {
 
     /**
      * Writes the deployment descriptor into a writer.
-     * 
+     *
      * @param writer
      *            The writer to write the deployment descriptor to
      * @return this
@@ -210,7 +210,7 @@ public interface DeploymentDescriptor {
     /**
      * Writes the deployment descriptor into a file. The paths are resolved as defined by
      * {@link org.gradle.api.Project#files(Object...)}
-     * 
+     *
      * @param path
      *            The path of the file to write the deployment descriptor into.
      * @return this

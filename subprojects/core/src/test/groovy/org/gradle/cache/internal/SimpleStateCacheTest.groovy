@@ -35,7 +35,7 @@ class SimpleStateCacheTest extends Specification {
         result == null
         1 * lock.readFromFile(!null) >> { it[0].call() }
     }
-    
+
     def "get returns last value written to file"() {
         when:
         cache.set('some value')

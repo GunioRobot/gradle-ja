@@ -24,7 +24,7 @@ import static org.junit.Assert.assertThat
 
 class DefaultGroovySourceSetTest {
     private final DefaultGroovySourceSet sourceSet = new DefaultGroovySourceSet("<set-display-name>", [resolve: {it as File}] as FileResolver)
-    
+
     @Test
     public void defaultValues() {
         assertThat(sourceSet.groovy, instanceOf(DefaultSourceDirectorySet))

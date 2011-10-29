@@ -31,7 +31,7 @@ public interface Named {
 
     // -- Internal note --
     // It would be better to only require getName() to return Object and just call toString() on it, but
-    // if you have a groovy class with a “String name” property the generated getName() method will not 
+    // if you have a groovy class with a “String name” property the generated getName() method will not
     // satisfy the Named interface. This seems to be a bug in the Groovy compiler - LD.
 
     /**
@@ -41,7 +41,7 @@ public interface Named {
         public String determineName(Named object) {
             return object.getName();
         }
-        
+
         public static <T> org.gradle.api.Namer<T> forType(Class<T> type) {
             if (Named.class.isAssignableFrom(type)) {
                 return (org.gradle.api.Namer<T>)new Namer();

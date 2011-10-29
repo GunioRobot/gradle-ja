@@ -27,7 +27,7 @@ import java.io.File;
 import java.util.Collections;
 
 public class ArtifactsTestUtils {
-    
+
     public static DefaultResolvedArtifact createResolvedArtifact(Mockery context, final String name, final String type, final String extension, File file) {
         final Artifact artifactStub = context.mock(Artifact.class, "artifact" + name);
         context.checking(new Expectations() {{
@@ -51,5 +51,5 @@ public class ArtifactsTestUtils {
         }});
         return new DefaultResolvedArtifact(context.mock(ResolvedDependency.class), artifactStub, resolveEngineMock);
     }
-    
+
 }

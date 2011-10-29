@@ -50,7 +50,7 @@ class EarPluginTest {
         '    <ejb>jrules-bres-session-wl100-6.7.3.jar</ejb>\n' +
         '  </module>\n' +
         '</application>')
-    
+
 
     @Before
     public void setUp() {
@@ -60,11 +60,11 @@ class EarPluginTest {
 
     @Test public void appliesBasePluginAndAddsConvention() {
         earPlugin.apply(project)
-        
+
         assertTrue(project.getPlugins().hasPlugin(BasePlugin));
         assertThat(project.convention.plugins.ear, instanceOf(EarPluginConvention))
     }
-    
+
     @Test public void createsConfigurations() {
         earPlugin.apply(project)
 
@@ -186,7 +186,7 @@ class EarPluginTest {
         }
 
         execute project.tasks[EarPlugin.EAR_TASK_NAME]
-        
+
         inEar "APP-INF/lib/child.jar"
     }
 
@@ -239,7 +239,7 @@ class EarPluginTest {
             action.execute(task)
         }
     }
-    
+
     File inEar(path) {
         def ear = project.zipTree("build/libs/${project.name}.ear")
         assert !ear.empty

@@ -41,7 +41,7 @@ public class ProjectDefaultsBuildExecuterTest {
             will(returnValue(project));
         }});
     }
-    
+
     @Test public void usesProjectDefaultTasksFromProject() {
         context.checking(new Expectations() {{
             one(project).getDefaultTasks();

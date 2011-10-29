@@ -31,7 +31,7 @@ import static org.junit.Assert.assertFalse;
 public class ModuleDependencyFactoryTest extends AbstractModuleFactoryTest {
     private static final String TEST_ARTIFACT_DESCRIPTOR = TEST_MODULE_DESCRIPTOR + "@" + TEST_TYPE;
     private static final String TEST_ARTIFACT_DESCRIPTOR_WITH_CLASSIFIER = TEST_MODULE_DESCRIPTOR + String.format(":%s@%s", TEST_CLASSIFIER, TEST_TYPE);
-    
+
     private ModuleDependencyFactory moduleDependencyFactory = new ModuleDependencyFactory(new DirectInstantiator());
 
     protected ExternalDependency createDependency(Object notation) {

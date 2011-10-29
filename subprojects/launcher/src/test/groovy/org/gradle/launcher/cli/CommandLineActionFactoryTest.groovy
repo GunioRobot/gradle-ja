@@ -209,7 +209,7 @@ class CommandLineActionFactoryTest extends Specification {
         action instanceof WithLoggingAction
         action.action.action instanceof RunBuildAction
     }
-    
+
     def stopsDaemon() {
         when:
         def action = factory.convert(['--stop'])

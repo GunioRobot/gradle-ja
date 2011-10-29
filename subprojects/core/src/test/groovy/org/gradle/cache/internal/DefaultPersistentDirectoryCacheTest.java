@@ -121,7 +121,7 @@ public class DefaultPersistentDirectoryCacheTest {
         DefaultPersistentDirectoryCache cache = new DefaultPersistentDirectoryCache(dir, CacheUsage.ON, properties, LockMode.Shared, action, lockManager);
         assertThat(loadProperties(dir.file("cache.properties")), equalTo(properties));
     }
-    
+
     @Test
     public void doesNotInitializeCacheWhenCacheDirExistsAndIsNotInvalid() {
         TestFile dir = createCacheDir();

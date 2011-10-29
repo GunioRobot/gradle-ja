@@ -28,7 +28,7 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
         this.collection = collection;
         this.filter = filter;
     }
-    
+
     public boolean add(S o) {
         throw new UnsupportedOperationException(String.format("Cannot add '%s' to '%s' as it is a filtered collection", o, this));
     }
@@ -40,11 +40,11 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
     public void clear() {
         throw new UnsupportedOperationException(String.format("Cannot clear '%s' as it is a filtered collection", this));
     }
-    
+
     protected boolean accept(Object o) {
         return filter.filter(o) != null;
     }
-    
+
     public boolean contains(Object o) {
         return collection.contains(o) && accept(o);
     }
@@ -63,11 +63,11 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
     }
 
     // boolean equals(Object o) {
-    // 
+    //
     // }
-    // 
+    //
     // int hashCode() {
-    //     
+    //
     // }
 
     public boolean isEmpty() {
@@ -86,15 +86,15 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
     protected static class FilteringIterator<T, S extends T> implements Iterator<S> {
         private final CollectionFilter<S> filter;
         private final Iterator<T> iterator;
-        
+
         private S next;
-        
+
         public FilteringIterator(Iterator<T> iterator, CollectionFilter<S> filter) {
             this.iterator = iterator;
             this.filter = filter;
             this.next = findNext();
         }
-        
+
         private S findNext() {
             while (iterator.hasNext()) {
                 T potentialNext = iterator.next();
@@ -103,10 +103,10 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
                     return filtered;
                 }
             }
-            
+
             return null;
         }
-        
+
         public boolean hasNext() {
             return next != null;
         }
@@ -120,12 +120,12 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
                 throw new NoSuchElementException();
             }
         }
-        
+
         public void remove() {
             throw new UnsupportedOperationException("This iterator does not support removal");
         }
-    } 
-    
+    }
+
     public Iterator<S> iterator() {
         return new FilteringIterator<T, S>(collection.iterator(), filter);
     }
@@ -133,7 +133,7 @@ public class FilteredCollection<T, S extends T> implements Collection<S> {
     public boolean remove(Object o) {
         throw new UnsupportedOperationException(String.format("Cannot remove '%s' from '%s' as it is a filtered collection", o, this));
     }
-    
+
     public boolean removeAll(Collection<?> c) {
         throw new UnsupportedOperationException(String.format("Cannot remove all of '%s' from '%s' as it is a filtered collection", c, this));
     }

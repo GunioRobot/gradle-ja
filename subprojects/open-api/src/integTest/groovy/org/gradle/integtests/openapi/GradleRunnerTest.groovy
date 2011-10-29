@@ -96,7 +96,7 @@ class GradleRunnerTest {
 
     //it should have fired a message that execution has started
     Assert.assertTrue( "Execution did not report started. Interaction: $interaction", interaction.executionStarted )
-    
+
     //it should have finished
     Assert.assertTrue( "Execution did not report finished. Interaction: $interaction", interaction.executionFinished )
 
@@ -219,7 +219,7 @@ class GradleRunnerTest {
   }
 
 
-  //class to track that has class was started and then kills it. 
+  //class to track that has class was started and then kills it.
   private class KillTestInteraction implements GradleRunnerInteractionVersion1
   {
     private GradleRunnerVersion1 runner

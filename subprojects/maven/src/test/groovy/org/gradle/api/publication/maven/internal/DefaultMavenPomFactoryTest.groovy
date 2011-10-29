@@ -28,8 +28,8 @@ public class DefaultMavenPomFactoryTest extends Specification {
     def createMavenPom() {
         DefaultConf2ScopeMappingContainer scopeMappings = new DefaultConf2ScopeMappingContainer();
         PomDependenciesConverter pomDependenciesConverter = Mock(PomDependenciesConverter);
-        ConfigurationContainer configurationContainer = Mock(ConfigurationContainer); 
-        FileResolver fileResolver = Mock(FileResolver); 
+        ConfigurationContainer configurationContainer = Mock(ConfigurationContainer);
+        FileResolver fileResolver = Mock(FileResolver);
         DefaultMavenPomFactory mavenPomFactory = new DefaultMavenPomFactory(configurationContainer, scopeMappings,
                 pomDependenciesConverter, fileResolver);
         DefaultMavenPom mavenPom = (DefaultMavenPom) mavenPomFactory.create();

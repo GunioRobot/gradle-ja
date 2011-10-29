@@ -76,7 +76,7 @@ class DefaultDependencyHandlerTest {
             one(dependenciesMock).add(returnedDependency);
         }
         def dependency = dependencyHandler.add(TEST_CONF_NAME, someNotation) {
-            force = true    
+            force = true
         }
         assertThat(dependency, equalTo(returnedDependency))
         assertThat(dependency.force, equalTo(true))
@@ -189,7 +189,7 @@ class DefaultDependencyHandlerTest {
         Map someMapNotation = [:]
         Closure projectDependencyClosure = {
             def dependency = "$TEST_CONF_NAME"(project(someMapNotation)) {
-                copy()    
+                copy()
             }
             assertThat(dependency, equalTo(projectDependency))
         }
@@ -273,7 +273,7 @@ class DefaultDependencyHandlerTest {
         }
         ConfigureUtil.configure(moduleClosure, dependencyHandler)
     }
-    
+
     @Test (expected = MissingMethodException)
     void pushToUnknownConfiguration() {
         String unknownConf = TEST_CONF_NAME + "delta"

@@ -161,7 +161,7 @@ public class DefaultArtifactPomTest {
         assertThat(artifactPom.getPom().getVersion(), equalTo("1.0"));
         assertThat(artifactPom.getPom().getPackaging(), equalTo("mainPackaging"));
     }
-    
+
     @Test(expected = InvalidUserDataException.class)
     public void addClassifierTwiceShouldThrowInvalidUserDataEx() {
         File classifierFile = new File("someClassifierFile");

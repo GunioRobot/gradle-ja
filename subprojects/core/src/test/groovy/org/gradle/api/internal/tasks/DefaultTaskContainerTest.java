@@ -138,7 +138,7 @@ public class DefaultTaskContainerTest {
 
         container.add("task");
     }
-    
+
     @Test
     public void cannotAddDuplicateTask() {
         final Task task = addTask("task");
@@ -167,7 +167,7 @@ public class DefaultTaskContainerTest {
             one(taskFactory).createTask(project, GUtil.map(Task.TASK_NAME, "task"));
             will(returnValue(newTask));
         }});
-        
+
         container.replace("task");
         assertThat(container.getByName("task"), sameInstance(newTask));
     }
@@ -260,7 +260,7 @@ public class DefaultTaskContainerTest {
         expectTaskLookupInOtherProject(":", "task", task);
         assertThat(container.resolveTask(new StringBuilder(":task")), sameInstance(task));
     }
-    
+
     private void expectTaskLookupInOtherProject(final String projectPath, final String taskName, final Task task) {
         context.checking(new Expectations() {{
             ProjectInternal otherProject = context.mock(ProjectInternal.class);

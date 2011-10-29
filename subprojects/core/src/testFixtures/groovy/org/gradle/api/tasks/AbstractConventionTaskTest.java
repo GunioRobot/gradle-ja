@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.gradle.api.tasks;
 
 import org.gradle.api.internal.ConventionAwareHelper;
@@ -29,7 +29,7 @@ import org.junit.Test;
 public abstract class AbstractConventionTaskTest extends AbstractTaskTest {
 
     public abstract ConventionTask getTask();
-    
+
     @Test
     public void testConventionAwareness() {
         ConventionTask task = getTask();

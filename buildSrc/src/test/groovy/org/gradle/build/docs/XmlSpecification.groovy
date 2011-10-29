@@ -118,7 +118,7 @@ abstract class XmlSpecification extends Specification {
             target.append(node.nodeValue.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
             return
         }
-        
+
         throw new UnsupportedOperationException("Don't know how to format DOM node: $node")
     }
 }

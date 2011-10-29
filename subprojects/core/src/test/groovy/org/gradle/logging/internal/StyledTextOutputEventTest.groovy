@@ -27,7 +27,7 @@ class StyledTextOutputEventTest extends Specification {
         expect:
         event.logLevel == LogLevel.DEBUG
     }
-    
+
     def rendersToTextOutput() {
         StyledTextOutput output = Mock()
         def event = new StyledTextOutputEvent(100, 'category', StyledTextOutput.Style.UserInput, 'message')
@@ -40,7 +40,7 @@ class StyledTextOutputEventTest extends Specification {
         1 * output.text('message')
         0 * output._
     }
-    
+
     def rendersMultipleSpansToTextOutput() {
         StyledTextOutput output = Mock()
         List spans = [new StyledTextOutputEvent.Span(StyledTextOutput.Style.UserInput, 'UserInput'),

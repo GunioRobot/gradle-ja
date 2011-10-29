@@ -95,7 +95,7 @@ public class DefaultResolvedArtifact implements ResolvedArtifact {
     public String getClassifier() {
         return artifact.getExtraAttribute(Dependency.CLASSIFIER);
     }
-    
+
     public String getVersion() {
         return getResolvedDependency() == null ? null : getResolvedDependency().getModuleVersion();
     }

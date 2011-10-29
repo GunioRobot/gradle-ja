@@ -43,7 +43,7 @@
                 <term>タスクグラフ用のプログラミング言語<phrase role="original">Language for dependency based programming</phrase></term>
                 <listitem>
                     <para role="original">The declarative language lies on top of a general purpose task graph, which you can fully
-                        leverage in your builds. It provides utmost flexibility to adapt Gradle to your unique needs. 
+                        leverage in your builds. It provides utmost flexibility to adapt Gradle to your unique needs.
                     </para>Gradleの提供する宣言型プログラミング言語は、グラフ構造をもつ汎用のタスク群の上に構築されています。
 皆さんのビルドシステムには様々なニーズがあると思いますが、Gradleは、それらに適合できる、究極的な柔軟性を持っているのです。
                     <para>
@@ -97,7 +97,7 @@
                     </para>
                     <para>Gradleは突出したマルチプロジェクトのサポートが特長です。プロジェクト間の依存関係はGradleのファーストクラス・オブジェクトであり、ごく普通に取り扱うことができます。世の中にはいろいろなビルドがありますが、Gradleではそれぞれのビルドに特有の問題点、課題にしたがってマルチプロジェクト、またプロジェクトの関係をモデリングできます。つまり、Gradleがあなたのプロジェクト構造に従うのであって、その逆ではありません。</para>
                     <para role="original">Gradle provides partial builds. If you build a single subproject Gradle takes care of building
-                        all the subprojects that subproject 
+                        all the subprojects that subproject
                         depends on. You can also choose to rebuild the subprojects that depend on a particular subproject.
                         Together with incremental builds this is a big time saver for larger builds.
                     </para>
@@ -108,7 +108,7 @@
                 <term>依存関係を管理する多くの方法<phrase role="original">Many ways to manage your dependencies</phrase></term>
                 <listitem>
                     <para role="original">Different teams prefer different ways to manage their external dependencies.
-                        Gradle provides convenient support for any strategy. From transitive dependency 
+                        Gradle provides convenient support for any strategy. From transitive dependency
                         management with remote maven and ivy repositories to jars or dirs on the local file system.</para>
                     <para>外部ライブラリの解決には、チームごとにさまざまな方法があるものです。リモートのmavenやivyのリポジトリを使った推移的な依存関係の管理から、ローカルファイルシステム上のjarやディレクトリまで、どのような方法をとるにせよGradleはそれらを強力にサポートします。</para>
                 </listitem>
@@ -161,7 +161,7 @@
                         installed. This is useful for example for some continuous integration servers. It is also
                         useful for an open source project to keep the barrier low for building it. The wrapper is also
                         very interesting for the enterprise. It is a zero administration approach for the client machines.
-                        It also enforces the usage of a particular Gradle version thus minimizing support issues. 
+                        It also enforces the usage of a particular Gradle version thus minimizing support issues.
                     </para>
                     <para>Gradleラッパーを使うと、Gradleをインストールしていないマシンでビルドを実行できます。たとえば、CIサーバー上でビルドしたり、オープンソースプロジェクトを簡単にビルドできるようにしたりするのに便利です。また、これはクライアントマシンの管理維持作業を省く(zero administration)というアプローチでもあり、企業向けと考えてもとても面白いものだといえます。使用させるGradleのバージョンを固定し、サポートしなければならないような問題の発生を最小限に抑えることもできます。</para>
                 </listitem>

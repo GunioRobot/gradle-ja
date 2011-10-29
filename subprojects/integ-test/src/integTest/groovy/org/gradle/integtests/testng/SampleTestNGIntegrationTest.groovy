@@ -50,7 +50,7 @@ public class SampleTestNGIntegrationTest {
         result.assertTestClassesExecuted('org.gradle.OkTest')
         result.testClass('org.gradle.OkTest').assertTestPassed('passingTest')
     }
-    
+
     @Test @UsesSample('testng/java-jdk15-passing')
     public void javaJdk15Passing() {
         executer.inDirectory(sample.dir).withTasks('clean', 'test').run()

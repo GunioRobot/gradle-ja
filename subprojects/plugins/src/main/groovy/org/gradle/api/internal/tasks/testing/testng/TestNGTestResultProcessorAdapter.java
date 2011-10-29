@@ -102,7 +102,7 @@ public class TestNGTestResultProcessorAdapter implements ITestListener, IConfigu
         synchronized (lock) {
             testId = tests.remove(iTestResult);
             if (testId == null) {
-                // This can happen when a method fails which this method depends on 
+                // This can happen when a method fails which this method depends on
                 testId = idGenerator.generateId();
                 Object parentId = testMethodToSuiteMapping.get(iTestResult.getMethod());
                 startEvent = new TestStartEvent(iTestResult.getStartMillis(), parentId);

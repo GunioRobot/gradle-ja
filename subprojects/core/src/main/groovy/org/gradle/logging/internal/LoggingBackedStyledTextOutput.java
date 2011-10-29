@@ -92,7 +92,7 @@ public class LoggingBackedStyledTextOutput extends AbstractStyledTextOutput {
 
             StyledTextOutputEvent event = new StyledTextOutputEvent(timeProvider.getCurrentTime(), category, logLevel, spans);
             spans = null;
-            
+
             listener.onOutput(event);
         }
     }
